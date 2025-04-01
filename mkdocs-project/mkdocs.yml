@@ -1,0 +1,5 @@
+site_name: ベーシック Python
+nav:
+  - ホーム: home.md
+  - 第０章: chapter0.md
+theme: cosmo
