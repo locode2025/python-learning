@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>第０章 - ベーシック Python</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">ベーシック Python</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../home/" class="nav-link">ホーム</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">第０章</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../home/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#python" class="nav-link">Pythonとは</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">はじめてのプログラミング</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">開発の流れ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">はじめてプログラムを開発して</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="python">Pythonとは</h2>
+<p>Pythonは、データ分析、AI（機械学習、深層学習）や、Webアプリケーション、IoTなどの幅広い分野で利用できるプログラミング言語です。</p>
+<p>他にもPythonには次の特徴があります。</p>
+<ul>
+<li>シンプルで読みやすい<ul>
+<li>文法がシンプルで、コードが直感的に理解しやすい。</li>
+<li>インデント（字下げ）によってブロックを表現するため、可読性が高い。</li>
+</ul>
+</li>
+<li>豊富なライブラリとフレームワーク<ul>
+<li>データ分析（NumPy、Pandas）、機械学習（TensorFlow、scikit-learn）、Web開発（Django、Flask）など、幅広い分野で使えるライブラリが充実。</li>
+</ul>
+</li>
+<li>汎用性が高い<ul>
+<li>Web開発、データ分析、AI・機械学習、ゲーム開発、業務自動化など、多様な分野で活用できる。</li>
+</ul>
+</li>
+<li>インタープリタ型で実行可能<ul>
+<li>コンパイル不要で、コードをすぐに実行できる（スクリプト言語）。</li>
+<li>インタラクティブな実行環境（REPL）で、試しながら開発しやすい。</li>
+</ul>
+</li>
+<li>クロスプラットフォーム対応<ul>
+<li>Windows、Mac、Linuxなど、さまざまな環境で動作する。</li>
+</ul>
+</li>
+<li>オープンソース &amp; コミュニティが活発<ul>
+<li>無料で利用でき、世界中の開発者がライブラリを提供し、問題解決のための情報も豊富。</li>
+</ul>
+</li>
+</ul>
+<p>それでは早速Pythonを使ったプログラミングを体験していきましょう。</p>
+<h2 id="_1">はじめてのプログラミング</h2>
+<pre><code class="language-python">print('Hello World!')
+</code></pre>
+<pre><code>Hello World!
+</code></pre>
+<p>このプログラムは、画面に「Hello World!」という文字列を表示する単純なプログラムです。
+クオーテーション囲まれている「Hello World!」の部分のメッセージを変更してみて、自分の名前を出力してみましょう！</p>
+<pre><code class="language-python">print('Hello まさゆき!')
+</code></pre>
+<pre><code>Hello まさゆき!
+</code></pre>
+<p>print()のことを「プリント関数」と言います。関数とはコンピュータに対して行う命令にあたります。Pythonには他にもさまざまな関数が用意されています。</p>
+<p>続いて、次のコードを実行してみましょう。</p>
+<pre><code class="language-python">print('Hello ひろゆき！)
+</code></pre>
+<pre><code>  File "/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_5822/114360147.py", line 1
+    print('Hello ひろゆき！)
+                       ^
+SyntaxError: EOL while scanning string literal
+</code></pre>
+<p>エラーの原因は、print('Hello ひろゆき！) の シングルクォート (') の閉じ忘れ です。
+正しくは、次のようにシングルクォート (') を閉じる必要があります：</p>
+<pre><code class="language-python">print('Hello ひろゆき！')  # 正しい書き方
+</code></pre>
+<pre><code>Hello ひろゆき！
+</code></pre>
+<p>または、ダブルクォート (") を使ってもOKです：</p>
+<pre><code class="language-python">print(&quot;Hello ひろゆき！&quot;)  # これもOK
+</code></pre>
+<pre><code>Hello ひろゆき！
+</code></pre>
+<p>Python は 文字列を開始したら必ず閉じるルール があります。閉じ忘れると、今回のように "EOL (End of Line) while scanning string literal" というエラーが発生します。</p>
+<p>💡 エラーは成長のチャンス！</p>
+<p>プログラミングでは、エラーと仲良くなること がとても大切です。最初はびっくりするかもしれませんが、エラーは「どこを直せばいいのか」を教えてくれる先生のようなものです。</p>
+<p>エラーが出たら、
+- ✅ エラーメッセージを読む → どこが間違っているかヒントを探す
+- ✅ 少しずつ試す → 1つずつ修正しながら原因を確かめる
+- ✅ 楽しむ！ → 「おっ、また新しいことを学べた！」という気持ちで取り組む</p>
+<p>間違えるほど成長できます。たくさんエラーを出して、どんどん上達していきましょう！🚀✨</p>
+<pre><code class="language-python">print('高柳　まさゆき')
+print('32歳')
+print('三度の飯よりラーメンが好き')
+</code></pre>
+<pre><code>高柳　まさゆき
+32歳
+三度の飯よりラーメンが好き
+</code></pre>
+<p>プログラムは上から下に実行されます。Pythonプログラムは原則として、上に書いた命令から順番に実行されていくことを覚えておきましょう。</p>
+<h2 id="_2">開発の流れ</h2>
+<h3 id="_3">プログラムの作成</h3>
+<p>① ソースコードの作成 ✍</p>
+<p>まず、Pythonのコードを作成します。
+テキストエディタ（VSCode, PyCharm, Jupyter Notebook など）を開いて、以下のような .py ファイルを作成します。</p>
+<p>例：簡単な電卓プログラム (calculator.py)</p>
+<pre><code class="language-py"># ユーザーに2つの数値を入力してもらう
+num1 = float(input(&quot;1つ目の数字を入力: &quot;))
+num2 = float(input(&quot;2つ目の数字を入力: &quot;))
+
+# 足し算を実行
+result = num1 + num2
+
+# 結果を表示
+print(&quot;合計:&quot;, result)
+</code></pre>
+<p>② 実行 ▶</p>
+<p>作成した .py ファイルを実行して、プログラムを動かします。</p>
+<p>方法 1: ターミナルで実行（Windows / Mac / Linux）
+ターミナルやコマンドプロンプトを開き、保存したファイルのあるフォルダへ移動して次のコマンドを実行：</p>
+<pre><code class="language-sh">python calculator.py
+</code></pre>
+<p>方法 2: エディタの「Run」ボタンで実行
+VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン を押すだけでOK。</p>
+<h3 id="ide-integrated-development-environment">統合開発環境（IDE: Integrated Development Environment）とは？</h3>
+<p>統合開発環境（IDE）は、プログラムを効率的に開発するためのツールが一式揃ったソフトウェア です。</p>
+<p>✅ IDEの主な機能
+- コードエディタ ✍
+    - 色分け（シンタックスハイライト）で見やすい
+    - 補完機能（入力のサポート）
+- デバッガ 🐞
+    - エラーを見つけて修正しやすくする
+    - 変数の値を確認しながら実行できる
+- 実行環境 ▶
+    - 書いたコードをそのまま実行できる
+- パッケージ管理 📦
+    - 必要なライブラリを簡単にインストール（例: pip）
+- バージョン管理（Git連携） 🔄
+    - コードの変更履歴を管理できる</p>
+<p>✅ Python開発におすすめのIDE</p>
+<p>🔹 初心者向け</p>
+<table>
+<thead>
+<tr>
+<th>IDE</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDLE</td>
+<td>Python標準搭載。シンプルで軽量だが機能は少なめ</td>
+</tr>
+<tr>
+<td>Thonny</td>
+<td>初心者向け。デバッグ機能がわかりやすい</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 中級・上級者向け</p>
+<table>
+<thead>
+<tr>
+<th>IDE</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VSCode</td>
+<td>拡張機能が豊富で軽量。Pythonにも最適</td>
+</tr>
+<tr>
+<td>PyCharm</td>
+<td>強力な補完・デバッグ機能を搭載。プロ向け</td>
+</tr>
+<tr>
+<td>Jupyter Notebook</td>
+<td>データ分析やAI向け。セルごとに実行可能</td>
+</tr>
+</tbody>
+</table>
+<p>✅ IDEを使うメリット
+- ✅ エラーを素早く発見できる 🐞
+- ✅ コーディングが効率化する ⏳
+- ✅ プログラムの動作確認がスムーズにできる 🚀</p>
+<h3 id="_4">「正しくて読みやすいコード」の書き方 😊✨</h3>
+<p>Pythonを学ぶときに大切なのは、
+① 正確に記述すること と ② 読みやすいコードを書くこと です！
+これを意識するだけで、プログラムがスムーズに動き、自分も他の人も理解しやすくなります。</p>
+<p>① 正確に記述する 📝</p>
+<p>プログラムは ほんの少しのミスでもエラー になります。
+「正確に書く」ことを意識すると、エラーが減り、スムーズに開発できます！</p>
+<p>🌟 正確に書くためのポイント
+1. 文法ルールを守る
+    - クォート (' や ") を閉じ忘れない
+    - : や () などの記号を正しく使う
+    - インデント（字下げ）を適切に入れる</p>
+<p>✅ 例（正しい書き方）</p>
+<pre><code class="language-py">print(&quot;こんにちは！&quot;)  # クォートを閉じる
+</code></pre>
+<p>❌ 間違い（エラーになる）</p>
+<pre><code class="language-py">print(&quot;こんにちは！   # クォートが閉じられていない
+</code></pre>
+<p>👉 こういうミスが原因で SyntaxError になることが多いので注意！</p>
+<ol>
+<li>エラーメッセージをよく読む<ul>
+<li>Pythonはエラーが発生すると、その原因を教えてくれます。</li>
+<li>エラーメッセージを読み、問題を修正するクセ をつけると、上達が早くなります！</li>
+</ul>
+</li>
+</ol>
+<p>② 読みやすいソースコードを記述する 👀</p>
+<p>Pythonは「人が読みやすいコードを書く」ことを大切にしています。
+将来の自分や他の人が すぐに理解できるコード を書くことがポイントです。</p>
+<p>🌟 読みやすいコードを書くためのポイント
+1. わかりやすい変数名をつける 🏷️
+    - x や y だけでなく、意味がわかる名前を使おう！</p>
+<p>✅ 良い例</p>
+<pre><code class="language-py">age = 25  # 年齢
+user_name = &quot;ひろゆき&quot;  # ユーザーの名前
+</code></pre>
+<p>❌ 悪い例</p>
+<pre><code class="language-py">a = 25
+b = &quot;ひろゆき&quot;
+</code></pre>
+<p>👉 どんな値が入っているのかわかりづらいですね💦</p>
+<ol>
+<li>適切にコメントを書く 💬<ul>
+<li>コードの意味がすぐにわかるように、コメント (#) を使おう！</li>
+</ul>
+</li>
+</ol>
+<p>✅ 良い例</p>
+<pre><code class="language-py"># 2つの数を足し算するプログラム
+num1 = 5
+num2 = 10
+result = num1 + num2  # 合計を計算
+print(result)  # 結果を表示
+</code></pre>
+<p>❌ 悪い例</p>
+<pre><code class="language-py">n1 = 5
+n2 = 10
+r = n1 + n2
+print(r)
+</code></pre>
+<p>👉 何をしているプログラムかわかりづらいですね💦</p>
+<p>「プログラムは "コンピュータのため" だけじゃなく、"人間のため" にも書くものだよ！」
+「ミスしても大丈夫！エラーと仲良くなりながら、一歩ずつ成長しよう😊✨」</p>
+<p>コツコツ練習すれば、どんどん書けるようになるよ！💪🔥</p>
+<h2 id="_5">はじめてプログラムを開発して</h2>
+<p>🎉 お疲れさまでした！Pythonで最初のプログラム実行完了！ 🎉</p>
+<p>はじめてのPythonプログラムを実行できましたね！✨</p>
+<p>「コードを書いて → 実行して → 結果を確認する」この基本の流れを体験できたのは、大きな一歩です！💡</p>
+<p>💡 Pythonってどんなところで使われているの？</p>
+<p>実は、Pythonは 世界中のあらゆる分野で活躍しているプログラミング言語 です！ 🌍</p>
+<ul>
+<li>
+<p>✅ Webサービス開発 🌐
+    → YouTube や Instagram などの大手サービスもPythonで作られています！</p>
+</li>
+<li>
+<p>✅ データ分析・AI開発 🤖
+    → Google や Netflix もPythonを活用してデータ解析＆機械学習を行っています！</p>
+</li>
+<li>
+<p>✅ 自動化（業務効率化） ⚡
+    → エクセル操作やメール送信などをPythonで自動化できます！</p>
+</li>
+<li>
+<p>✅ ゲーム開発 🎮
+    → Pythonを使って 簡単なゲーム を作ることもできます！</p>
+</li>
+</ul>
+<p>🚀 これからの学習に向けて 🌱
+今日の経験をもとに、Pythonをもっと活用できるように少しずつ学んでいきましょう！</p>
+<p>コードを書けば書くほど、できることが増えていきます💪✨</p>
+<p>次のステップでは、もっと便利なプログラム を作れるように練習していきます！</p>
+<p>これからも一緒にPythonを楽しみながら学んでいきましょう！😊🎵</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
