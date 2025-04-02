@@ -1,24 +1,71 @@
-<!DOCTYPE html>
-<html lang="ja" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="まさゆき">
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="初学者向けのPythonのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
         <link rel="canonical" href="https://pylocode.jp/chapter0/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>第０章 - はじめての Python</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../chapter1/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>はじめに - はじめての Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
      crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
@@ -31,88 +78,432 @@
   gtag('config', 'G-WWN2B4XZDV');
 </script>
 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">はじめての Python</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href=".." class="nav-link">ホーム</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">第０章</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> 検索
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> 前へ
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
-                                    次へ <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="目次">
-            <span class="fa fa-angle-down"></span>
-        </button>
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="はじめての Python" class="md-header__button md-logo" aria-label="はじめての Python" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            はじめての Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              はじめに
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="はじめての Python" class="md-nav__button md-logo" aria-label="はじめての Python" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    はじめての Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="2"><a href="#python" class="nav-link">Pythonとは</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">はじめてのプログラミング</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">開発の流れ</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">はじめてプログラムを開発して</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
 
-<h2 id="python">Pythonとは</h2>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pythonとは
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. はじめてのプログラミング
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 開発の流れ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 開発の流れ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      プログラムの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ide-integrated-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合開発環境（IDE: Integrated Development Environment）とは？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      「正しくて読みやすいコード」の書き方 😊✨
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. はじめてプログラムを開発して
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pythonとは
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. はじめてのプログラミング
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 開発の流れ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 開発の流れ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      プログラムの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ide-integrated-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      統合開発環境（IDE: Integrated Development Environment）とは？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      「正しくて読みやすいコード」の書き方 😊✨
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. はじめてプログラムを開発して
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">はじめに</h1>
+<hr />
+<h2 id="1-python">1. Pythonとは</h2>
 <p>Pythonは、データ分析、AI（機械学習、深層学習）や、Webアプリケーション、IoTなどの幅広い分野で利用できるプログラミング言語です。</p>
 <p>他にもPythonには次の特徴があります。</p>
 <ul>
@@ -144,60 +535,78 @@
 </li>
 </ul>
 <p>それでは早速Pythonを使ったプログラミングを体験していきましょう。</p>
-<h2 id="_1">はじめてのプログラミング</h2>
+<hr />
+<h2 id="2">2. はじめてのプログラミング</h2>
+<p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-</code></pre></div>
-<pre><code>Hello World!
-</code></pre>
-<p>このプログラムは、画面に「Hello World!」という文字列を表示する単純なプログラムです。
-クオーテーション囲まれている「Hello World!」の部分のメッセージを変更してみて、自分の名前を出力してみましょう！</p>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello<span class="w"> </span>World!
+</code></pre></div></p>
+<p>このプログラムは、画面に「<code>Hello World!</code>」という文字列を表示する単純なプログラムです。
+クオーテーション囲まれている「<code>Hello World!</code>」の部分のメッセージを変更してみて、自分の名前を出力してみましょう！</p>
+<p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello まさゆき!&#39;</span><span class="p">)</span>
-</code></pre></div>
-<pre><code>Hello まさゆき!
-</code></pre>
-<p>print()のことを「プリント関数」と言います。関数とはコンピュータに対して行う命令にあたります。Pythonには他にもさまざまな関数が用意されています。</p>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello<span class="w"> </span>まさゆき!
+</code></pre></div></p>
+<p><code>print()</code> のことを「プリント関数」と言います。関数とはコンピュータに対して行う命令にあたります。Pythonには他にもさまざまな関数が用意されています。</p>
 <p>続いて、次のコードを実行してみましょう。</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello ひろゆき！)</span>
-</code></pre></div>
-<pre><code>  File "/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_5822/114360147.py", line 1
-    print('Hello ひろゆき！)
-                       ^
-SyntaxError: EOL while scanning string literal
-</code></pre>
-<p>エラーの原因は、print('Hello ひろゆき！) の シングルクォート (') の閉じ忘れ です。
-正しくは、次のようにシングルクォート (') を閉じる必要があります：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello ひろゆき！&#39;</span><span class="p">)</span>  <span class="c1"># 正しい書き方</span>
-</code></pre></div>
-<pre><code>Hello ひろゆき！
-</code></pre>
-<p>または、ダブルクォート (") を使ってもOKです：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello ひろゆき！&quot;</span><span class="p">)</span>  <span class="c1"># これもOK</span>
-</code></pre></div>
-<pre><code>Hello ひろゆき！
-</code></pre>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello すず！)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>File<span class="w"> </span><span class="s2">&quot;/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_5822/114360147.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>print<span class="o">(</span><span class="err">&#39;</span>Hello<span class="w"> </span>すず！<span class="o">)</span>
+<span class="w">                        </span>^
+SyntaxError:<span class="w"> </span>EOL<span class="w"> </span><span class="k">while</span><span class="w"> </span>scanning<span class="w"> </span>string<span class="w"> </span>literal
+</code></pre></div></p>
+<p>エラーの原因は、<code>print('Hello すず！)</code> の シングルクォート (<code>'</code>) の閉じ忘れ です。
+正しくは、次のようにシングルクォート (<code>'</code>) を閉じる必要があります：</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello すず！&#39;</span><span class="p">)</span>  <span class="c1"># 正しい書き方</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello<span class="w"> </span>すず！
+</code></pre></div></p>
+<p>または、ダブルクォート (<code>"</code>) を使ってもOKです：</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello すず！&quot;</span><span class="p">)</span>  <span class="c1"># これもOK</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello<span class="w"> </span>すず！
+</code></pre></div></p>
 <p>Python は 文字列を開始したら必ず閉じるルール があります。閉じ忘れると、今回のように "EOL (End of Line) while scanning string literal" というエラーが発生します。</p>
-<p>💡 エラーは成長のチャンス！</p>
+<hr />
+<p><strong>💡 エラーは成長のチャンス！</strong></p>
 <p>プログラミングでは、エラーと仲良くなること がとても大切です。最初はびっくりするかもしれませんが、エラーは「どこを直せばいいのか」を教えてくれる先生のようなものです。</p>
-<p>エラーが出たら、
-- ✅ エラーメッセージを読む → どこが間違っているかヒントを探す
-- ✅ 少しずつ試す → 1つずつ修正しながら原因を確かめる
-- ✅ 楽しむ！ → 「おっ、また新しいことを学べた！」という気持ちで取り組む</p>
+<p>エラーが出たら、</p>
+<ul>
+<li>✅ エラーメッセージを読む → どこが間違っているかヒントを探す</li>
+<li>✅ 少しずつ試す → 1つずつ修正しながら原因を確かめる</li>
+<li>✅ 楽しむ！ → 「おっ、また新しいことを学べた！」という気持ちで取り組む</li>
+</ul>
 <p>間違えるほど成長できます。たくさんエラーを出して、どんどん上達していきましょう！🚀✨</p>
+<p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;高柳　まさゆき&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;32歳&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;三度の飯よりラーメンが好き&#39;</span><span class="p">)</span>
-</code></pre></div>
-<pre><code>高柳　まさゆき
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>高柳<span class="w">　</span>まさゆき
 32歳
 三度の飯よりラーメンが好き
-</code></pre>
+</code></pre></div></p>
 <p>プログラムは上から下に実行されます。Pythonプログラムは原則として、上に書いた命令から順番に実行されていくことを覚えておきましょう。</p>
-<h2 id="_2">開発の流れ</h2>
-<h3 id="_3">プログラムの作成</h3>
-<p>① ソースコードの作成 ✍</p>
+<hr />
+<h2 id="3">3. 開発の流れ</h2>
+<p>開発の流れは基本的に、プログラムを作成して、それを実行します。プログラムを実装する開発環境として、統合開発環境というものが存在します。また、プログラムをコーディングするには、機械がわかるように正しい書き方で命令を実行する必要があります。それぞれ見ていきましょう。</p>
+<h3 id="_2">プログラムの作成</h3>
+<p><strong>① ソースコードの作成 ✍</strong></p>
 <p>まず、Pythonのコードを作成します。
 テキストエディタ（VSCode, PyCharm, Jupyter Notebook など）を開いて、以下のような .py ファイルを作成します。</p>
-<p>例：簡単な電卓プログラム (calculator.py)</p>
+<p><strong>例：簡単な電卓プログラム (calculator.py)</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># ユーザーに2つの数値を入力してもらう</span>
 <span class="n">num1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;1つ目の数字を入力: &quot;</span><span class="p">))</span>
 <span class="n">num2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;2つ目の数字を入力: &quot;</span><span class="p">))</span>
@@ -208,30 +617,51 @@ SyntaxError: EOL while scanning string literal
 <span class="c1"># 結果を表示</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;合計:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-<p>② 実行 ▶</p>
-<p>作成した .py ファイルを実行して、プログラムを動かします。</p>
-<p>方法 1: ターミナルで実行（Windows / Mac / Linux）
-ターミナルやコマンドプロンプトを開き、保存したファイルのあるフォルダへ移動して次のコマンドを実行：</p>
+<p><strong>② 実行 🏃</strong></p>
+<p>作成した <code>.py</code> ファイルを実行して、プログラムを動かします。</p>
+<ul>
+<li>
+<p>方法 1: ターミナルで実行（Windows / Mac / Linux）</p>
+<p><strong>ターミナルやコマンドプロンプトを開き、保存したファイルのあるフォルダへ移動して次のコマンドを実行：</strong></p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>calculator.py
 </code></pre></div>
-<p>方法 2: エディタの「Run」ボタンで実行
-VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン を押すだけでOK。</p>
+</li>
+<li>
+<p>方法 2: エディタの「Run」ボタンで実行</p>
+<p>VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン を押すだけでOK。</p>
+</li>
+</ul>
+<hr />
 <h3 id="ide-integrated-development-environment">統合開発環境（IDE: Integrated Development Environment）とは？</h3>
 <p>統合開発環境（IDE）は、プログラムを効率的に開発するためのツールが一式揃ったソフトウェア です。</p>
-<p>✅ IDEの主な機能
-- コードエディタ ✍
-    - 色分け（シンタックスハイライト）で見やすい
-    - 補完機能（入力のサポート）
-- デバッガ 🐞
-    - エラーを見つけて修正しやすくする
-    - 変数の値を確認しながら実行できる
-- 実行環境 ▶
-    - 書いたコードをそのまま実行できる
-- パッケージ管理 📦
-    - 必要なライブラリを簡単にインストール（例: pip）
-- バージョン管理（Git連携） 🔄
-    - コードの変更履歴を管理できる</p>
-<p>✅ Python開発におすすめのIDE</p>
+<p><strong>✅ IDEの主な機能</strong></p>
+<ul>
+<li>コードエディタ ✍<ul>
+<li>色分け（シンタックスハイライト）で見やすい</li>
+<li>補完機能（入力のサポート）</li>
+</ul>
+</li>
+<li>デバッガ 🐞<ul>
+<li>エラーを見つけて修正しやすくする</li>
+<li>変数の値を確認しながら実行できる</li>
+</ul>
+</li>
+<li>実行環境 🏃<ul>
+<li>書いたコードをそのまま実行できる</li>
+</ul>
+</li>
+<li>パッケージ管理 📦<ul>
+<li>必要なライブラリを簡単にインストール（例: pip）</li>
+</ul>
+</li>
+<li>バージョン管理（Git連携） 🔄<ul>
+<li>コードの変更履歴を管理できる</li>
+</ul>
+</li>
+</ul>
+<p><strong>✅ Python開発におすすめのIDE</strong></p>
+<ul>
+<li>
 <p>🔹 初心者向け</p>
 <table>
 <thead>
@@ -247,10 +677,12 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
 </tr>
 <tr>
 <td>Thonny</td>
-<td>初心者向け。デバッグ機能がわかりやすい</td>
+<td>初心者向け。デバッグ機能がわかりやすい。<a href="https://thonny.org/" target="_blank">https://thonny.org/</a></td>
 </tr>
 </tbody>
 </table>
+</li>
+<li>
 <p>🔹 中級・上級者向け</p>
 <table>
 <thead>
@@ -262,77 +694,88 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
 <tbody>
 <tr>
 <td>VSCode</td>
-<td>拡張機能が豊富で軽量。Pythonにも最適</td>
+<td>拡張機能が豊富で軽量。Pythonにも最適。<a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></td>
 </tr>
 <tr>
 <td>PyCharm</td>
-<td>強力な補完・デバッグ機能を搭載。プロ向け</td>
+<td>強力な補完・デバッグ機能を搭載。プロ向け。<a href="https://www.jetbrains.com/ja-jp/pycharm/" target="_blank">https://www.jetbrains.com/ja-jp/pycharm/</a></td>
 </tr>
 <tr>
 <td>Jupyter Notebook</td>
-<td>データ分析やAI向け。セルごとに実行可能</td>
+<td>データ分析やAI向け。セルごとに実行可能。<a href="https://jupyter.org/" target="_blank">https://jupyter.org/</a></td>
 </tr>
 </tbody>
 </table>
-<p>✅ IDEを使うメリット
-- ✅ エラーを素早く発見できる 🐞
-- ✅ コーディングが効率化する ⏳
-- ✅ プログラムの動作確認がスムーズにできる 🚀</p>
-<h3 id="_4">「正しくて読みやすいコード」の書き方 😊✨</h3>
+</li>
+</ul>
+<p><strong>✅ IDEを使うメリット</strong></p>
+<ul>
+<li>エラーを素早く発見できる 🐞</li>
+<li>コーディングが効率化する ⏳</li>
+<li>プログラムの動作確認がスムーズにできる 🚀</li>
+</ul>
+<hr />
+<h3 id="_3">「正しくて読みやすいコード」の書き方 😊✨</h3>
 <p>Pythonを学ぶときに大切なのは、
-① 正確に記述すること と ② 読みやすいコードを書くこと です！
+<strong>① 正確に記述すること</strong> と <strong>② 読みやすいコードを書くこと</strong> です！
 これを意識するだけで、プログラムがスムーズに動き、自分も他の人も理解しやすくなります。</p>
-<p>① 正確に記述する 📝</p>
+<p><strong>① 正確に記述する 📝</strong></p>
 <p>プログラムは ほんの少しのミスでもエラー になります。
 「正確に書く」ことを意識すると、エラーが減り、スムーズに開発できます！</p>
-<p>🌟 正確に書くためのポイント
-1. 文法ルールを守る
-    - クォート (' や ") を閉じ忘れない
-    - : や () などの記号を正しく使う
-    - インデント（字下げ）を適切に入れる</p>
-<p>✅ 例（正しい書き方）
+<div class="admonition note">
+<p class="admonition-title">🌟 正確に書くためのポイント：文法ルールを守る</p>
+<ul>
+<li>クォート (<code>'</code> や <code>"</code>) を閉じ忘れない</li>
+<li><code>:</code> や <code>()</code> などの記号を正しく使う</li>
+<li>インデント（字下げ）を適切に入れる</li>
+</ul>
+</div>
+<p><strong>✅ 例（正しい書き方）：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！&quot;</span><span class="p">)</span>  <span class="c1"># クォートを閉じる</span>
 </code></pre></div></p>
-<p>❌ 間違い（エラーになる）
+<p><strong>❌ 間違い（エラーになる）：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！   # クォートが閉じられていない</span>
 </code></pre></div>
-👉 こういうミスが原因で SyntaxError になることが多いので注意！</p>
-<ol>
-<li>エラーメッセージをよく読む<ul>
+👉 こういうミスが原因で <code>SyntaxError</code> になることが多いので注意！</p>
+<div class="admonition note">
+<p class="admonition-title">🌟 正確に書くためのポイント： エラーメッセージをよく読む</p>
+<ul>
 <li>Pythonはエラーが発生すると、その原因を教えてくれます。</li>
 <li>エラーメッセージを読み、問題を修正するクセ をつけると、上達が早くなります！</li>
 </ul>
-</li>
-</ol>
-<p>② 読みやすいソースコードを記述する 👀</p>
+</div>
+<p><strong>② 読みやすいソースコードを記述する 👀</strong></p>
 <p>Pythonは「人が読みやすいコードを書く」ことを大切にしています。
 将来の自分や他の人が すぐに理解できるコード を書くことがポイントです。</p>
-<p>🌟 読みやすいコードを書くためのポイント
-1. わかりやすい変数名をつける 🏷️
-    - x や y だけでなく、意味がわかる名前を使おう！</p>
-<p>✅ 良い例
+<div class="admonition note">
+<p class="admonition-title">🌟 読みやすいコードを書くためのポイント：わかりやすい変数名をつける 🏷️</p>
+<ul>
+<li><code>x</code> や <code>y</code> だけでなく、意味がわかる名前を使おう！</li>
+</ul>
+</div>
+<p><strong>✅ 良い例：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># 年齢</span>
-<span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;ひろゆき&quot;</span>  <span class="c1"># ユーザーの名前</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;すず&quot;</span>  <span class="c1"># ユーザーの名前</span>
 </code></pre></div></p>
-<p>❌ 悪い例
+<p><strong>❌ 悪い例：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;ひろゆき&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;すず&quot;</span>
 </code></pre></div>
 👉 どんな値が入っているのかわかりづらいですね💦</p>
-<ol>
-<li>適切にコメントを書く 💬<ul>
-<li>コードの意味がすぐにわかるように、コメント (#) を使おう！</li>
+<div class="admonition note">
+<p class="admonition-title">🌟 読みやすいコードを書くためのポイント：適切にコメントを書く 💬</p>
+<ul>
+<li>コードの意味がすぐにわかるように、コメント (<code>#</code>) を使おう！</li>
 </ul>
-</li>
-</ol>
-<p>✅ 良い例
+</div>
+<p><strong>✅ 良い例：</strong>
 <div class="highlight"><pre><span></span><code><span class="c1"># 2つの数を足し算するプログラム</span>
 <span class="n">num1</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>  <span class="c1"># 合計を計算</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 結果を表示</span>
 </code></pre></div></p>
-<p>❌ 悪い例
+<p><strong>❌ 悪い例：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">n2</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span>
@@ -342,11 +785,12 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
 <p>「プログラムは "コンピュータのため" だけじゃなく、"人間のため" にも書くものだよ！」
 「ミスしても大丈夫！エラーと仲良くなりながら、一歩ずつ成長しよう😊✨」</p>
 <p>コツコツ練習すれば、どんどん書けるようになるよ！💪🔥</p>
-<h2 id="_5">はじめてプログラムを開発して</h2>
+<hr />
+<h2 id="4">4. はじめてプログラムを開発して</h2>
 <p>🎉 お疲れさまでした！Pythonで最初のプログラム実行完了！ 🎉</p>
 <p>はじめてのPythonプログラムを実行できましたね！✨</p>
 <p>「コードを書いて → 実行して → 結果を確認する」この基本の流れを体験できたのは、大きな一歩です！💡</p>
-<p>💡 Pythonってどんなところで使われているの？</p>
+<p><strong>💡 Pythonってどんなところで使われているの？</strong></p>
 <p>実は、Pythonは 世界中のあらゆる分野で活躍しているプログラミング言語 です！ 🌍</p>
 <ul>
 <li>
@@ -366,86 +810,62 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
     → Pythonを使って 簡単なゲーム を作ることもできます！</p>
 </li>
 </ul>
-<p>🚀 これからの学習に向けて 🌱
-今日の経験をもとに、Pythonをもっと活用できるように少しずつ学んでいきましょう！</p>
+<p><strong>🚀 これからの学習に向けて 🌱</strong></p>
+<p>今日の経験をもとに、Pythonをもっと活用できるように少しずつ学んでいきましょう！</p>
 <p>コードを書けば書くほど、できることが増えていきます💪✨</p>
 <p>次のステップでは、もっと便利なプログラム を作れるように練習していきます！</p>
-<p>これからも一緒にPythonを楽しみながら学んでいきましょう！😊🎵</p></div>
-            </div>
-        </div>
+<p>これからも一緒にPythonを楽しみながら学んでいきましょう！😊🎵</p>
+<p>👉 <a href="../chapter1">次は、<strong>変数とデータ型</strong>について説明していきます。</a></p>
 
-        <footer class="col-md-12">
-            <hr>
-            <p><a href="https://www.mkdocs.org/">MkDocs</a> でビルドされたドキュメンテーション</p>
-        </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">検索</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>これらのドキュメントをこちらから検索できます。検索語句を以下に入力してください。</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="検索..." id="mkdocs-search-query" title="検索語句を入力してください">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="結果がありません"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">キーボードショートカット</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">キー</th>
-                    <th>アクション</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>このヘルプを開く</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>次のページ</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>前のページ</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>検索</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
 </html>
