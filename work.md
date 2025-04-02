@@ -13,6 +13,7 @@
 - テーマ https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
     - 複数のテーマを選択できる https://mkdocs.github.io/mkdocs-bootswatch
 - テンプレートの上書き https://www.mkdocs.org/user-guide/customizing-your-theme/
+- 拡張機能の有効 https://dev.classmethod.jp/articles/mkdocs-plugins-1/
 
 ## GitHub Pages
 

@@ -1,7 +1,38 @@
-site_name: ベーシック Python
+site_name: はじめての Python
+site_url: https://pylocode.jp/
+site_description: 初学者向けのPythonのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。
+site_author: まさゆき
 nav:
   - ホーム: index.md
   - 第０章: chapter0.md
 theme:
-  name: cosmo
   custom_dir: custom_theme/
+  #for cosmo
+  name: cosmo
+  locale: ja
+  #for material
+  # name: material
+  # language: ja
+  # logo: img/favicon.ico
+  # favicon: img/favicon.ico
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: !ENV GA_TRACKING_ID
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
