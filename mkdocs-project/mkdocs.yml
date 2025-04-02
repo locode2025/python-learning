@@ -4,8 +4,10 @@ site_description: 初学者向けのPythonのプログラミング教材です�
 site_author: Masayuki
 nav:
   - ホーム: index.md
-  - はじめに: chapter0.md
-  - 変数とデータ型: chapter1.md
+  - はじめに: introduction.md
+  - 変数とデータ型: variable_and_type.md
+  - コンテナ: container.md
+
 theme:
   custom_dir: custom_theme/
   #for cosmo

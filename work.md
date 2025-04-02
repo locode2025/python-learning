@@ -14,6 +14,8 @@
     - 複数のテーマを選択できる https://mkdocs.github.io/mkdocs-bootswatch
 - テンプレートの上書き https://www.mkdocs.org/user-guide/customizing-your-theme/
 - 拡張機能の有効 https://dev.classmethod.jp/articles/mkdocs-plugins-1/
+- デプロイにカスタムドメインの設定 https://www.mkdocs.org/user-guide/deploying-your-docs/
+    - mkdocsのCNAME https://github.com/mkdocs/mkdocs/blob/master/docs/CNAME
 
 ## GitHub Pages
 
