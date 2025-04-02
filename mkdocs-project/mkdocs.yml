@@ -1,5 +1,7 @@
 site_name: ベーシック Python
 nav:
-  - ホーム: home.md
+  - ホーム: index.md
   - 第０章: chapter0.md
-theme: cosmo
+theme:
+  name: cosmo
+  custom_dir: custom_theme/

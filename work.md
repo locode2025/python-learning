@@ -12,3 +12,10 @@
     - パスが通っていることを確認 `mkdocs --version`
 - テーマ https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
     - 複数のテーマを選択できる https://mkdocs.github.io/mkdocs-bootswatch
+
+## GitHub Pages
+
+- MkDocsのでデプロイ https://www.mkdocs.org/user-guide/deploying-your-docs/
+- `mkdocs gh-deploy` で認証を求められ、パスワード入力で失敗する
+    - GitHubアカウントのClassic tokenを使って認証を通過する https://qiita.com/NumLock7019/items/c867e01c5451dc7d06e3
+- 取得したドメインにDNSを設定して、GitHub Pagesにカスタムドメインとして設定する https://qiita.com/eshun-mikuro-tama/items/8fc3cfceab3281a8c24f
