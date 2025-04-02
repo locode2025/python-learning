@@ -1,4 +1,4 @@
-## MkDocsのインストール
+## MkDocs
 
 - チュートリアル https://www.mkdocs.org/getting-started/
     - `pip3 install mkdocs`
@@ -12,6 +12,7 @@
     - パスが通っていることを確認 `mkdocs --version`
 - テーマ https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
     - 複数のテーマを選択できる https://mkdocs.github.io/mkdocs-bootswatch
+- テンプレートの上書き https://www.mkdocs.org/user-guide/customizing-your-theme/
 
 ## GitHub Pages
 
