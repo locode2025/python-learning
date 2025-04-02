@@ -1,20 +1,21 @@
 site_name: はじめての Python
 site_url: https://pylocode.jp/
 site_description: 初学者向けのPythonのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。
-site_author: まさゆき
+site_author: Masayuki
 nav:
   - ホーム: index.md
-  - 第０章: chapter0.md
+  - はじめに: chapter0.md
+  - 変数とデータ型: chapter1.md
 theme:
   custom_dir: custom_theme/
   #for cosmo
-  name: cosmo
-  locale: ja
+  # name: cosmo
+  # locale: ja
   #for material
-  # name: material
-  # language: ja
-  # logo: img/favicon.ico
-  # favicon: img/favicon.ico
+  name: material
+  language: ja
+  logo: img/favicon.ico
+  favicon: img/favicon.ico
 extra:
   generator: false
   analytics:
@@ -25,6 +26,7 @@ markdown_extensions:
   - admonition
   - def_list
   - footnotes
+  - attr_list
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
