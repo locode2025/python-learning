@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="ja" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        
-        
+        <meta name="author" content="まさゆき">
+        <link rel="canonical" href="https://pylocode.jp/chapter0/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>第０章 - ベーシック Python</title>
+        <title>第０章 - はじめての Python</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">ベーシック Python</a>
+                <a class="navbar-brand" href="..">はじめての Python</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,17 +57,17 @@
                     <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
+                                <i class="fa fa-search"></i> 検索
                             </a>
                         </li>
                             <li class="nav-item">
                                 <a rel="prev" href=".." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
+                                    <i class="fa fa-arrow-left"></i> 前へ
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a rel="next" class="nav-link disabled">
-                                    Next <i class="fa fa-arrow-right"></i>
+                                    次へ <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                     </ul>
@@ -79,7 +79,7 @@
             <div class="row">
                     <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="目次">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
@@ -145,20 +145,20 @@
 </ul>
 <p>それでは早速Pythonを使ったプログラミングを体験していきましょう。</p>
 <h2 id="_1">はじめてのプログラミング</h2>
-<pre><code class="language-python">print('Hello World!')
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+</code></pre></div>
 <pre><code>Hello World!
 </code></pre>
 <p>このプログラムは、画面に「Hello World!」という文字列を表示する単純なプログラムです。
 クオーテーション囲まれている「Hello World!」の部分のメッセージを変更してみて、自分の名前を出力してみましょう！</p>
-<pre><code class="language-python">print('Hello まさゆき!')
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello まさゆき!&#39;</span><span class="p">)</span>
+</code></pre></div>
 <pre><code>Hello まさゆき!
 </code></pre>
 <p>print()のことを「プリント関数」と言います。関数とはコンピュータに対して行う命令にあたります。Pythonには他にもさまざまな関数が用意されています。</p>
 <p>続いて、次のコードを実行してみましょう。</p>
-<pre><code class="language-python">print('Hello ひろゆき！)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello ひろゆき！)</span>
+</code></pre></div>
 <pre><code>  File "/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_5822/114360147.py", line 1
     print('Hello ひろゆき！)
                        ^
@@ -166,13 +166,13 @@ SyntaxError: EOL while scanning string literal
 </code></pre>
 <p>エラーの原因は、print('Hello ひろゆき！) の シングルクォート (') の閉じ忘れ です。
 正しくは、次のようにシングルクォート (') を閉じる必要があります：</p>
-<pre><code class="language-python">print('Hello ひろゆき！')  # 正しい書き方
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello ひろゆき！&#39;</span><span class="p">)</span>  <span class="c1"># 正しい書き方</span>
+</code></pre></div>
 <pre><code>Hello ひろゆき！
 </code></pre>
 <p>または、ダブルクォート (") を使ってもOKです：</p>
-<pre><code class="language-python">print(&quot;Hello ひろゆき！&quot;)  # これもOK
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello ひろゆき！&quot;</span><span class="p">)</span>  <span class="c1"># これもOK</span>
+</code></pre></div>
 <pre><code>Hello ひろゆき！
 </code></pre>
 <p>Python は 文字列を開始したら必ず閉じるルール があります。閉じ忘れると、今回のように "EOL (End of Line) while scanning string literal" というエラーが発生します。</p>
@@ -183,10 +183,10 @@ SyntaxError: EOL while scanning string literal
 - ✅ 少しずつ試す → 1つずつ修正しながら原因を確かめる
 - ✅ 楽しむ！ → 「おっ、また新しいことを学べた！」という気持ちで取り組む</p>
 <p>間違えるほど成長できます。たくさんエラーを出して、どんどん上達していきましょう！🚀✨</p>
-<pre><code class="language-python">print('高柳　まさゆき')
-print('32歳')
-print('三度の飯よりラーメンが好き')
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;高柳　まさゆき&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;32歳&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;三度の飯よりラーメンが好き&#39;</span><span class="p">)</span>
+</code></pre></div>
 <pre><code>高柳　まさゆき
 32歳
 三度の飯よりラーメンが好き
@@ -198,22 +198,22 @@ print('三度の飯よりラーメンが好き')
 <p>まず、Pythonのコードを作成します。
 テキストエディタ（VSCode, PyCharm, Jupyter Notebook など）を開いて、以下のような .py ファイルを作成します。</p>
 <p>例：簡単な電卓プログラム (calculator.py)</p>
-<pre><code class="language-py"># ユーザーに2つの数値を入力してもらう
-num1 = float(input(&quot;1つ目の数字を入力: &quot;))
-num2 = float(input(&quot;2つ目の数字を入力: &quot;))
+<div class="highlight"><pre><span></span><code><span class="c1"># ユーザーに2つの数値を入力してもらう</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;1つ目の数字を入力: &quot;</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;2つ目の数字を入力: &quot;</span><span class="p">))</span>
 
-# 足し算を実行
-result = num1 + num2
+<span class="c1"># 足し算を実行</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
 
-# 結果を表示
-print(&quot;合計:&quot;, result)
-</code></pre>
+<span class="c1"># 結果を表示</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;合計:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
 <p>② 実行 ▶</p>
 <p>作成した .py ファイルを実行して、プログラムを動かします。</p>
 <p>方法 1: ターミナルで実行（Windows / Mac / Linux）
 ターミナルやコマンドプロンプトを開き、保存したファイルのあるフォルダへ移動して次のコマンドを実行：</p>
-<pre><code class="language-sh">python calculator.py
-</code></pre>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>calculator.py
+</code></pre></div>
 <p>方法 2: エディタの「Run」ボタンで実行
 VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン を押すだけでOK。</p>
 <h3 id="ide-integrated-development-environment">統合開発環境（IDE: Integrated Development Environment）とは？</h3>
@@ -290,13 +290,13 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
     - クォート (' や ") を閉じ忘れない
     - : や () などの記号を正しく使う
     - インデント（字下げ）を適切に入れる</p>
-<p>✅ 例（正しい書き方）</p>
-<pre><code class="language-py">print(&quot;こんにちは！&quot;)  # クォートを閉じる
-</code></pre>
-<p>❌ 間違い（エラーになる）</p>
-<pre><code class="language-py">print(&quot;こんにちは！   # クォートが閉じられていない
-</code></pre>
-<p>👉 こういうミスが原因で SyntaxError になることが多いので注意！</p>
+<p>✅ 例（正しい書き方）
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！&quot;</span><span class="p">)</span>  <span class="c1"># クォートを閉じる</span>
+</code></pre></div></p>
+<p>❌ 間違い（エラーになる）
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！   # クォートが閉じられていない</span>
+</code></pre></div>
+👉 こういうミスが原因で SyntaxError になることが多いので注意！</p>
 <ol>
 <li>エラーメッセージをよく読む<ul>
 <li>Pythonはエラーが発生すると、その原因を教えてくれます。</li>
@@ -310,35 +310,35 @@ VSCode や PyCharm などのエディタでは、「▶（実行）」ボタン 
 <p>🌟 読みやすいコードを書くためのポイント
 1. わかりやすい変数名をつける 🏷️
     - x や y だけでなく、意味がわかる名前を使おう！</p>
-<p>✅ 良い例</p>
-<pre><code class="language-py">age = 25  # 年齢
-user_name = &quot;ひろゆき&quot;  # ユーザーの名前
-</code></pre>
-<p>❌ 悪い例</p>
-<pre><code class="language-py">a = 25
-b = &quot;ひろゆき&quot;
-</code></pre>
-<p>👉 どんな値が入っているのかわかりづらいですね💦</p>
+<p>✅ 良い例
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># 年齢</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;ひろゆき&quot;</span>  <span class="c1"># ユーザーの名前</span>
+</code></pre></div></p>
+<p>❌ 悪い例
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;ひろゆき&quot;</span>
+</code></pre></div>
+👉 どんな値が入っているのかわかりづらいですね💦</p>
 <ol>
 <li>適切にコメントを書く 💬<ul>
 <li>コードの意味がすぐにわかるように、コメント (#) を使おう！</li>
 </ul>
 </li>
 </ol>
-<p>✅ 良い例</p>
-<pre><code class="language-py"># 2つの数を足し算するプログラム
-num1 = 5
-num2 = 10
-result = num1 + num2  # 合計を計算
-print(result)  # 結果を表示
-</code></pre>
-<p>❌ 悪い例</p>
-<pre><code class="language-py">n1 = 5
-n2 = 10
-r = n1 + n2
-print(r)
-</code></pre>
-<p>👉 何をしているプログラムかわかりづらいですね💦</p>
+<p>✅ 良い例
+<div class="highlight"><pre><span></span><code><span class="c1"># 2つの数を足し算するプログラム</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>  <span class="c1"># 合計を計算</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 結果を表示</span>
+</code></pre></div></p>
+<p>❌ 悪い例
+<div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div>
+👉 何をしているプログラムかわかりづらいですね💦</p>
 <p>「プログラムは "コンピュータのため" だけじゃなく、"人間のため" にも書くものだよ！」
 「ミスしても大丈夫！エラーと仲良くなりながら、一歩ずつ成長しよう😊✨」</p>
 <p>コツコツ練習すれば、どんどん書けるようになるよ！💪🔥</p>
@@ -376,7 +376,7 @@ print(r)
 
         <footer class="col-md-12">
             <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+            <p><a href="https://www.mkdocs.org/">MkDocs</a> でビルドされたドキュメンテーション</p>
         </footer>
         <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
@@ -390,17 +390,17 @@ print(r)
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title" id="searchModalLabel">検索</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>これらのドキュメントをこちらから検索できます。検索語句を以下に入力してください。</p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="検索..." id="mkdocs-search-query" title="検索語句を入力してください">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results" data-no-results-text="結果がありません"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -410,33 +410,33 @@ print(r)
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title" id="keyboardModalLabel">キーボードショートカット</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
             </div>
             <div class="modal-body">
               <table class="table">
                 <thead>
                   <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
+                    <th style="width: 20%;">キー</th>
+                    <th>アクション</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
+                    <td>このヘルプを開く</td>
                   </tr>
                   <tr>
                     <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
+                    <td>次のページ</td>
                   </tr>
                   <tr>
                     <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
+                    <td>前のページ</td>
                   </tr>
                   <tr>
                     <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
+                    <td>検索</td>
                   </tr>
                 </tbody>
               </table>
