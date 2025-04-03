@@ -1,13 +1,18 @@
-site_name: はじめて Python
+site_name: あらためてのプログラミング
 site_url: https://pylocode.jp/
-site_description: 初学者向けのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。
+site_description: プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。
 site_author: Masayuki
 nav:
-  - ホーム: index.md
-  - 第１章 はじめに: introduction.md
-  - 第２章 変数とデータ型: variable_and_type.md
-  - 第３章 コンテナ: container.md
-  - 第４章 条件分岐: conditinal_statement.md
+  - "改めて Python": index.md
+  - "第１章　はじめに": introduction.md
+  - "第２章　変数とデータ型": variable_and_type.md
+  - "第３章　コンテナ": container.md
+  - "第４章　条件分岐": conditinal_statement.md
+  - "第５章　繰り返し": loop.md
+  - "第６章　関数": function.md
+  - "第７章　オブジェクト": object.md
+  - "第８章　モジュール": module.md
+  - "第９章　おわりに": outro.md
 
 theme:
   custom_dir: custom_theme/

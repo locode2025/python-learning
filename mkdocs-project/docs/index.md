@@ -7,7 +7,7 @@ Python は、シンプルで読みやすく、初心者でもすぐにプログ�
 さあ、Python の世界へ一緒に飛び込みましょう！
 
 
-!!! Note
+!!! note
     Python 公式サイト [https://www.python.org/](https://www.python.org/)
 
 ---
