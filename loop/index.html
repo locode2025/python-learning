@@ -1,0 +1,1546 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/loop/">
+      
+      
+        <link rel="prev" href="../conditinal_statement/">
+      
+      
+        <link rel="next" href="../function/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>第５章 繰り返し - あらためてのプログラミング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="あらためてのプログラミング" class="md-header__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            あらためてのプログラミング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第５章　繰り返し
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="あらためてのプログラミング" class="md-nav__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    あらためてのプログラミング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    改めて Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第１章　はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variable_and_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第２章　変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第３章　コンテナ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第４章　条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第５章　繰り返し
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第５章　繰り返し
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 繰り返しの基本構文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 繰り返しの基本構文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      無限ループ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状態による繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しによるリストの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しによるリストの要素の利用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. for文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. for文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文による繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文の基本構造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文による決まった回数の繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whilefor" class="md-nav__link">
+    <span class="md-ellipsis">
+      while文とfor文の使い分け
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 繰り返しの制御
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 繰り返しの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しの強制終了
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しのスキップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      break文とcontinue文
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第６章　関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第７章　オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第８章　モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第９章　おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 繰り返しの基本構文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 繰り返しの基本構文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      無限ループ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状態による繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しによるリストの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しによるリストの要素の利用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. for文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. for文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文による繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文の基本構造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      for文による決まった回数の繰り返し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whilefor" class="md-nav__link">
+    <span class="md-ellipsis">
+      while文とfor文の使い分け
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 繰り返しの制御
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 繰り返しの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しの強制終了
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      繰り返しのスキップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      break文とcontinue文
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">繰り返し</h1>
+<hr />
+<h2 id="1">1. 繰り返しの基本構文</h2>
+<h3 id="while">while文</h3>
+<p>プログラムで 同じ処理を何度も実行 する場面はよくあります。例えば、「<strong>Hello, World!</strong> を5回表示する」処理を考えてみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>このコードでは、同じ処理を何度も手で書いている ため、可読性やメンテナンス性が低くなります。
+もし 100回 繰り返したい場合、<code>print()</code> を100行コピーしないといけません。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="c1"># (省略) 100回続く</span>
+<span class="c1"># ...</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>これは 保守が大変 です。
+例えば、「<strong>Hello, Python!</strong> に変更しよう」と思ったら、100行すべて書き換える必要があります！繰り返し処理を使えば、たった数行で100回の処理を実装できます！</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+~~<span class="w"> </span>（省略）100回続く<span class="w"> </span>~~
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+</code></pre></div></p>
+<hr />
+<h3 id="_2">無限ループ</h3>
+<p><code>while</code> 文を使うと、繰り返し処理を簡潔に書けますが、カウンタ変数の制御を忘れると「無限ループ」になってしまう ことがあります。無限ループとは、プログラムが永遠に繰り返し処理を続けてしまう 状態のことです。たとえば、次のコードを実行すると、止まらなくなる ので注意が必要です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+    <span class="c1"># count += 1 がない！ (カウンタの更新を忘れている)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+~~<span class="w"> </span>（省略）パソコンが動く限り続く<span class="w"> </span>~~
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+Hello,<span class="w"> </span>World!
+
+
+IOPub<span class="w"> </span>data<span class="w"> </span>rate<span class="w"> </span>exceeded.
+The<span class="w"> </span>notebook<span class="w"> </span>server<span class="w"> </span>will<span class="w"> </span>temporarily<span class="w"> </span>stop<span class="w"> </span>sending<span class="w"> </span>output
+to<span class="w"> </span>the<span class="w"> </span>client<span class="w"> </span><span class="k">in</span><span class="w"> </span>order<span class="w"> </span>to<span class="w"> </span>avoid<span class="w"> </span>crashing<span class="w"> </span>it.
+To<span class="w"> </span>change<span class="w"> </span>this<span class="w"> </span>limit,<span class="w"> </span><span class="nb">set</span><span class="w"> </span>the<span class="w"> </span>config<span class="w"> </span>variable
+<span class="sb">`</span>--NotebookApp.iopub_data_rate_limit<span class="sb">`</span>.
+
+Current<span class="w"> </span>values:
+NotebookApp.iopub_data_rate_limit<span class="o">=</span><span class="m">1000000</span>.0<span class="w"> </span><span class="o">(</span>bytes/sec<span class="o">)</span>
+NotebookApp.rate_limit_window<span class="o">=</span><span class="m">3</span>.0<span class="w"> </span><span class="o">(</span>secs<span class="o">)</span>
+</code></pre></div></p>
+<p>上記のコードは、</p>
+<ul>
+<li>✅ count += 1 がないため、count の値は ずっと 0 のまま です。</li>
+<li>✅ そのため、while count &lt; 5 の条件が ずっと True のまま になり、プログラムが止まらない！</li>
+</ul>
+<p>間違えて無限ループを実行してしまった場合、
+プログラムを強制終了する 必要があります。</p>
+<ul>
+<li>🔹 ターミナルやコマンドプロンプトで実行している場合<ul>
+<li>Ctrl + C を押すと、Pythonの実行を強制停止できます。</li>
+</ul>
+</li>
+<li>🔹 Jupyter Notebook を使っている場合<ul>
+<li>「■（停止ボタン）」 を押すと実行が止まります。</li>
+</ul>
+</li>
+</ul>
+<p>無限ループはバグの原因 になることが多いですが、
+逆に、特定の状況では意図的に使うこともあります。</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>  <span class="c1"># 条件を「常にTrue」にすることで無限ループを作る</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;何か入力してください（qで終了）：&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span>  <span class="c1"># &quot;q&quot; を入力するとループ終了</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;終了します&quot;</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c1"># ループを抜ける</span>
+</code></pre></div>
+<ul>
+<li>✅ while True で 無限ループを作成</li>
+<li>✅ break を使い、特定の条件でループを抜ける</li>
+</ul>
+<hr />
+<h3 id="_3">状態による繰り返し</h3>
+<p>これまでの <code>while</code> 文では、カウンタ変数を使って一定回数の繰り返しを行いましたが、
+実際のプログラムでは 「特定の条件が満たされるまで繰り返す」 という処理がよく使われます。</p>
+<p>このような「状態」による繰り返しを実装するには、ブール値（<code>True</code> / <code>False</code>）の変数を条件式に利用 します。</p>
+<hr />
+<p><strong>1. 状態を表す変数を使った繰り返し</strong></p>
+<p>次のコードは、「ユーザーが <strong>"exit"</strong> を入力するまで繰り返す」例です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;コマンドを入力してください（exit で終了）：&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">&quot;exit&quot;</span><span class="p">:</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;あなたの入力: </span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;プログラムを終了しました。&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>コマンドを入力してください（exit<span class="w"> </span>で終了）：go
+あなたの入力:<span class="w"> </span>go
+コマンドを入力してください（exit<span class="w"> </span>で終了）：think
+あなたの入力:<span class="w"> </span>think
+コマンドを入力してください（exit<span class="w"> </span>で終了）：feel
+あなたの入力:<span class="w"> </span>feel
+コマンドを入力してください（exit<span class="w"> </span>で終了）：exit
+プログラムを終了しました。
+</code></pre></div></p>
+<ul>
+<li>✅ <strong>running</strong> という変数が <code>True</code> の間、ループが続く</li>
+<li>✅ <strong>exit</strong> を入力すると <code>running = False</code> になり、ループが終了</li>
+</ul>
+<hr />
+<p><strong>2. 数値を使った条件による繰り返し</strong></p>
+<p>特定の条件を満たすまで繰り返す例として、ユーザーが<strong>10</strong>以上の数値を入力するまで繰り返す プログラムを作成できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">valid</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">valid</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;10以上の数値を入力してください: &quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;正しい入力: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10以上の数値を入力してください！&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>10以上の数値を入力してください:<span class="w"> </span><span class="m">1</span>
+10以上の数値を入力してください！
+10以上の数値を入力してください:<span class="w"> </span><span class="m">199</span>
+正しい入力:<span class="w"> </span><span class="m">199</span>
+</code></pre></div></p>
+<ul>
+<li>✅ <code>valid = False</code> の間は繰り返す</li>
+<li>✅ <strong>10</strong>以上の数値が入力されると <code>valid = True</code> に変わり、ループが終了</li>
+</ul>
+<hr />
+<h3 id="_4">繰り返しによるリストの作成</h3>
+<p>プログラムでは 「データをリストに蓄積する」 という処理がよくあります。
+例えば、学校のテストの点数を記録し、あとで集計するといったケースが考えられます。</p>
+<p><code>while</code> 文を使って、ユーザーから 複数のテストの点数を入力 し、それをリストに保存する方法を学びましょう。</p>
+<p><strong>1. テストの点数をリストに追加する</strong></p>
+<p>次のプログラムでは、<code>while</code> 文を使って 複数のテストの点数をリストに格納 し、最後に合計点と平均点を計算します。</p>
+<p><strong>プログラム</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">つ目のテストの点数を入力してください: &quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;点数は0〜100の範囲で入力してください！&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;入力された点数: </span><span class="si">{</span><span class="n">scores</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合計点: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;平均点: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>1つ目のテストの点数を入力してください:<span class="w"> </span><span class="m">78</span>
+2つ目のテストの点数を入力してください:<span class="w"> </span><span class="m">90</span>
+3つ目のテストの点数を入力してください:<span class="w"> </span><span class="m">59</span>
+4つ目のテストの点数を入力してください:<span class="w"> </span><span class="m">87</span>
+5つ目のテストの点数を入力してください:<span class="w"> </span><span class="m">70</span>
+入力された点数:<span class="w"> </span><span class="o">[</span><span class="m">78</span>,<span class="w"> </span><span class="m">90</span>,<span class="w"> </span><span class="m">59</span>,<span class="w"> </span><span class="m">87</span>,<span class="w"> </span><span class="m">70</span><span class="o">]</span>
+合計点:<span class="w"> </span><span class="m">384</span>
+平均点:<span class="w"> </span><span class="m">76</span>.8
+</code></pre></div></p>
+<ul>
+<li>✅ 点数をリスト (<code>scores</code>) に保存する</li>
+<li>✅ 5回の入力が終わったら、合計点と平均点を計算</li>
+<li>✅ 0〜100の範囲外の点数は受け付けないようにチェック</li>
+</ul>
+<hr />
+<p><strong>2. 入力を続けるか選べるようにする</strong></p>
+<p>次に、「何人分の点数を入力するかわからない場合」に対応する方法を紹介します。
+<code>while True</code> を使って、ユーザーが終了を選ぶまで繰り返し入力 できるようにします。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;テストの点数を入力してください（終了するには &#39;exit&#39; と入力）: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">score</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;exit&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="n">score</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;点数は0〜100の範囲で入力してください！&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;入力された点数: </span><span class="si">{</span><span class="n">scores</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合計点: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;平均点: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;点数が入力されませんでした。&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">テストの点数を入力してください</span><span class="err">（</span><span class="n">終了するには</span> <span class="s1">&#39;exit&#39;</span> <span class="n">と入力</span><span class="err">）</span><span class="p">:</span> <span class="mi">80</span>
+<span class="n">テストの点数を入力してください</span><span class="err">（</span><span class="n">終了するには</span> <span class="s1">&#39;exit&#39;</span> <span class="n">と入力</span><span class="err">）</span><span class="p">:</span> <span class="mi">90</span>
+<span class="n">テストの点数を入力してください</span><span class="err">（</span><span class="n">終了するには</span> <span class="s1">&#39;exit&#39;</span> <span class="n">と入力</span><span class="err">）</span><span class="p">:</span> <span class="n">exit</span>
+<span class="n">入力された点数</span><span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">合計点</span><span class="p">:</span> <span class="mi">170</span>
+<span class="n">平均点</span><span class="p">:</span> <span class="mf">85.0</span>
+</code></pre></div></p>
+<ul>
+<li>✅ <code>while True</code> を使って、何度でも点数を入力できるようにする</li>
+<li>✅ <code>break</code> を使って、<strong>exit</strong> が入力されたらループを抜ける</li>
+<li>✅ 点数が1つも入力されなかった場合の対策もする</li>
+</ul>
+<hr />
+<h3 id="_5">繰り返しによるリストの要素の利用</h3>
+<p>リストに保存されたデータは、繰り返し処理を使うことで 1つずつ取り出して利用 できます。
+例えば、テストの点数を使って 合格・不合格を判定 するプログラムを作成してみましょう。</p>
+<p><strong><code>while</code> を使ってリストの要素を順番に処理</strong></p>
+<p>リストの各要素に <code>while</code> ループを使ってアクセス する方法です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> 点: 合格&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> 点: 不合格&quot;</span><span class="p">)</span>
+
+    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">85</span><span class="w"> </span>点:<span class="w"> </span>合格
+<span class="m">42</span><span class="w"> </span>点:<span class="w"> </span>不合格
+<span class="m">90</span><span class="w"> </span>点:<span class="w"> </span>合格
+<span class="m">78</span><span class="w"> </span>点:<span class="w"> </span>合格
+<span class="m">30</span><span class="w"> </span>点:<span class="w"> </span>不合格
+</code></pre></div></p>
+<hr />
+<h2 id="2-for">2. for文</h2>
+<h3 id="for">for文による繰り返し</h3>
+<p><strong>1. while文の問題点とfor文のメリット</strong></p>
+<p>前回、<code>while</code> を使ってリストの要素を順番に処理しましたが、
+<code>while</code> には以下のような問題点があります。</p>
+<p>🔴 無限ループのリスク：
+　→ インデックスの更新を忘れると、無限ループになってしまう</p>
+<p>🔴 IndexErrorの可能性：
+　→ インデックスがリストの長さを超えるとエラーになる</p>
+<p>一方、for文 を使うと、これらの問題を簡単に回避 できます。</p>
+<p><strong>2. for を使った安全な繰り返し</strong></p>
+<p><code>for</code> 文は リストの要素を自動的に順番に取り出す ため、</p>
+<ul>
+<li>✅ 無限ループにならない</li>
+<li>✅ インデックスの管理が不要で、<code>IndexError</code> を防げる</li>
+</ul>
+<p>次の例では、<code>while</code> の代わりに <code>for</code> を使って、テストの点数を処理します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> 点: 合格&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> 点: 不合格&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="mi">85</span> <span class="n">点</span><span class="p">:</span> <span class="n">合格</span>
+<span class="mi">42</span> <span class="n">点</span><span class="p">:</span> <span class="n">不合格</span>
+<span class="mi">90</span> <span class="n">点</span><span class="p">:</span> <span class="n">合格</span>
+<span class="mi">78</span> <span class="n">点</span><span class="p">:</span> <span class="n">合格</span>
+<span class="mi">30</span> <span class="n">点</span><span class="p">:</span> <span class="n">不合格</span>
+</code></pre></div></p>
+<p><strong>3. for 文のポイント</strong></p>
+<ul>
+<li>✅ リストの要素を1つずつ自動的に取り出す</li>
+<li>✅ <code>while</code> のようにインデックスを管理する必要がない</li>
+<li>✅ リストの要素がなくなったら自動で終了</li>
+</ul>
+<hr />
+<h3 id="for_1">for文の基本構造</h3>
+<p>for文で繰り返す回数は、リストの要素数で決まります。そして、繰り返しのたびにリストの要素を先頭から順に取得し、変数に代入します。</p>
+<p><code>in</code> はリストだけではなく、タプルやディクショナリ、セットなどのほかのコンテナでも利用可能です。リストは格納する要素に順序を持ちますが、セットなどの順序の情報を持たないコンテナの場合、代入される要素に順序は保証されません。</p>
+<h3 id="for_2">for文による決まった回数の繰り返し</h3>
+<p><code>for</code> 文を使って決まった回数だけ繰り返す場合、<code>range()</code> 関数を使います。
+<code>range()</code> は、指定した範囲の数字を順番に生成し、その数字を <code>for</code> 文で繰り返し処理することができます。</p>
+<p>🔹 range()の基本構造</p>
+<div class="highlight"><pre><span></span><code><span class="nb">range</span><span class="p">(</span><span class="n">開始</span><span class="p">,</span> <span class="n">終了</span><span class="p">,</span> <span class="n">ステップ</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>開始：繰り返しを始める数字（省略すると0）</li>
+<li>終了：繰り返しを終了する数字（この数字は含まれません）</li>
+<li>ステップ：数字を増やす間隔（省略すると1）</li>
+</ul>
+<p>🔹 具体例：0から4までの5回繰り返し</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">0</span>
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">3</span>
+<span class="m">4</span>
+</code></pre></div></p>
+<ul>
+<li>✅ <code>range(5)</code> は 0 から 4 までの数字を生成</li>
+<li>✅ 繰り返しの回数は5回</li>
+</ul>
+<p>🔹 具体例：2から6までの繰り返し</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">2</span>
+<span class="m">3</span>
+<span class="m">4</span>
+<span class="m">5</span>
+<span class="m">6</span>
+</code></pre></div></p>
+<ul>
+<li>✅ <code>range(2, 7)</code> は 2 から 6 までの数字を生成</li>
+<li>✅ 終了値（7）は含まれないことに注意</li>
+</ul>
+<p>🔹 具体例：2ずつ増加する場合</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">0</span>
+<span class="m">2</span>
+<span class="m">4</span>
+<span class="m">6</span>
+<span class="m">8</span>
+</code></pre></div></p>
+<ul>
+<li>✅ <code>range(0, 10, 2)</code> は 0 から 10 の間を2ずつ増加</li>
+<li>✅ ステップを使うことで、繰り返し間隔を調整できる</li>
+</ul>
+<hr />
+<h3 id="whilefor">while文とfor文の使い分け</h3>
+<p><code>while</code> 文と <code>for</code> 文は、どちらも繰り返し処理に使いますが、その使い方には違いがあります。それぞれの特徴を理解することで、適切な場面で使い分けることができます。</p>
+<p><strong>🔹 while文</strong></p>
+<p><code>while</code> 文は、繰り返す条件が成り立っている限り繰り返しを続ける制御構文です。
+繰り返しの回数が事前に決まっていない場合に便利です。繰り返しの条件式を明示的に記述する必要があります。</p>
+<p>特徴：</p>
+<ul>
+<li>条件が満たされる限り繰り返す（条件が真である間）</li>
+<li>繰り返し回数が事前に分からない場合に適している</li>
+<li>条件を正しく管理しないと無限ループになる可能性がある</li>
+</ul>
+<p><strong>例：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></p>
+<p>この場合、<code>counter</code> が5未満の間は繰り返し、条件が満たされなくなった時点で終了します。</p>
+<p><strong>🔹 for文</strong></p>
+<p><code>for</code> 文は、指定された回数だけ繰り返す場合に使います。特に、リストや範囲を反復したい場合に便利です。事前に繰り返し回数や範囲が分かっている場合に最適です。</p>
+<p>特徴：</p>
+<ul>
+<li>回数や範囲が事前に分かっている場合に使う</li>
+<li>繰り返しの回数が決まっている、または反復対象が決まっている場合に適している</li>
+<li>無限ループや条件ミスのリスクが少ない</li>
+</ul>
+<p><strong>例：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></p>
+<p><code>range(5)</code> は 0 から 4 までの数を生成するので、5回の繰り返しが確実に行われます。</p>
+<hr />
+<p><strong>🔹 使い分けのポイント</strong></p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>while文</th>
+<th>for文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>繰り返し回数</strong></td>
+<td>事前に決まっていない</td>
+<td>事前に決まっている、または範囲が決まっている</td>
+</tr>
+<tr>
+<td><strong>繰り返し条件</strong></td>
+<td>条件式を指定（繰り返す条件が必要）</td>
+<td>反復する対象（リストや範囲）を指定</td>
+</tr>
+<tr>
+<td><strong>無限ループのリスク</strong></td>
+<td>条件の設定を間違えると無限ループになる可能性</td>
+<td>無限ループになることはない</td>
+</tr>
+<tr>
+<td><strong>使用例</strong></td>
+<td>条件が変化するまで繰り返す</td>
+<td>決まった回数、またはリストや範囲を反復</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3">3. 繰り返しの制御</h2>
+<h3 id="_6">繰り返しの強制終了</h3>
+<p><code>break</code> 文は、繰り返し処理を途中で強制的に終了させるためのものです。<code>while</code> や <code>for</code> ループを途中で終了させたい場合に使用します。例えば、特定の条件が満たされたときにループを止めたいときに便利です。</p>
+<p>次のコード例では、テストの点数リストから最初に合格（60点以上）した学生を見つけた時点で、繰り返しを終了します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">91</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合格: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">点&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;不合格: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">点&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>不合格:<span class="w"> </span>55点
+不合格:<span class="w"> </span>40点
+合格:<span class="w"> </span>65点
+</code></pre></div></p>
+<p>このコードでは、点数が60点以上の学生が現れた時に<code>break</code>を使って、ループを強制的に終了します。つまり、最初の合格者が見つかると、それ以降の点数のチェックは行われず、繰り返しが終了します。</p>
+<hr />
+<h3 id="_7">繰り返しのスキップ</h3>
+<p><code>continue</code> 文は、繰り返しの現在のループをスキップして、次のループに進むために使用します。条件を満たした場合に、処理を飛ばして次の繰り返しに移行することができます。</p>
+<p>以下のコードでは、点数が60点未満の学生をスキップして、次の学生の点数をチェックします。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">91</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>
+<span class="c1">#         print(f&quot;不合格: {score}点（スキップ）&quot;)</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合格: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">点&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>出力：
+<div class="highlight"><pre><span></span><code>合格:<span class="w"> </span>65点
+合格:<span class="w"> </span>72点
+合格:<span class="w"> </span>91点
+</code></pre></div></p>
+<p>このコードでは、<code>continue</code> を使って、60点未満の学生（不合格の学生）に対しては処理をスキップし、60点以上の学生だけに「合格」を表示します。</p>
+<hr />
+<h3 id="breakcontinue"><code>break</code>文と<code>continue</code>文</h3>
+<p><code>break</code> は、繰り返し処理を途中で完全に終了させます。
+<code>continue</code> は、現在の繰り返しをスキップして、次の繰り返しに進むことができます。</p>
+<p>これらの制御文を適切に使い分けることで、より柔軟で効率的な繰り返し処理を実装できます。</p>
+<hr />
+<h2 id="_8">この章のまとめ</h2>
+<p>この章では、Pythonにおける繰り返し処理（ループ）について学びました。以下のポイントを押さえておきましょう。</p>
+<div class="admonition success">
+<p class="admonition-title">1. 繰り返しの基本構造</p>
+<ol>
+<li><code>while</code> 文を使うことで、条件が満たされている限り繰り返し処理を実行できます。無限ループや状態に基づく繰り返し、リスト作成などにも活用できます。</li>
+<li><code>for</code> 文では、イテラブル（リスト、タプルなど）の要素を一つずつ取り出して処理します。<code>range()</code> 関数を使うことで、決まった回数の繰り返しも簡単に実現できます。</li>
+</ol>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. for文とwhile文の使い分け</p>
+<ol>
+<li><code>while</code> 文は繰り返しを行う条件が変わるまで処理を繰り返す場合に便利で、動的な条件に基づく繰り返しに適しています。</li>
+<li><code>for</code> 文はあらかじめ繰り返し回数やイテラブル（リストなど）が決まっている場合に適しており、要素を順番に処理する際に使用します。</li>
+</ol>
+</div>
+<div class="admonition success">
+<p class="admonition-title">3. 繰り返しの制御</p>
+<ol>
+<li><code>break</code> 文は繰り返し処理を途中で終了させるために使用し、特定の条件が満たされたときにループを停止します。</li>
+<li><code>continue</code> 文は現在の繰り返しをスキップし、次の繰り返しに進むことができます。</li>
+</ol>
+</div>
+<p>繰り返し処理を理解することで、より効率的にデータの処理や反復作業を自動化することが可能になります。</p>
+<hr />
+<h2 id="_9">練習問題</h2>
+<div class="admonition question">
+<p class="admonition-title">問題1: while文を使ったカウントダウン</p>
+<p>1から10までの数字をカウントダウンするプログラムを<code>while</code>文を使って作成してください。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題2: 無限ループと<code>break</code></p>
+<p><code>while</code>文を使って、ユーザーから「終了」と入力されるまで繰り返し入力を受け付けるプログラムを作成してください。もしユーザーが「終了」と入力した場合、<code>break</code>文を使ってループを終了させてください。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題3: <code>for</code>文によるリストの合計</p>
+<p>以下のリストに含まれる全ての数字の合計を<code>for</code>文を使って計算するプログラムを作成してください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題4: <code>range()</code>を使った繰り返し</p>
+<p><code>range()</code>を使って、1から20までの数字の中で偶数だけを出力するプログラムを作成してください。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題5: 繰り返しによるリストの作成とスキップ</p>
+<p>1から10までの数字をリストに格納するプログラムを作成してください。ただし、3と6はリストに追加せず、<code>continue</code>文を使ってスキップしてください。</p>
+</div>
+<hr />
+<p>👉 <a href="../function">次の章では、<strong>関数</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../conditinal_statement/" class="md-footer__link md-footer__link--prev" aria-label="前: 第４章　条件分岐">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                第４章　条件分岐
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../function/" class="md-footer__link md-footer__link--next" aria-label="次: 第６章　関数">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                第６章　関数
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

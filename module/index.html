@@ -1,0 +1,1752 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/module/">
+      
+      
+        <link rel="prev" href="../object/">
+      
+      
+        <link rel="next" href="../outro/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>第８章 モジュール - あらためてのプログラミング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="あらためてのプログラミング" class="md-header__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            あらためてのプログラミング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第８章　モジュール
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="あらためてのプログラミング" class="md-nav__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    あらためてのプログラミング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    改めて Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第１章　はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variable_and_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第２章　変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第３章　コンテナ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第４章　条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第５章　繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第６章　関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第７章　オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第８章　モジュール
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第８章　モジュール
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 部品を使おう
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 部品を使おう">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pythonで使える部品たち
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 組み込み関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 組み込み関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      組み込み関数とは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ファイル入出力
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. モジュールの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. モジュールの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュールとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      標準ライブラリ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュールの取り込み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      特定の関数や変数だけを取り込む
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ワイルドカードインポート
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュール取り込みのまとめ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. パッケージの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. パッケージの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージ内のモジュールを取り込む
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 外部ライブラリの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 外部ライブラリの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部ライブラリとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部ライブラリの準備
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      matplotlib
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第９章　おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 部品を使おう
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 部品を使おう">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pythonで使える部品たち
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 組み込み関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 組み込み関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      組み込み関数とは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ファイル入出力
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. モジュールの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. モジュールの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュールとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      標準ライブラリ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュールの取り込み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      特定の関数や変数だけを取り込む
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ワイルドカードインポート
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      モジュール取り込みのまとめ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. パッケージの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. パッケージの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージ内のモジュールを取り込む
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 外部ライブラリの利用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 外部ライブラリの利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部ライブラリとは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部ライブラリの準備
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      matplotlib
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">モジュール</h1>
+<hr />
+<h2 id="1">1. 部品を使おう</h2>
+<h3 id="python">Pythonで使える部品たち</h3>
+<p>プログラムを書くときには、基本的な変数や関数だけでなく、さまざまな便利な「部品」を活用できます。Pythonには、標準で提供されている「組み込み関数」や「標準ライブラリ」、自作や他者が作成した「モジュール」や「パッケージ」、そしてインターネット上で配布されている「外部ライブラリ」など、多くの部品が用意されています。これらを活用することで、より効率的にプログラムを作成できます。</p>
+<p>ここでは、それぞれの部品について簡単に紹介します。</p>
+<hr />
+<p><strong>1. 組み込み関数（Built-in Functions）</strong></p>
+<p>Pythonには、最初から使える便利な関数が多く用意されています。例えば：
+- <code>print()</code> : 画面に出力する
+- <code>len()</code> : 要素の数を取得する
+- <code>int()</code> / float() : 数値の型変換
+- <code>str()</code> : 文字列の型変換</p>
+<p>これらの関数は、特別な準備をしなくてもすぐに利用できます。</p>
+<hr />
+<p><strong>2. モジュール（Module）</strong></p>
+<p>Pythonでは、便利な機能が「モジュール」としてまとめられています。例えば：
+- <code>math</code> : 数学関数（平方根や三角関数など）
+- <code>random</code> : 乱数を扱う
+- <code>datetime</code> : 日付や時間を扱う</p>
+<p>これらのモジュールを利用するには、<code>import</code> 文を使います。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>  <span class="c1"># 4.0</span>
+</code></pre></div>
+<hr />
+<p><strong>3. パッケージ（Package）</strong></p>
+<p>モジュールをさらに整理してまとめたものが「パッケージ」です。例えば <code>numpy</code> や <code>pandas</code> などのライブラリは、複数のモジュールから構成されています。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<hr />
+<p><strong>4. 外部ライブラリ（External Libraries）</strong></p>
+<p>Pythonでは、世界中の開発者が作成した便利なライブラリをインストールして使うことができます。例えば：
+- <code>matplotlib</code> : グラフ描画
+- <code>requests</code> : Web API との通信
+- <code>pandas</code> : データ解析</p>
+<p>外部ライブラリを使うには、<code>pip</code> を利用してインストールします。</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>requests
+</code></pre></div>
+<p>このように、Pythonには便利な「部品」が豊富に用意されています。次の章では、それぞれの部品について詳しく学んでいきましょう。</p>
+<hr />
+<h2 id="2">2. 組み込み関数</h2>
+<h3 id="_2">組み込み関数とは</h3>
+<p>Python には、あらかじめ用意されている「組み込み関数（Built-in Functions）」が多数あります。これらの関数は、特別な準備をしなくても、Python をインストールした時点でそのまま使うことができます。</p>
+<p>例えば、次のような機能を提供する組み込み関数があります：</p>
+<ul>
+<li>データの出力: <code>print()</code></li>
+<li>データの型変換: <code>int()</code>, <code>float()</code>, <code>str()</code></li>
+<li>リストや文字列の長さ取得: <code>len()</code></li>
+<li>数値の計算: <code>abs()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code></li>
+<li>データの並び替え: <code>sorted()</code>, <code>reversed()</code></li>
+<li>要素の取得: <code>enumerate()</code>, <code>zip()</code></li>
+<li>関数を適用する: <code>map()</code>, <code>filter()</code></li>
+</ul>
+<p>組み込み関数を使うことで、プログラムを短くシンプルに書くことができ、より効率的なコーディングが可能になります。</p>
+<hr />
+<p><strong>例：基本的な組み込み関数の使用</strong></p>
+<p>以下のコードでは、いくつかの組み込み関数を試してみます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 文字列を画面に出力</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Hello,<span class="w"> </span>Python!
+</code></pre></div></p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 数値の型変換</span>
+<span class="n">num_str</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+<span class="n">num_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_int</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">123</span>
+</code></pre></div></p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># リストの要素数を取得</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">3</span>
+</code></pre></div></p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 最小値・最大値を求める</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">5</span>
+<span class="m">40</span>
+</code></pre></div></p>
+<hr />
+<p><strong>なぜ組み込み関数を使うのか？</strong></p>
+<p>組み込み関数を使うことで、次のようなメリットがあります。</p>
+<ol>
+<li>
+<dl>
+<dt>コードが簡潔になる</dt>
+<dd>例えば、<code>sum(numbers)</code> を使えば、ループを使わずにリストの合計が求められます。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>パフォーマンスが向上する</dt>
+<dd>組み込み関数は Python の内部で最適化されており、自作の関数より高速に動作することが多いです。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>可読性が向上する</dt>
+<dd><code>sorted(numbers)</code> のように、わかりやすい関数名がついているため、コードの意図が伝わりやすくなります。</dd>
+</dl>
+</li>
+</ol>
+<hr />
+<h3 id="_3">ファイル入出力</h3>
+<p>Python では、<code>open()</code> 関数を使ってファイルを開き、データを読み書きすることができます。ファイルを扱う際は、正しく開閉することが重要です。ここでは、標準入力から受け取ったテキストをファイルに保存するプログラムを、段階的に説明します。</p>
+<hr />
+<p><strong>1. <code>open()</code> と <code>close()</code> を使った基本的なファイル書き込み</strong></p>
+<p>まずは、<code>open()</code> と <code>close()</code> を使って、標準入力から受け取ったテキストをファイルに保存する方法を見てみましょう。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>  <span class="c1"># &quot;a&quot; は追記モード</span>
+<span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;保存するテキストを入力してください: &quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;テキストを output.txt に保存しました。&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>保存するテキストを入力してください:<span class="w">  </span>好きなテレビ番組はありますか
+テキストを<span class="w"> </span>output.txt<span class="w"> </span>に保存しました。
+</code></pre></div></p>
+<p><strong>出力（再度同じプログラムを実行する）：</strong></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>保存するテキストを入力してください:<span class="w">  </span>ネットテレビをよく見ます
+テキストを<span class="w"> </span>output.txt<span class="w"> </span>に保存しました。
+</code></pre></div></p>
+<p>ポイント</p>
+<ul>
+<li><code>open("output.txt", "a")</code> でファイルを開く。<ul>
+<li><code>"a"</code> は「追記モード（add）」を意味します。既存のファイルがある場合は上書きされます。</li>
+</ul>
+</li>
+<li><code>file.write(text)</code> でテキストを書き込む。</li>
+<li><code>file.close()</code> でファイルを閉じる。<ul>
+<li>ファイルを閉じないと、データが正しく保存されなかったり、メモリを無駄に消費したりする可能性があります。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>2. with 文を使ってファイルを開く</strong></p>
+<p>ファイルを開いたら必ず <code>close()</code> しなければなりませんが、もし <code>close()</code> を忘れると、データが保存されないことがあります。
+そこで、<code>with</code> 文を使うと、自動的に <code>close()</code> してくれるので便利です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;保存するテキストを入力してください: &quot;</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;テキストを output.txt に保存しました。&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>保存するテキストを入力してください:<span class="w">  </span>タイムリープしている
+テキストを<span class="w"> </span>output.txt<span class="w"> </span>に保存しました。
+</code></pre></div></p>
+<p><code>with</code> 文を使うメリット</p>
+<ul>
+<li><code>with</code> ブロックを抜けると、自動的に <code>close()</code> される。</li>
+<li><code>close()</code> の書き忘れを防げる。</li>
+<li>エラーが発生した場合でも、ファイルが適切に閉じられる。</li>
+</ul>
+<h2 id="3">3. モジュールの利用</h2>
+<h3 id="_4">モジュールとは</h3>
+<p>Python には、「モジュール（Module）」という仕組みがあります。モジュールとは、Python の機能をまとめたファイルのことで、再利用可能なコードを整理して管理するために使われます。
+Python には標準で用意されている「標準モジュール」のほか、自分で作成する「自作モジュール」や、外部からインストールできる「外部モジュール」があります。</p>
+<p><strong>モジュールを使うメリット</strong></p>
+<ol>
+<li>
+<dl>
+<dt>コードの再利用</dt>
+<dd>一度作成した関数やクラスを、別のプログラムでも簡単に使い回せます。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>コードの整理</dt>
+<dd>機能ごとに分割して管理できるため、コードが見やすくなります。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>Python の標準機能を簡単に利用</dt>
+<dd>Python には多くの便利な標準モジュールがあり、すぐに活用できます。</dd>
+</dl>
+</li>
+</ol>
+<h3 id="_5">標準ライブラリ</h3>
+<p>Python には、あらかじめ多くの便利なモジュールが「標準ライブラリ（Standard Library）」として用意されています。
+標準ライブラリは、追加のインストールなしで Python に最初から含まれており、<code>import</code> するだけですぐに使うことができます。</p>
+<p>例えば、以下のような標準ライブラリがあります：</p>
+<table>
+<thead>
+<tr>
+<th>モジュール</th>
+<th>主な機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>math</code></td>
+<td>数学計算（平方根、三角関数、対数など）</td>
+</tr>
+<tr>
+<td><code>random</code></td>
+<td>乱数の生成</td>
+</tr>
+<tr>
+<td><code>datetime</code></td>
+<td>日付・時刻の操作</td>
+</tr>
+<tr>
+<td><code>os</code></td>
+<td>OS の操作（ファイル・ディレクトリ操作）</td>
+</tr>
+<tr>
+<td><code>sys</code></td>
+<td>システム情報の取得（コマンドライン引数など）</td>
+</tr>
+<tr>
+<td><code>json</code></td>
+<td>JSON 形式のデータを扱う</td>
+</tr>
+<tr>
+<td><code>csv</code></td>
+<td>CSV ファイルを読み書きする</td>
+</tr>
+<tr>
+<td><code>re</code></td>
+<td>正規表現を使った文字列処理</td>
+</tr>
+<tr>
+<td><code>urllib</code></td>
+<td>Web からデータを取得する</td>
+</tr>
+<tr>
+<td><code>collections</code></td>
+<td>高度なデータ構造（デフォルト辞書、キューなど）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_6">モジュールの取り込み</h3>
+<p>Python では、<code>import</code> 文を使ってモジュールを取り込み、さまざまな機能を利用できます。
+モジュールの取り込み方にはいくつかの方法があり、それぞれ用途に応じて使い分けることが重要です。</p>
+<p><strong>1. 基本的な import の使い方</strong></p>
+<p>最も基本的な方法は、<code>import モジュール名</code> でモジュール全体を取り込む方法です。
+この場合、モジュール内の関数や変数を使うときは <code>モジュール名.関数名</code> のように記述します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>.0
+<span class="m">3</span>.141592653589793
+</code></pre></div></p>
+<p>✅ メリット</p>
+<ul>
+<li>モジュール名を明示するため、どのモジュールの関数を使っているか分かりやすい。</li>
+</ul>
+<p>⚠️ 注意点</p>
+<ul>
+<li>モジュール名を毎回書く必要があるため、コードが長くなることがある。</li>
+</ul>
+<p><strong>2. 別名（エイリアス）をつける</strong></p>
+<p>モジュール名が長い場合や、短く書きたい場合は <code>as</code> を使って別名（エイリアス）をつけられます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>.0
+</code></pre></div></p>
+<p>✅ メリット</p>
+<ul>
+<li>コードを短くできる。</li>
+<li>よく使うモジュールに対して一般的な別名をつけることで、可読性が向上する（例: <code>numpy</code> → <code>np</code>、<code>pandas</code> → <code>pd</code>）。</li>
+</ul>
+<hr />
+<h3 id="_7">特定の関数や変数だけを取り込む</h3>
+<p>モジュール全体ではなく、一部の関数や変数だけを使いたい場合は、<code>from</code> を使います。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>.0
+<span class="m">3</span>.141592653589793
+</code></pre></div></p>
+<p>✅ メリット</p>
+<ul>
+<li><code>math.sqrt()</code> ではなく、<code>sqrt()</code> のように直接関数を呼び出せる。</li>
+<li>必要な機能だけをインポートするので、コードがシンプルになる。</li>
+</ul>
+<p>⚠️ 注意点</p>
+<ul>
+<li>どのモジュールの関数かわかりにくくなることがある。</li>
+</ul>
+<hr />
+<h3 id="_8">ワイルドカードインポート</h3>
+<p>すべての関数や変数をインポートしたい場合は、<code>*</code>（ワイルドカード）を使います。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>.0
+<span class="m">3</span>.141592653589793
+</code></pre></div></p>
+<p>⚠️ 注意点（非推奨）</p>
+<ul>
+<li>どの関数がどのモジュール由来なのか分かりにくくなる。</li>
+<li>他のモジュールと関数名が衝突する可能性があるため、基本的には避ける。</li>
+</ul>
+<hr />
+<h3 id="_9">モジュール取り込みのまとめ</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>記述例</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>import モジュール名</code></td>
+<td><code>import math</code></td>
+<td>標準的な方法。<code>math.sqrt()</code> のようにモジュール名をつけて使う。</td>
+</tr>
+<tr>
+<td><code>import モジュール名 as 別名</code></td>
+<td><code>import numpy as np</code></td>
+<td>モジュール名を短縮できる。よく使うモジュールに便利。</td>
+</tr>
+<tr>
+<td><code>from モジュール名 import 関数名</code></td>
+<td><code>from math import sqrt, pi</code></td>
+<td>必要な関数のみをインポートでき、短く書ける。</td>
+</tr>
+<tr>
+<td><code>from モジュール名 import *</code></td>
+<td><code>from math import *</code></td>
+<td>すべての関数をインポート。関数名の衝突に注意。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. パッケージの利用</h2>
+<h3 id="_10">パッケージとは</h3>
+<p>Python における「パッケージ」は、関連するモジュールをまとめたディレクトリのことを指します。
+パッケージを使うことで、大規模なプロジェクトやライブラリを管理しやすくすることができます。パッケージは、モジュールが整理された形で提供され、各モジュールのファイルを簡単にインポートして利用できます。</p>
+<p><strong>1. パッケージの構成</strong></p>
+<p>パッケージは、基本的に以下のような構造を持っています。</p>
+<div class="highlight"><pre><span></span><code>mypackage/<span class="w">                </span><span class="c1"># パッケージのディレクトリ</span>
+<span class="w">    </span>__init__.py<span class="w">           </span><span class="c1"># パッケージの初期化ファイル（必須）</span>
+<span class="w">    </span>module1.py<span class="w">            </span><span class="c1"># モジュール1</span>
+<span class="w">    </span>module2.py<span class="w">            </span><span class="c1"># モジュール2</span>
+<span class="w">    </span>subpackage/<span class="w">           </span><span class="c1"># サブパッケージ（さらにモジュールを持つディレクトリ）</span>
+<span class="w">        </span>__init__.py
+<span class="w">        </span>submodule.py
+</code></pre></div>
+<ul>
+<li><code>mypackage/</code> がパッケージのディレクトリです。</li>
+<li><code>__init__.py</code> はそのディレクトリがパッケージであることを示すために必要なファイルです。このファイルは空でも構いませんが、パッケージがインポートされたときに初期化処理を行うために使われることもあります。</li>
+<li>各モジュール（<code>module1.py</code> や <code>module2.py</code>）やサブパッケージ（<code>subpackage/</code>）は、パッケージ内の機能を構成するファイルです。</li>
+</ul>
+<p><strong>2. パッケージのインポート</strong></p>
+<p>パッケージ内のモジュールをインポートするには、次のように記述します。</p>
+<ol>
+<li>
+<p>モジュールのインポート</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mypackage.module1</span>
+
+<span class="n">mypackage</span><span class="o">.</span><span class="n">module1</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>サブパッケージ内のモジュールのインポート</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mypackage.subpackage.submodule</span>
+
+<span class="n">mypackage</span><span class="o">.</span><span class="n">subpackage</span><span class="o">.</span><span class="n">submodule</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>パッケージ全体をインポート</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mypackage</span>
+
+<span class="n">mypackage</span><span class="o">.</span><span class="n">module1</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+<span class="n">mypackage</span><span class="o">.</span><span class="n">module2</span><span class="o">.</span><span class="n">another_function</span><span class="p">()</span>
+</code></pre></div>
+</li>
+</ol>
+<hr />
+<h3 id="_11">パッケージ内のモジュールを取り込む</h3>
+<p><strong>1. パッケージの利用例</strong></p>
+<p>たとえば、<code>requests</code> という人気のある外部ライブラリは、実際には多くのモジュールを含むパッケージです。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+<p><code>requests</code> は、HTTP 通信に関するさまざまな機能を提供するモジュールを集めたパッケージです。</p>
+<p><strong>2. サブパッケージ</strong></p>
+<p>パッケージはサブパッケージを持つことができます。サブパッケージもパッケージと同じようにモジュールや他のサブパッケージを持つことができ、さらに階層的に管理できます。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mypackage.subpackage.submodule</span>
+</code></pre></div>
+<p>このように、パッケージは階層的に構造を持つことができます。</p>
+<hr />
+<h2 id="5">5. 外部ライブラリの利用</h2>
+<h3 id="_12">外部ライブラリとは</h3>
+<p>外部ライブラリ（または外部モジュール）とは、Pythonの標準ライブラリには含まれていないが、Pythonコミュニティや第三者の開発者が提供している、追加機能を持ったモジュールやパッケージです。これらのライブラリは、特定の問題を解決するために非常に便利で、しばしば公式のパッケージリポジトリである Python Package Index (PyPI) からインストールして利用します。</p>
+<p>外部ライブラリを使うことで、標準ライブラリではできないような特定の機能や、複雑な処理を簡単に実現できます。</p>
+<hr />
+<h3 id="_13">外部ライブラリの準備</h3>
+<p>外部ライブラリは、Python のパッケージ管理ツールである <code>pip</code> を使ってインストールします。pip は、PyPI からパッケージを簡単にインストールできるツールです。</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>パッケージ名
+</code></pre></div>
+<p>例えば、<code>requests</code> ライブラリをインストールするには次のようにします。</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>requests
+</code></pre></div>
+<hr />
+<h3 id="matplotlib">matplotlib</h3>
+<p><code>matplotlib</code> は、データの可視化に非常に便利なライブラリです。特に、グラフやプロットを作成するために広く利用されます。以下は、<code>matplotlib</code> を使って簡単な折れ線グラフを描く例です。</p>
+<p><strong>インストール</strong></p>
+<p>まず、<code>matplotlib</code> をインストールします。</p>
+<p><strong>コマンド：</strong>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>matplotlib
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Defaulting<span class="w"> </span>to<span class="w"> </span>user<span class="w"> </span>installation<span class="w"> </span>because<span class="w"> </span>normal<span class="w"> </span>site-packages<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>writeable
+Collecting<span class="w"> </span>matplotlib
+<span class="w">    </span>Downloading<span class="w"> </span>matplotlib-3.9.4-cp39-cp39-macosx_11_0_arm64.whl<span class="w"> </span><span class="o">(</span><span class="m">7</span>.8<span class="w"> </span>MB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">7</span>.8<span class="w"> </span>MB<span class="w"> </span><span class="m">6</span>.1<span class="w"> </span>MB/s<span class="w"> </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hRequirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>packaging&gt;<span class="o">=</span><span class="m">20</span>.0<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>matplotlib<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">24</span>.2<span class="o">)</span>
+Collecting<span class="w"> </span>pyparsing&gt;<span class="o">=</span><span class="m">2</span>.3.1
+<span class="w">    </span>Downloading<span class="w"> </span>pyparsing-3.2.3-py3-none-any.whl<span class="w"> </span><span class="o">(</span><span class="m">111</span><span class="w"> </span>kB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">111</span><span class="w"> </span>kB<span class="w"> </span><span class="m">9</span>.7<span class="w"> </span>MB/s<span class="w"> </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hCollecting<span class="w"> </span>fonttools&gt;<span class="o">=</span><span class="m">4</span>.22.0
+<span class="w">    </span>Downloading<span class="w"> </span>fonttools-4.56.0-cp39-cp39-macosx_10_9_universal2.whl<span class="w"> </span><span class="o">(</span><span class="m">2</span>.8<span class="w"> </span>MB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">2</span>.8<span class="w"> </span>MB<span class="w"> </span><span class="m">7</span>.2<span class="w"> </span>MB/s<span class="w"> </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hCollecting<span class="w"> </span>cycler&gt;<span class="o">=</span><span class="m">0</span>.10
+<span class="w">    </span>Downloading<span class="w"> </span>cycler-0.12.1-py3-none-any.whl<span class="w"> </span><span class="o">(</span><span class="m">8</span>.3<span class="w"> </span>kB<span class="o">)</span>
+Collecting<span class="w"> </span>importlib-resources&gt;<span class="o">=</span><span class="m">3</span>.2.0
+<span class="w">    </span>Downloading<span class="w"> </span>importlib_resources-6.5.2-py3-none-any.whl<span class="w"> </span><span class="o">(</span><span class="m">37</span><span class="w"> </span>kB<span class="o">)</span>
+Collecting<span class="w"> </span>pillow&gt;<span class="o">=</span><span class="m">8</span>
+<span class="w">    </span>Downloading<span class="w"> </span>pillow-11.1.0-cp39-cp39-macosx_11_0_arm64.whl<span class="w"> </span><span class="o">(</span><span class="m">3</span>.1<span class="w"> </span>MB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">3</span>.1<span class="w"> </span>MB<span class="w"> </span><span class="m">5</span>.5<span class="w"> </span>MB/s<span class="w"> </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hRequirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>python-dateutil&gt;<span class="o">=</span><span class="m">2</span>.7<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>matplotlib<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">2</span>.9.0.post0<span class="o">)</span>
+Collecting<span class="w"> </span>kiwisolver&gt;<span class="o">=</span><span class="m">1</span>.3.1
+<span class="w">    </span>Downloading<span class="w"> </span>kiwisolver-1.4.7-cp39-cp39-macosx_11_0_arm64.whl<span class="w"> </span><span class="o">(</span><span class="m">64</span><span class="w"> </span>kB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">64</span><span class="w"> </span>kB<span class="w"> </span><span class="m">9</span>.2<span class="w"> </span>MB/s<span class="w">  </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hCollecting<span class="w"> </span>contourpy&gt;<span class="o">=</span><span class="m">1</span>.0.1
+<span class="w">    </span>Downloading<span class="w"> </span>contourpy-1.3.0-cp39-cp39-macosx_11_0_arm64.whl<span class="w"> </span><span class="o">(</span><span class="m">249</span><span class="w"> </span>kB<span class="o">)</span>
+<span class="o">[</span>K<span class="w">     </span><span class="p">|</span>████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">249</span><span class="w"> </span>kB<span class="w"> </span><span class="m">6</span>.9<span class="w"> </span>MB/s<span class="w"> </span>eta<span class="w"> </span><span class="m">0</span>:00:01
+<span class="o">[</span>?25hRequirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>numpy&gt;<span class="o">=</span><span class="m">1</span>.23<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>matplotlib<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">2</span>.0.2<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>zipp&gt;<span class="o">=</span><span class="m">3</span>.1.0<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>importlib-resources&gt;<span class="o">=</span><span class="m">3</span>.2.0-&gt;matplotlib<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">3</span>.21.0<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>six&gt;<span class="o">=</span><span class="m">1</span>.5<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>python-dateutil&gt;<span class="o">=</span><span class="m">2</span>.7-&gt;matplotlib<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">1</span>.15.0<span class="o">)</span>
+Installing<span class="w"> </span>collected<span class="w"> </span>packages:<span class="w"> </span>pyparsing,<span class="w"> </span>pillow,<span class="w"> </span>kiwisolver,<span class="w"> </span>importlib-resources,<span class="w"> </span>fonttools,<span class="w"> </span>cycler,<span class="w"> </span>contourpy,<span class="w"> </span>matplotlib
+Successfully<span class="w"> </span>installed<span class="w"> </span>contourpy-1.3.0<span class="w"> </span>cycler-0.12.1<span class="w"> </span>fonttools-4.56.0<span class="w"> </span>importlib-resources-6.5.2<span class="w"> </span>kiwisolver-1.4.7<span class="w"> </span>matplotlib-3.9.4<span class="w"> </span>pillow-11.1.0<span class="w"> </span>pyparsing-3.2.3
+<span class="o">[</span>33mWARNING:<span class="w"> </span>You<span class="w"> </span>are<span class="w"> </span>using<span class="w"> </span>pip<span class="w"> </span>version<span class="w"> </span><span class="m">21</span>.2.4<span class="p">;</span><span class="w"> </span>however,<span class="w"> </span>version<span class="w"> </span><span class="m">25</span>.0.1<span class="w"> </span>is<span class="w"> </span>available.
+You<span class="w"> </span>should<span class="w"> </span>consider<span class="w"> </span>upgrading<span class="w"> </span>via<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip&#39;</span><span class="w"> </span>command.<span class="o">[</span>0m
+</code></pre></div></p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Simple Line Plot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X Axis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y Axis&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong></p>
+<p><img alt="png" src="../img/output_30_0.png" /></p>
+<p>解説</p>
+<ul>
+<li><code>plt.plot(x, y)</code> で <code>x</code> と <code>y</code> のデータを元に折れ線グラフを作成します。</li>
+<li><code>plt.title()</code> や <code>plt.xlabel()</code>, <code>plt.ylabel()</code> でグラフのタイトルや軸ラベルを設定します。</li>
+<li><code>plt.show()</code> でグラフを画面に表示します。</li>
+</ul>
+<p>このように、<code>matplotlib</code> を使うことで、データの可視化が簡単に行えます。</p>
+<hr />
+<h3 id="requests">requests</h3>
+<p><code>requests</code> は、Web サイトからデータを取得したり、API と通信したりする際に便利なライブラリです。例えば、指定した URL からデータを取得し、その内容を表示するプログラムを作成できます。</p>
+<p><strong>インストール</strong></p>
+<p>まず、<code>requests</code> をインストールします。</p>
+<p><strong>コマンド：</strong>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>requests
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>Defaulting<span class="w"> </span>to<span class="w"> </span>user<span class="w"> </span>installation<span class="w"> </span>because<span class="w"> </span>normal<span class="w"> </span>site-packages<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>writeable
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>requests<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span><span class="m">2</span>.32.3<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>urllib3&lt;<span class="m">3</span>,&gt;<span class="o">=</span><span class="m">1</span>.21.1<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>requests<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">2</span>.3.0<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>idna&lt;<span class="m">4</span>,&gt;<span class="o">=</span><span class="m">2</span>.5<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>requests<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">3</span>.10<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>certifi&gt;<span class="o">=</span><span class="m">2017</span>.4.17<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>requests<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">2025</span>.1.31<span class="o">)</span>
+Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>charset-normalizer&lt;<span class="m">4</span>,&gt;<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/masayuki/Library/Python/3.9/lib/python/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>requests<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">3</span>.4.1<span class="o">)</span>
+<span class="o">[</span>33mWARNING:<span class="w"> </span>You<span class="w"> </span>are<span class="w"> </span>using<span class="w"> </span>pip<span class="w"> </span>version<span class="w"> </span><span class="m">21</span>.2.4<span class="p">;</span><span class="w"> </span>however,<span class="w"> </span>version<span class="w"> </span><span class="m">25</span>.0.1<span class="w"> </span>is<span class="w"> </span>available.
+You<span class="w"> </span>should<span class="w"> </span>consider<span class="w"> </span>upgrading<span class="w"> </span>via<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip&#39;</span><span class="w"> </span>command.<span class="o">[</span>0m
+</code></pre></div>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Request was successful!&quot;</span><span class="p">)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># 最初の投稿を表示</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Request failed with status code:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Request<span class="w"> </span>was<span class="w"> </span>successful!
+<span class="o">{</span><span class="s1">&#39;userId&#39;</span>:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="s1">&#39;id&#39;</span>:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="s1">&#39;title&#39;</span>:<span class="w"> </span><span class="s1">&#39;sunt aut facere repellat provident occaecati excepturi optio reprehenderit&#39;</span>,<span class="w"> </span><span class="s1">&#39;body&#39;</span>:<span class="w"> </span><span class="s1">&#39;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&#39;</span><span class="o">}</span>
+
+
+/Users/masayuki/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35:<span class="w"> </span>NotOpenSSLWarning:<span class="w"> </span>urllib3<span class="w"> </span>v2<span class="w"> </span>only<span class="w"> </span>supports<span class="w"> </span>OpenSSL<span class="w"> </span><span class="m">1</span>.1.1+,<span class="w"> </span>currently<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;ssl&#39;</span><span class="w"> </span>module<span class="w"> </span>is<span class="w"> </span>compiled<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;LibreSSL 2.8.3&#39;</span>.<span class="w"> </span>See:<span class="w"> </span>https://github.com/urllib3/urllib3/issues/3020
+<span class="w">    </span>warnings.warn<span class="o">(</span>
+</code></pre></div></p>
+<p>解説</p>
+<ul>
+<li><code>requests.get()</code> メソッドを使って、指定した URL に HTTP GET リクエストを送信します。</li>
+<li><code>response.status_code</code> でリクエストのステータスコードを確認できます。200 は成功を意味します。</li>
+<li><code>response.json()</code> で、レスポンスを JSON 形式で解析し、Python の辞書型として利用できます。</li>
+</ul>
+<p>この例では、JSONPlaceholder という無料のデモ用 API から投稿データを取得し、その内容を表示しています。</p>
+<h2 id="_14">この章のまとめ</h2>
+<div class="admonition success">
+<p class="admonition-title">1. 組み込み関数</p>
+<ul>
+<li>組み込み関数 は、Python の言語仕様として最初から提供されている関数です。</li>
+<li>これらの関数は、特別なインポートなしで使用でき、日常的なプログラミングに欠かせないものです。</li>
+<li>例として、<code>print()</code> や <code>len()</code>、<code>type()</code> などがあり、これらはPythonを使う上で頻繁に利用されます。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. 標準ライブラリ</p>
+<ul>
+<li>標準ライブラリ は、Python のインストール時に最初から含まれているモジュールやパッケージの集まりです。</li>
+<li>これにより、ファイル操作、数学計算、日付と時刻の操作、データ構造の操作などが簡単に行えます。</li>
+<li>例: <code>math</code>, <code>os</code>, <code>datetime</code>, <code>sys</code> など。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">3. 外部ライブラリ</p>
+<ul>
+<li>外部ライブラリ は、Python 標準ライブラリには含まれていないが、コミュニティや開発者が提供するライブラリです。</li>
+<li>外部ライブラリは、Python Package Index (PyPI) からインストールし、より高度な機能を簡単に追加できます。</li>
+<li>代表的なものとして、<code>requests</code>（HTTP通信）、<code>matplotlib</code>（グラフ描画）、<code>pandas</code>（データ解析）などがあります。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">4. パッケージ</p>
+<ul>
+<li>パッケージ は、関連するモジュールをディレクトリ単位でまとめたものです。</li>
+<li>パッケージを使うことで、複数のモジュールを整理し、階層構造で管理できます。</li>
+<li>パッケージは <code>__init__.py</code> ファイルを持ち、モジュールやサブパッケージを含むことができます。</li>
+<li>例: <code>numpy</code>, <code>matplotlib</code>, <code>requests</code> などのライブラリはパッケージとして提供されます。</li>
+</ul>
+</div>
+<hr />
+<h2 id="_15">練習問題</h2>
+<div class="admonition question">
+<p class="admonition-title">問題 1: 組み込み関数の利用</p>
+<p>次のリスト <code>numbers = [10, 20, 30, 40, 50]</code> に対して、以下の操作を行ってください。</p>
+<ol>
+<li>リスト numbers の要素の数を求める。</li>
+<li>リストの最初の要素を取得する。</li>
+<li>リスト内の最大値を求める。</li>
+</ol>
+<p>出力結果をコメントとして書いてください。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 2: 標準ライブラリを使ったファイル操作</p>
+<p>次の操作を行うプログラムを作成してください。</p>
+<ul>
+<li><code>"sample.txt"</code> というファイルを作成し、その中に文字列 <code>"Hello, Python!"</code> を書き込む。</li>
+<li><code>"sample.txt"</code> を読み込み、内容を表示する。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 3: 外部ライブラリ <code>requests</code> の使用</p>
+<p><code>requests</code> ライブラリを使って、以下の手順で Web サイトからデータを取得するプログラムを作成してください。</p>
+<ol>
+<li><code>https://jsonplaceholder.typicode.com/posts/1</code> から <strong>GET</strong> リクエストを送信し、レスポンスを受け取る。</li>
+<li>レスポンスの内容を JSON として解析し、取得したデータを表示する。</li>
+</ol>
+<dl>
+<dt>ヒント</dt>
+<dd><code>response.json()</code> メソッドを使用してください。</dd>
+</dl>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 4: パッケージ内のモジュールのインポート</p>
+<p>次のパッケージ構造を想定します。</p>
+<div class="highlight"><pre><span></span><code>mypackage/
+<span class="w">    </span>__init__.py
+<span class="w">    </span>module1.py
+<span class="w">    </span>module2.py
+</code></pre></div>
+<ol>
+<li><code>mypackage/module1.py</code> に定義された関数 <code>function1()</code> を、<code>mypackage/module2.py</code> からインポートして呼び出してください。</li>
+<li><code>function1()</code> が返す文字列 <code>"Hello from module1!"</code> を表示させるようにプログラムを書いてください。</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 5: パッケージの利用</p>
+<p>次の操作を行うプログラムを作成してください。</p>
+<ul>
+<li>標準ライブラリの <code>math</code> パッケージをインポートし、平方根を計算してください。</li>
+<li>例えば、数値 <code>16</code> の平方根を求めると、出力は <code>4.0</code> となるようにしてください。</li>
+</ul>
+<dl>
+<dt>ヒント</dt>
+<dd><code>math.sqrt()</code> 関数を使用してください。</dd>
+</dl>
+</div>
+<hr />
+<p>👉 <a href="../outro">次の章では、<strong>おわりに</strong> さらなる Python の有用性について説明します。</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../object/" class="md-footer__link md-footer__link--prev" aria-label="前: 第７章　オブジェクト">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                第７章　オブジェクト
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../outro/" class="md-footer__link md-footer__link--next" aria-label="次: 第９章　おわりに">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                第９章　おわりに
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

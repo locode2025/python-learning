@@ -1,0 +1,2038 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/function/">
+      
+      
+        <link rel="prev" href="../loop/">
+      
+      
+        <link rel="next" href="../object/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>第６章 関数 - あらためてのプログラミング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="あらためてのプログラミング" class="md-header__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            あらためてのプログラミング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第６章　関数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="あらためてのプログラミング" class="md-nav__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    あらためてのプログラミング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    改めて Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第１章　はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variable_and_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第２章　変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第３章　コンテナ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第４章　条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第５章　繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第６章　関数
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第６章　関数
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. オリジナルの関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. オリジナルの関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数の必要性とメリット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数を使うための基本的な2ステップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数定義と呼び出し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ローカル変数と独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 引数と戻り値
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 引数と戻り値">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      複数の引数を渡す
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      戻り値
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数呼び出しの正体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数の連携
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 関数の応用テクニック
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 関数の応用テクニック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      暗黙のタプルによる複数の戻り値
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      戻り値を個別の変数に代入する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      デフォルト引数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数のキーワード指定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      可変長引数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 独立性の破れ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 独立性の破れ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      グローバル変数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数と戻り値の存在価値
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="引数と戻り値の存在価値">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      結論：引数と戻り値の適切な利用が、良いコードを生む
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第７章　オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第８章　モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第９章　おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. オリジナルの関数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. オリジナルの関数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数の必要性とメリット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数を使うための基本的な2ステップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数定義と呼び出し
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ローカル変数と独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 引数と戻り値
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 引数と戻り値">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      複数の引数を渡す
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      戻り値
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数呼び出しの正体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      関数の連携
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 関数の応用テクニック
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 関数の応用テクニック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      暗黙のタプルによる複数の戻り値
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      戻り値を個別の変数に代入する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      デフォルト引数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数のキーワード指定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      可変長引数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 独立性の破れ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 独立性の破れ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      グローバル変数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      引数と戻り値の存在価値
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="引数と戻り値の存在価値">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      結論：引数と戻り値の適切な利用が、良いコードを生む
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">関数</h1>
+<hr />
+<h2 id="1">1. オリジナルの関数</h2>
+<h3 id="_2">関数の必要性とメリット</h3>
+<dl>
+<dt><strong>関数とは何か？</strong></dt>
+<dd>プログラムを書くとき、同じ処理を何度も繰り返し記述するのは効率が悪く、ミスの原因にもなります。関数を使うことで、<strong>「ひとまとまりの処理をまとめて定義し、必要なときに呼び出せる」</strong>ようになります。</dd>
+</dl>
+<p><strong>関数のメリット</strong></p>
+<p>関数を使うと、次のようなメリットがあります。</p>
+<ol>
+<li>
+<p>コードの再利用性が向上する</p>
+<p>一度定義した関数を何度でも呼び出せるため、同じコードを繰り返し書く必要がなくなる。</p>
+</li>
+<li>
+<p>コードが見やすく、保守しやすくなる</p>
+<p>関数を使うことで、プログラムが「処理ごとに分割」され、どの部分が何をしているかが明確になる。</p>
+</li>
+<li>
+<p>バグを減らしやすい</p>
+<p>ひとつの処理を関数としてまとめることで、エラーが起きた際に修正が容易になる。</p>
+</li>
+<li>
+<p>他のプログラムでも使い回せる</p>
+<p>汎用的な関数を作れば、別のプログラムでも再利用できる。</p>
+</li>
+</ol>
+<p><strong>関数を使わない場合の問題点</strong></p>
+<p>関数を使わずに、同じ処理を繰り返し記述するとどうなるでしょうか？
+たとえば、「名前を入力して挨拶を表示する」プログラムを考えてみます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">name1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;名前を入力してください: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name1</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+
+<span class="n">name2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;名前を入力してください: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name2</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+
+<span class="n">name3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;名前を入力してください: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name3</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>このコードでは、同じ処理を何度も書いているため、もし挨拶のメッセージを変更したい場合、すべての <code>print</code> 文を修正しなければなりません。</p>
+<p><strong>関数を使うとどうなるか？</strong></p>
+<p>この処理を関数でまとめると、簡潔で柔軟なコードになります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;名前を入力してください: &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">()</span>
+<span class="n">greet</span><span class="p">()</span>
+<span class="n">greet</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>名前を入力してください:<span class="w"> </span>アイ
+こんにちは、アイさん！
+名前を入力してください:<span class="w"> </span>ノブ
+こんにちは、ノブさん！
+名前を入力してください:<span class="w"> </span>ダイゴ
+こんにちは、ダイゴさん！
+</code></pre></div></p>
+<p>このように関数を使うことで、コードが短くなり、修正も容易になります。
+また、関数を定義すれば、繰り返し回数を自由に変更したり、ループを使ったりすることも可能です。</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h3 id="2">関数を使うための基本的な2ステップ</h3>
+<p>Python で関数を使うためには、次の 2つのステップ を理解することが重要です。</p>
+<ol>
+<li>関数を定義する</li>
+<li>関数を呼び出す</li>
+</ol>
+<p>この2つのステップを順番に詳しく解説します。</p>
+<hr />
+<h3 id="_3">関数定義と呼び出し</h3>
+<div class="admonition tip">
+<p class="admonition-title">ステップ1: 関数を定義する</p>
+<p>関数を使うためには、まず <code>def</code> キーワード を使って関数を 定義 する必要があります。</p>
+</div>
+<p><strong>関数の基本的な書き方</strong></p>
+<p>関数を定義するには、次のように書きます。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">関数名</span><span class="p">():</span>
+    <span class="n">処理</span>
+</code></pre></div>
+<ul>
+<li><code>def</code> は 関数を定義する ためのキーワード。</li>
+<li>関数名 には 自由に名前をつける ことができる。</li>
+<li><code>()</code> は この関数が実行する処理のまとまり であることを示す。</li>
+<li><code>:</code>（コロン）のあとに インデント（半角スペース4つまたはタブ）して処理を書いていく。</li>
+</ul>
+<p><strong>具体例</strong></p>
+<p>次のコードでは、「画面に挨拶を表示する」関数 <strong>greet</strong> を定義しています。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pythonの世界へようこそ！&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>この <code>greet</code> 関数は、「こんにちは！」と「Pythonの世界へようこそ！」を表示する処理」 をまとめたものです。</p>
+<p><strong>ポイント：</strong></p>
+<ul>
+<li><code>print</code> 文が インデントされていること に注意（インデントを忘れるとエラーになる）。</li>
+<li>関数を定義した だけ では、まだ何も実行されない。</li>
+</ul>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">ステップ2: 関数を呼び出す</p>
+<p>関数を 定義しただけでは動作しません。定義した関数を 実行する（呼び出す） ことで、初めて処理が実行されます。</p>
+</div>
+<p><strong>関数の呼び出し方</strong>
+関数を呼び出すには、次のように 関数名と <code>()</code> を書くだけ です。</p>
+<div class="highlight"><pre><span></span><code><span class="n">関数名</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>具体例</strong></p>
+<p>先ほど定義した <code>greet</code> 関数を 実際に呼び出してみましょう。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 関数の定義</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは！&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pythonの世界へようこそ！&quot;</span><span class="p">)</span>
+
+<span class="c1"># 関数の呼び出し</span>
+<span class="n">greet</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>こんにちは！
+Pythonの世界へようこそ！
+</code></pre></div></p>
+<p>このように、関数を定義し、それを呼び出すことで初めて処理が実行される ことがわかります。</p>
+<hr />
+<h3 id="_4">ローカル変数と独立性</h3>
+<p>関数を使う際に重要な概念の一つが <strong>ローカル変数（Local Variable）</strong> です。
+ローカル変数を理解することで、関数が他の部分と 独立した動作 をすることが分かります。</p>
+<dl>
+<dt><strong>ローカル変数とは？</strong></dt>
+<dd>関数内で定義された変数は ローカル変数 と呼ばれ、関数の外からはアクセスできません。これは 関数が他の部分と干渉しないための仕組み です。</dd>
+</dl>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">say_hello</span><span class="p">():</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;こんにちは！&quot;</span>  <span class="c1"># 関数内で定義されたローカル変数</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="n">say_hello</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>こんにちは！
+</code></pre></div></p>
+<p>この <code>message</code> 変数は <code>say_hello</code> 関数の中でしか使えません。
+関数の外で <code>message</code> を使おうとすると エラーになります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">say_hello</span><span class="p">():</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;こんにちは！&quot;</span>  <span class="c1"># 関数内で定義されたローカル変数</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+NameError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_7791/3463849412.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+----&gt;<span class="w"> </span><span class="m">1</span><span class="w"> </span>print<span class="o">(</span>message<span class="o">)</span>
+
+
+NameError:<span class="w"> </span>name<span class="w"> </span><span class="s1">&#39;message&#39;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>defined
+</code></pre></div></p>
+<p>このエラーは、message という変数が 関数の外では定義されていない ために発生します。</p>
+<hr />
+<p><strong>ローカル変数の独立性</strong></p>
+<p>関数を何度も呼び出しても、ローカル変数は毎回リセットされます。
+関数内で定義された変数は、他の呼び出しと影響を及ぼし合うことはありません。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">counter</span><span class="p">():</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+<span class="n">counter</span><span class="p">()</span>
+<span class="n">counter</span><span class="p">()</span>
+<span class="n">counter</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">1</span>
+<span class="m">1</span>
+<span class="m">1</span>
+</code></pre></div></p>
+<p>関数を呼び出すたびに <code>count</code> は <code>0</code> にリセットされる ため、結果は毎回 <code>1</code> になります。</p>
+<hr />
+<p><strong>ローカル変数が関数ごとに独立することのメリット</strong></p>
+<ul>
+<li>関数が他の部分に影響を与えない</li>
+<li>バグの発生を防ぎやすい</li>
+<li>関数を安心して再利用できる</li>
+</ul>
+<p>例えば、プログラムが大きくなると 変数の上書きによるバグ が起こりやすくなります。
+しかし、ローカル変数を使えば、関数ごとに独立しているため 変数の衝突を防げます。</p>
+<hr />
+<h2 id="2_1">2. 引数と戻り値</h2>
+<p>関数をより便利に使うためには 「引数」と「戻り値」 の概念が重要になります。
+これによって、関数に値を渡したり、処理の結果を受け取ったり できるようになります。</p>
+<h3 id="_5">引数</h3>
+<dl>
+<dt><strong>引数とは？</strong></dt>
+<dd>関数を呼び出す際に、外部から値を渡す ための仕組みを 「引数（ひきすう）」 といいます。
+関数定義の <code>()</code> 内に 変数名 を記述し、関数を呼び出すときに値を渡します。</dd>
+</dl>
+<p><strong>引数の基本構造：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">関数名</span><span class="p">(</span><span class="n">引数1</span><span class="p">,</span> <span class="n">引数2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+    <span class="n">処理</span>
+</code></pre></div></p>
+<p><strong>引数の具体例：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;太郎&quot;</span><span class="p">)</span>  <span class="c1"># 「こんにちは、太郎さん！」と出力</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;花子&quot;</span><span class="p">)</span>  <span class="c1"># 「こんにちは、花子さん！」と出力</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>こんにちは、太郎さん！
+こんにちは、花子さん！
+</code></pre></div></p>
+<p>この <code>name</code> は 関数内でのみ使えるローカル変数 です。
+関数を呼び出す際に "太郎" や "花子" を渡すことで、異なる出力が得られます。</p>
+<hr />
+<h3 id="_6">複数の引数を渡す</h3>
+<p>引数を複数指定することもできます。
+例えば、足し算をする関数を考えてみましょう。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">8</span>
+<span class="m">30</span>
+</code></pre></div></p>
+<p>このように、<code>a</code> と <code>b</code> の 2つの値 を引数として渡し、その合計を計算しています。引数には、数値や文字列はもちろん、コンテナも引数に渡すことができます。</p>
+<hr />
+<h3 id="_7">戻り値</h3>
+<dl>
+<dt><strong>戻り値とは？</strong></dt>
+<dd>関数は計算結果を出力するだけでなく、「戻り値」 を使って値を返すこともできます。
+<code>return</code> を使うことで、関数の外でその値を使えるようになります。</dd>
+</dl>
+<p><strong>戻り値の基本構造：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">関数名</span><span class="p">(</span><span class="n">引数</span><span class="p">):</span>
+    <span class="n">処理</span>
+    <span class="k">return</span> <span class="n">戻り値</span>
+</code></pre></div></p>
+<p><strong>戻り値の具体例：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">10</span>
+</code></pre></div></p>
+<p>この <code>return</code> によって、計算結果を 関数の外で使える ようになりました。
+例えば、戻り値を使ってさらに計算することもできます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> 
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">30</span>
+</code></pre></div></p>
+<hr />
+<h3 id="_8">関数呼び出しの正体</h3>
+<p><strong>関数呼び出し演算子 <code>()</code> について</strong></p>
+<p>Python では、関数を実行するときに 関数名の後に <code>()</code> を付ける ことで呼び出します。
+この <code>()</code> を 「関数呼び出し演算子」 と呼びます。</p>
+<p><strong>関数呼び出し演算子の役割</strong></p>
+<p>関数呼び出し演算子 <code>()</code> の重要なポイントは次の 2 つです。</p>
+<ul>
+<li><code>()</code> を 付けると 関数が実行される</li>
+<li><code>()</code> を 付けないと 関数自体（オブジェクト）が参照される</li>
+</ul>
+<p>例えば、以下のコードを見てみましょう。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;こんにちは！&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>&lt;<span class="k">function</span><span class="w"> </span>greet<span class="w"> </span>at<span class="w"> </span>0x7fc1295ea700&gt;
+こんにちは！
+</code></pre></div></p>
+<ul>
+<li><code>greet</code> → 関数オブジェクトの参照（関数そのもの）</li>
+<li><code>greet()</code> → 関数の実行結果（戻り値）</li>
+</ul>
+<hr />
+<p><strong>関数オブジェクトの参照を使う例</strong></p>
+<p>関数を <code>()</code> を付けずに変数に代入 すると、関数自体を代入 できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="n">calc</span> <span class="o">=</span> <span class="n">square</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">25</span>
+</code></pre></div></p>
+<p><code>calc = square</code> により、<code>calc(5)</code> で <code>square(5)</code> と同じ動作になります。
+これは 関数を引数として渡したり、動的に切り替えたりする ときに役立ちます。</p>
+<hr />
+<h3 id="_9">関数の連携</h3>
+<p><strong>関数の連携を使った例</strong></p>
+<p>ここでは、 数値を受け取り、それを加工しながら連携していく 例を考えます。</p>
+<p><strong>3つの関数を定義</strong></p>
+<ul>
+<li>double: 数値を2倍にする</li>
+<li>add_five: 数値に5を加える</li>
+<li>square: 数値を2乗する</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;数値を2倍にする&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_five</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;数値に5を加える&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">5</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;数値を2乗する&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">step1</span> <span class="o">=</span> <span class="n">double</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>       <span class="c1"># 3 * 2 = 6</span>
+<span class="n">step2</span> <span class="o">=</span> <span class="n">add_five</span><span class="p">(</span><span class="n">step1</span><span class="p">)</span>   <span class="c1"># 6 + 5 = 11</span>
+<span class="n">step3</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="n">step2</span><span class="p">)</span>     <span class="c1"># 11 ** 2 = 121</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">step3</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">121</span>
+</code></pre></div></p>
+<p>このように書くと、各処理の結果が明確になり、デバッグもしやすくなります。</p>
+<div class="admonition note">
+<p class="admonition-title">関数の連携のポイント</p>
+<ul>
+<li>関数の戻り値を、次の関数の引数として渡す</li>
+<li>ネストを避けて、処理を分けて書くと可読性が向上</li>
+<li>データの流れを意識すると、プログラムが整理しやすくなる</li>
+</ul>
+</div>
+<hr />
+<h2 id="3">3. 関数の応用テクニック</h2>
+<h3 id="_10">暗黙のタプルによる複数の戻り値</h3>
+<p>例えば、「円の面積」と「円周の長さ」を同時に計算して返す関数 を考えます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">circle_properties</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;半径を受け取り、円の面積と円周の長さを返す&quot;&quot;&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">circumference</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
+    <span class="k">return</span> <span class="n">area</span><span class="p">,</span> <span class="n">circumference</span>  <span class="c1"># 暗黙のタプル</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">circle_properties</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">(</span><span class="m">78</span>.53981633974483,<span class="w"> </span><span class="m">31</span>.41592653589793<span class="o">)</span>
+</code></pre></div></p>
+<p><code>return area, circumference</code> のようにカンマで区切ると、戻り値はタプルとして返されます。これは、タプルと定義する丸括弧 <code>()</code> を省略して記述していることになります。</p>
+<hr />
+<h3 id="_11">戻り値を個別の変数に代入する</h3>
+<p>タプルは 「アンパック（展開）」 することで、個々の変数に分解 できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">area</span><span class="p">,</span> <span class="n">circumference</span> <span class="o">=</span> <span class="n">circle_properties</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;円の面積: </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;円周の長さ: </span><span class="si">{</span><span class="n">circumference</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>円の面積:<span class="w"> </span><span class="m">78</span>.53981633974483
+円周の長さ:<span class="w"> </span><span class="m">31</span>.41592653589793
+</code></pre></div></p>
+<p>明示的に丸括弧を実装しても同じ意味になります。</p>
+<p><strong>プログラム</strong>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">circumference</span><span class="p">)</span> <span class="o">=</span> <span class="n">circle_properties</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;円の面積: </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;円周の長さ: </span><span class="si">{</span><span class="n">circumference</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力</strong>
+<div class="highlight"><pre><span></span><code>円の面積:<span class="w"> </span><span class="m">78</span>.53981633974483
+円周の長さ:<span class="w"> </span><span class="m">31</span>.41592653589793
+</code></pre></div></p>
+<hr />
+<h3 id="_12">デフォルト引数</h3>
+<p>関数を呼び出すとき、引数を省略してもデフォルトの値が使われるように設定できる機能 を 「デフォルト引数」 といいます。
+デフォルト引数を使うことで、関数の使い勝手が向上し、コードの可読性が向上 します。</p>
+<dl>
+<dt><strong>デフォルト引数の基本構文</strong></dt>
+<dd>デフォルト引数は、関数定義時に <code>=</code> を使って値を指定 します。</dd>
+</dl>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ゲスト&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">()</span>
+<span class="n">greet</span><span class="p">(</span><span class="s1">&#39;吉田栄作&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>こんにちは、ゲストさん！
+こんにちは、吉田栄作さん！
+</code></pre></div></p>
+<p><strong>複数のデフォルト引数</strong></p>
+<p>デフォルト引数は 複数設定可能 です。
+ただし、デフォルト値のある引数は、<strong>デフォルト値のない引数より後に書く</strong> 必要があります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">order</span><span class="p">(</span><span class="n">product</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">quantity</span> <span class="o">*</span> <span class="n">price</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2"> を </span><span class="si">{</span><span class="n">quantity</span><span class="si">}</span><span class="s2"> 個注文しました。合計 </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2"> 円です。&quot;</span><span class="p">)</span>
+
+<span class="n">order</span><span class="p">(</span><span class="s2">&quot;リンゴ&quot;</span><span class="p">)</span> 
+<span class="n">order</span><span class="p">(</span><span class="s2">&quot;オレンジ&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">order</span><span class="p">(</span><span class="s2">&quot;バナナ&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>リンゴ<span class="w"> </span>を<span class="w"> </span><span class="m">1</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">1000</span><span class="w"> </span>円です。
+オレンジ<span class="w"> </span>を<span class="w"> </span><span class="m">3</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">3000</span><span class="w"> </span>円です。
+バナナ<span class="w"> </span>を<span class="w"> </span><span class="m">2</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">1000</span><span class="w"> </span>円です。
+</code></pre></div></p>
+<p><strong>デフォルト引数の注意点</strong></p>
+<p>デフォルト引数を使うと便利ですが、変更可能なオブジェクト（リストや辞書）をデフォルト引数に使うと意図しない動作をする ことがあります。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">item_list</span><span class="o">=</span><span class="p">[]):</span>  <span class="c1"># リストをデフォルト引数にする</span>
+    <span class="n">item_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>  <span class="c1"># リストにアイテムを追加</span>
+    <span class="k">return</span> <span class="n">item_list</span>
+
+<span class="c1"># 最初の呼び出し</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_item</span><span class="p">(</span><span class="s2">&quot;リンゴ&quot;</span><span class="p">))</span>  
+<span class="c1"># → [&#39;リンゴ&#39;]</span>
+
+<span class="c1"># 2回目の呼び出し</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_item</span><span class="p">(</span><span class="s2">&quot;バナナ&quot;</span><span class="p">))</span>  
+<span class="c1"># → [&#39;リンゴ&#39;, &#39;バナナ&#39;]  （意図せず前回のリストを引き継いでしまう！）</span>
+</code></pre></div>
+<p>Python は デフォルト引数を関数定義時に 1 回だけ評価 するため、リストが 毎回同じオブジェクト を参照してしまいます。</p>
+<p><strong>正しい書き方</strong></p>
+<p>変更可能なオブジェクトをデフォルト引数にしたい場合は、デフォルト値を None にして、関数内で新しいオブジェクトを作る のが定石です。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">item_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">item_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">item_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 新しいリストを作成</span>
+    <span class="n">item_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">item_list</span>
+
+<span class="c1"># 毎回新しいリストが作られる</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_item</span><span class="p">(</span><span class="s2">&quot;リンゴ&quot;</span><span class="p">))</span>  <span class="c1"># → [&#39;リンゴ&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_item</span><span class="p">(</span><span class="s2">&quot;バナナ&quot;</span><span class="p">))</span>  <span class="c1"># → [&#39;バナナ&#39;]</span>
+</code></pre></div>
+<hr />
+<h3 id="_13">引数のキーワード指定</h3>
+<p>Python では関数の引数を 「キーワード指定（キーワード引数）」 で渡すことができます。
+キーワード指定を使うことで、関数の可読性が向上し、引数の順番を気にせずに関数を呼び出すことが可能 になります。</p>
+<p><strong>キーワード指定の基本</strong></p>
+<p>通常の関数呼び出しでは、引数は定義された 順番 で渡します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">introduce</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;私は </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> です。</span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> 歳で、</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2"> に住んでいます。&quot;</span><span class="p">)</span>
+
+<span class="n">introduce</span><span class="p">(</span><span class="s2">&quot;太郎&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;東京&quot;</span><span class="p">)</span> 
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>私は<span class="w"> </span>太郎<span class="w"> </span>です。25<span class="w"> </span>歳で、東京<span class="w"> </span>に住んでいます。
+</code></pre></div></p>
+<p>しかし、引数が増えると順番を間違えやすくなります。
+そこで、キーワード指定（名前付き引数）を使う と、引数の順番を気にせずに渡せます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">introduce</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;太郎&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;東京&quot;</span><span class="p">)</span>
+<span class="n">introduce</span><span class="p">(</span><span class="n">city</span><span class="o">=</span><span class="s2">&quot;大阪&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;花子&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>私は<span class="w"> </span>太郎<span class="w"> </span>です。25<span class="w"> </span>歳で、東京<span class="w"> </span>に住んでいます。
+私は<span class="w"> </span>花子<span class="w"> </span>です。30<span class="w"> </span>歳で、大阪<span class="w"> </span>に住んでいます。
+</code></pre></div></p>
+<hr />
+<p><strong>キーワード引数とデフォルト引数の組み合わせ</strong></p>
+<p>キーワード引数は デフォルト引数と組み合わせて使うことが多い です。
+デフォルト値を設定しておけば、省略した場合に自動で値が補完されます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">order</span><span class="p">(</span><span class="n">product</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">quantity</span> <span class="o">*</span> <span class="n">price</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2"> を </span><span class="si">{</span><span class="n">quantity</span><span class="si">}</span><span class="s2"> 個注文しました。合計 </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2"> 円です。&quot;</span><span class="p">)</span>
+
+<span class="c1"># デフォルト引数を利用</span>
+<span class="n">order</span><span class="p">(</span><span class="n">product</span><span class="o">=</span><span class="s2">&quot;りんご&quot;</span><span class="p">)</span>  
+
+<span class="c1"># キーワード指定で一部を変更</span>
+<span class="n">order</span><span class="p">(</span><span class="n">product</span><span class="o">=</span><span class="s2">&quot;バナナ&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>りんご<span class="w"> </span>を<span class="w"> </span><span class="m">1</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">1000</span><span class="w"> </span>円です。
+バナナ<span class="w"> </span>を<span class="w"> </span><span class="m">3</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">3000</span><span class="w"> </span>円です。
+</code></pre></div></p>
+<p><strong>注意点</strong></p>
+<p>キーワード引数は 位置引数（通常の引数）より後に書く必要 があります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">order</span><span class="p">(</span><span class="s2">&quot;みかん&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>みかん<span class="w"> </span>を<span class="w"> </span><span class="m">1</span><span class="w"> </span>個注文しました。合計<span class="w"> </span><span class="m">500</span><span class="w"> </span>円です。
+</code></pre></div></p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">order</span><span class="p">(</span><span class="n">quantity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;ぶどう&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>File<span class="w"> </span><span class="s2">&quot;/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_7791/1935673085.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>order<span class="o">(</span><span class="nv">quantity</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="s2">&quot;ぶどう&quot;</span><span class="o">)</span>
+<span class="w">                            </span>^
+SyntaxError:<span class="w"> </span>positional<span class="w"> </span>argument<span class="w"> </span>follows<span class="w"> </span>keyword<span class="w"> </span>argument
+</code></pre></div></p>
+<hr />
+<h3 id="_14">可変長引数</h3>
+<p>Pythonでは、引数の数が不定な関数 を定義することができます。
+これを 「可変長引数」 といい、 <code>*args</code> や <code>**kwargs</code> を使って実装します。</p>
+<dl>
+<dt><strong><code>*args</code>（位置引数の可変長引数）</strong></dt>
+<dd><code>*args</code> を使うと、複数の引数をタプルとして受け取る ことができます。関数の中で <code>args</code> は タプル になります。</dd>
+</dl>
+<p><strong>基本的な使い方：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sum_numbers</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合計: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">sum_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="n">sum_numbers</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>合計:<span class="w"> </span><span class="m">6</span>
+合計:<span class="w"> </span><span class="m">150</span>
+</code></pre></div></p>
+<p><strong>特徴</strong></p>
+<ul>
+<li>✅ 引数の数が決まっていなくても関数を呼び出せる</li>
+<li>✅ <code>args</code> は タプル なので、リストのように要素を取得できる</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">show_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;引数の個数: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;引数 </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">show_args</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;C++&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>引数の個数:<span class="w"> </span><span class="m">3</span>
+引数<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Python
+引数<span class="w"> </span><span class="m">2</span>:<span class="w"> </span>Java
+引数<span class="w"> </span><span class="m">3</span>:<span class="w"> </span>C++
+</code></pre></div></p>
+<hr />
+<dl>
+<dt><strong><code>**kwargs</code>（キーワード引数の可変長引数）</strong></dt>
+<dd><code>**kwargs</code> を使うと、キーワード付きの可変長引数を辞書として受け取る ことができます。</dd>
+</dl>
+<p><strong>基本的な使い方：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">show_info</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">show_info</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;太郎&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;東京&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>name:<span class="w"> </span>太郎
+age:<span class="w"> </span><span class="m">25</span>
+city:<span class="w"> </span>東京
+</code></pre></div>
+<p><strong>特徴</strong></p>
+<ul>
+<li>✅ <code>kwargs</code> は 辞書（dict） なので、キーと値のペアで管理できる</li>
+<li>✅ どの引数が渡されるかわからない場合に便利</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">display_settings</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s2">&quot;theme&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;テーマ: </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;theme&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;font_size&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;フォントサイズ: </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;font_size&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">display_settings</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;Japanese&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>テーマ:<span class="w"> </span>dark
+フォントサイズ:<span class="w"> </span><span class="m">14</span>
+</code></pre></div></p>
+<hr />
+<p><strong><code>*args</code> と <code>**kwargs</code> を組み合わせる</strong></p>
+<p><code>*args</code> と <code>**kwargs</code> を 同時に使用する ことも可能です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mixed_example</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;位置引数:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">キーワード引数:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">mixed_example</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;太郎&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>位置引数:
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">3</span>
+
+キーワード引数:
+name:<span class="w"> </span>太郎
+age:<span class="w"> </span><span class="m">30</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">使う順番に注意！</p>
+<p>関数を定義するときは、以下の順番で記述する必要があります。</p>
+<ol>
+<li>位置引数（通常の引数）</li>
+<li><code>*args</code>（可変長の位置引数）</li>
+<li><code>**kwargs</code>（可変長のキーワード引数）</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<ul>
+<li>✅ 正しい順番: <code>(通常の引数, *args, **kwargs)</code></li>
+<li>❌ エラーになる順番: <code>(通常の引数, **kwargs, *args)</code></li>
+</ul>
+</div>
+<hr />
+<h2 id="4">4. 独立性の破れ</h2>
+<h3 id="_15">グローバル変数</h3>
+<p>Pythonでは、関数の外側で定義された変数 を グローバル変数 と呼びます。
+通常、関数内で変数を定義すると ローカル変数 となり、関数外の変数（グローバル変数）とは 別のもの として扱われます。
+しかし、関数内から グローバル変数を直接書き換えたり、<code>global</code> キーワードを使って変更することも可能 です。</p>
+<p><strong>1. グローバル変数を関数内で使用する</strong></p>
+<p>関数内から グローバル変数を参照するだけ なら、そのまま利用できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">show_count</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;現在のカウント: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">show_count</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>現在のカウント:<span class="w"> </span><span class="m">0</span>
+</code></pre></div></p>
+<p>✅ グローバル変数を読むだけならエラーにならない</p>
+<hr />
+<p><strong>2. グローバル変数を関数内で書き換えるとエラー</strong></p>
+<p>関数内で グローバル変数を変更しようとするとエラー になります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;カウント: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">increment</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+UnboundLocalError<span class="w">                         </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_9855/3299216266.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">        </span><span class="m">5</span><span class="w">     </span>print<span class="o">(</span>f<span class="s2">&quot;カウント: {count}&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="m">6</span><span class="w"> </span>
+----&gt;<span class="w"> </span><span class="m">7</span><span class="w"> </span>increment<span class="o">()</span>
+
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_9855/3299216266.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>increment<span class="o">()</span>
+<span class="w">        </span><span class="m">2</span><span class="w"> </span>
+<span class="w">        </span><span class="m">3</span><span class="w"> </span>def<span class="w"> </span>increment<span class="o">()</span>:
+----&gt;<span class="w"> </span><span class="m">4</span><span class="w">     </span><span class="nv">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span><span class="m">5</span><span class="w">     </span>print<span class="o">(</span>f<span class="s2">&quot;カウント: {count}&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="m">6</span><span class="w"> </span>
+
+
+UnboundLocalError:<span class="w"> </span><span class="nb">local</span><span class="w"> </span>variable<span class="w"> </span><span class="s1">&#39;count&#39;</span><span class="w"> </span>referenced<span class="w"> </span>before<span class="w"> </span>assignment
+</code></pre></div></p>
+<p>🔴 <code>count</code> を関数内で変更しようとすると、Pythonは count を ローカル変数 とみなす。しかし、ローカル変数として定義される前に参照しようとしているためエラーが発生するからです。</p>
+<hr />
+<p><strong>3. global キーワードを使って書き換える</strong></p>
+<p><code>global</code> キーワードを使うと、関数内でグローバル変数を書き換えることができます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">count</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;カウント: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">increment</span><span class="p">()</span>  
+<span class="n">increment</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>カウント:<span class="w"> </span><span class="m">1</span>
+カウント:<span class="w"> </span><span class="m">2</span>
+</code></pre></div></p>
+<p>✅ <code>global count</code> を宣言すれば、関数内で <code>count</code> を書き換え可能</p>
+<hr />
+<p><strong>4. グローバル変数の問題点</strong></p>
+<p>(1) 副作用が発生しやすい</p>
+<p>グローバル変数を関数内で変更すると、どこで値が変わるのか分かりにくくなる ため、バグの原因 になりやすい。</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">count</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">count</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">increment</span><span class="p">()</span>
+<span class="n">increment</span><span class="p">()</span>
+<span class="n">reset</span><span class="p">()</span>
+<span class="n">increment</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p>✅ 関数の動作が予測しづらくなる</p>
+<hr />
+<p>(2) 関数の独立性が失われる
+関数の中でグローバル変数を使うと、その関数は 外部の変数に依存する ため、再利用しにくくなる。</p>
+<div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">total</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;合計: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</code></pre></div>
+<p>この関数は <code>total</code> に依存しているため、別の計算には使い回しにくい。</p>
+<hr />
+<p><strong>5. グローバル変数を避ける方法</strong></p>
+<p>✅ 関数の引数と戻り値を使うことで、グローバル変数を避ける ことができる。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">total</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+<p>メリット:</p>
+<ul>
+<li><code>total</code> の値を明示的にやり取りするため、関数の独立性が保たれる。</li>
+<li>関数がどの変数に影響を与えるのかが明確 になり、バグが減る。</li>
+</ul>
+<hr />
+<h3 id="_16">引数と戻り値の存在価値</h3>
+<p>プログラミングにおいて、関数は単なるコードの塊ではなく、「データの流れを整理し、再利用性を高める仕組み」 です。その中核を担うのが「引数」と「戻り値」です。特に、チーム開発や大規模なシステムでは、関数の独立性が重要になり、それを確保するために引数と戻り値を適切に活用することが求められます。</p>
+<p><strong>関数の独立性を保つことの重要性</strong></p>
+<p>ソフトウェア開発において、関数が独立して動作することは極めて重要です。特にチーム開発では、複数人が同じコードベースを編集するため、関数が不用意に外部の状態を変更すると、意図しないバグや予期せぬ挙動 が発生する原因になります。</p>
+<p>引数と戻り値を適切に設計することで、関数の動作が明確になり、他のメンバーが関数を利用しやすくなります。</p>
+<p><strong>1. グローバル変数への依存が生む問題</strong></p>
+<p>もし関数がグローバル変数に依存していると、次のような問題が発生します。</p>
+<ul>
+<li>チーム開発での競合 ... 同じグローバル変数を複数人が別々の意図で変更してしまい、思わぬバグを引き起こす。</li>
+<li>関数の影響範囲が不明確になる ... どこで値が変更されるかわからず、デバッグが困難になる。</li>
+<li>再利用性が低下する ... あるプロジェクトでは動いても、別のプロジェクトでは使えない可能性がある。</li>
+</ul>
+<p>例えば、ある関数が外部の変数を変更する場合、その関数を呼び出す前後でどのような値がセットされているかを常に意識しなければならず、開発の負担が増えます。</p>
+<p><strong>2. 引数の意義：関数に必要なデータを明示的に渡す</strong></p>
+<p>関数に引数を渡すことで、「この関数が何を処理するのか」が明確になります。</p>
+<ul>
+<li>関数の再利用性が高まる：引数を変更するだけで、異なるデータに対して処理を実行できる。</li>
+<li>関数のテストが容易になる：さまざまな値を引数として渡すことで、関数の動作を簡単に検証できる。</li>
+<li>コードの可読性が向上する：関数のインターフェースが明確になり、チームメンバーが直感的に利用しやすくなる。</li>
+</ul>
+<p>また、引数を適切に定義することで、関数の責務がはっきりし、他の開発者が関数の目的を理解しやすくなります。</p>
+<p><strong>3. 戻り値の意義：関数の結果を適切に受け取る</strong></p>
+<p>関数の結果を戻り値として返すことで、関数の内部で行われた処理の結果を適切に取得できます。</p>
+<ul>
+<li>
+<p>データの流れが明確になる</p>
+<p>関数の呼び出し元が、関数の処理結果を受け取って次の処理に活かせる。</p>
+</li>
+<li>
+<p>関数の副作用を減らせる</p>
+<p>関数内で不用意に外部の変数を書き換えないため、意図しない挙動を防げる。</p>
+</li>
+<li>
+<p>関数の独立性を維持できる</p>
+<p>戻り値を返すことで、関数が特定の環境に依存せず、どこでも使えるようになる。</p>
+</li>
+</ul>
+<p>例えば、関数の戻り値を変数に格納し、それを別の関数に渡すことで、関数間のデータの流れをシンプルに管理できます。</p>
+<p><strong>4. チーム開発における引数と戻り値の設計</strong></p>
+<p>チーム開発では、関数の引数と戻り値を適切に設計することが、バグの削減・可読性の向上・保守性の向上 につながります。</p>
+<p>設計のポイント: </p>
+<ol>
+<li>必要なデータはすべて引数として渡す<ul>
+<li>グローバル変数に依存せず、関数の動作を明確にする。</li>
+</ul>
+</li>
+<li>関数の結果は戻り値として返す<ul>
+<li>関数を呼び出した側が結果を明示的に受け取れるようにする。</li>
+</ul>
+</li>
+<li>関数が1つの責務に集中するようにする<ul>
+<li>複数の機能を詰め込まず、シンプルな構造を保つ。</li>
+</ul>
+</li>
+<li>引数や戻り値の型を統一する<ul>
+<li>チームでのコードの一貫性を保ち、予測しやすい関数を作る。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="_17">結論：引数と戻り値の適切な利用が、良いコードを生む</h4>
+<p>関数の引数と戻り値を適切に設計することで、プログラムの可読性・保守性・再利用性が向上し、バグを減らしやすくなります。</p>
+<p>特にチーム開発では、「誰が見ても分かりやすく、意図したとおりに動くコード」を書くことが重要です。そのために、関数の引数と戻り値を適切に活用し、グローバル変数への依存を避けることが、開発効率の向上と品質の安定につながります。</p>
+<hr />
+<h2 id="_18">この章のまとめ</h2>
+<p>本章では、Pythonにおける「関数」について学びました。関数は、コードの再利用性を高め、プログラムの可読性を向上させる重要な仕組みです。</p>
+<div class="admonition success">
+<p class="admonition-title">1. 関数の基本</p>
+<ul>
+<li><code>def</code> を使って関数を定義し、呼び出し演算子 <code>()</code> で実行する。</li>
+<li>ローカル変数 を利用することで、関数の独立性を保つ。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. 引数と戻り値</p>
+<ul>
+<li>引数 を使って外部からデータを受け取り、戻り値 を通じて処理結果を返す。</li>
+<li>関数同士を連携 させることで、より柔軟なプログラムが書ける。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">3. 関数の応用テクニック</p>
+<ul>
+<li>デフォルト引数 で省略可能なパラメータを設定できる。</li>
+<li>キーワード引数 を活用すると、可読性の高い関数呼び出しが可能。</li>
+<li>可変長引数 (<code>*args</code>, <code>**kwargs</code>) で柔軟な関数を作成できる。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">4. 独立性の破れとその対策</p>
+<ul>
+<li>グローバル変数 は関数の独立性を損なうため、極力避けるべき。</li>
+<li>引数と戻り値を適切に利用することで、関数の責務を明確にする。</li>
+</ul>
+</div>
+<p>関数を適切に設計し、データの流れを整理することで、保守性の高いプログラム を作成できるようになります。</p>
+<hr />
+<h2 id="_19">練習問題</h2>
+<div class="admonition question">
+<p class="admonition-title">問題 1: 関数の基本</p>
+<p>次の説明が 正しい場合は<strong>〇</strong>、誤っている場合は<strong>×</strong> を答えてください。</p>
+<ol>
+<li>関数を定義するには <code>def</code> キーワードを使用する。</li>
+<li>関数の名前の後に <code>()</code> をつけて定義する必要がある。</li>
+<li><code>return</code> を使うことで関数の実行結果を呼び出し元に返せる。</li>
+<li>Python では関数を定義しなくても、コードを繰り返し使うことは可能である。</li>
+<li>関数を呼び出すには、関数名の後に <code>()</code> をつける必要がある。</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 2: 引数と戻り値</p>
+<p>次の関数 <code>calculate_area</code> は、四角形の面積を計算する関数です。この関数には 「引数」と「戻り値」があるかどうか を答えてください。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculate_area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;面積は </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2"> です&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 3: デフォルト引数</p>
+<p>次の関数 <code>greet</code> には、デフォルト引数を設定しようとしています。適切に修正してください。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;こんにちは&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">さん！&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 4: 可変長引数</p>
+<p>次の <code>sum_numbers</code> 関数は、渡された数値をすべて足し合わせる関数です。<code>*args</code> を利用して修正してください。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sum_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 5: グローバル変数の影響</p>
+<p>次のコードを実行すると、どのような出力になりますか？また、このコードの問題点を説明してください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>  
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>  
+
+<span class="n">increment</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<hr />
+<p>👉 <a href="../object">次の章では、<strong>オブジェクト</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../loop/" class="md-footer__link md-footer__link--prev" aria-label="前: 第５章　繰り返し">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                第５章　繰り返し
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../object/" class="md-footer__link md-footer__link--next" aria-label="次: 第７章　オブジェクト">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                第７章　オブジェクト
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

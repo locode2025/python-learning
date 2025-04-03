@@ -1,0 +1,1589 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/object/">
+      
+      
+        <link rel="prev" href="../function/">
+      
+      
+        <link rel="next" href="../module/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>第７章 オブジェクト - あらためてのプログラミング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="あらためてのプログラミング" class="md-header__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            あらためてのプログラミング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第７章　オブジェクト
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="あらためてのプログラミング" class="md-nav__button md-logo" aria-label="あらためてのプログラミング" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    あらためてのプログラミング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    改めて Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第１章　はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variable_and_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第２章　変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第３章　コンテナ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第４章　条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第５章　繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第６章　関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第７章　オブジェクト
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第７章　オブジェクト
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. format関数の謎
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. format関数の謎">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトの型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字列オブジェクトが持つメソッド
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. オブジェクトの設計図
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. オブジェクトの設計図">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトの姿を決定づける設計図
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      オリジナルの設計図を作る
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. オブジェクトの落とし穴
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. オブジェクトの落とし穴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトのアイデンティティ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照による副作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      防御的コピー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      不変オブジェクト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトのまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第８章　モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第９章　おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. format関数の謎
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. format関数の謎">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトの型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字列オブジェクトが持つメソッド
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. オブジェクトの設計図
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. オブジェクトの設計図">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトの姿を決定づける設計図
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      オリジナルの設計図を作る
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. オブジェクトの落とし穴
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. オブジェクトの落とし穴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトのアイデンティティ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照による副作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      防御的コピー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      不変オブジェクト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      オブジェクトのまとめ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">オブジェクト</h1>
+<hr />
+<h2 id="1-format">1. format関数の謎</h2>
+<p>Python では、これまで学んできた <code>def</code> を使って関数を定義し、呼び出すことができます。例えば、以下のようなオリジナルの関数を定義できます。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">さん！&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;太郎&quot;</span><span class="p">))</span>  <span class="c1"># こんにちは、太郎さん！</span>
+</code></pre></div>
+<p>一方で、Python には <code>.format()</code> のようにオブジェクトに対してメソッドを呼び出す書き方があります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;こんにちは、</span><span class="si">{}</span><span class="s2">さん！&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;太郎&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>結果：</strong>
+<div class="highlight"><pre><span></span><code>こんにちは、太郎さん！
+</code></pre></div></p>
+<p><strong>関数とメソッドの違い</strong></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>関数 (<code>def</code>)</th>
+<th>メソッド (<code>オブジェクト.メソッド()</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属</td>
+<td>独立している</td>
+<td>特定のオブジェクトに所属している</td>
+</tr>
+<tr>
+<td>呼び出し方</td>
+<td><code>関数名(引数)</code></td>
+<td><code>オブジェクト.メソッド名(引数)</code></td>
+</tr>
+<tr>
+<td>使用例</td>
+<td><code>print(len("hello"))</code></td>
+<td><code>"hello".upper()</code></td>
+</tr>
+<tr>
+<td>影響範囲</td>
+<td>どこからでも呼び出せる</td>
+<td>そのオブジェクトのみに適用される</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例：文字列の format() はメソッド</strong></p>
+<p>Python の <code>str.format()</code> は 文字列オブジェクトに属するメソッド です。</p>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;私の名前は </span><span class="si">{}</span><span class="s2"> です。&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;花子&quot;</span><span class="p">))</span>  <span class="c1"># 私の名前は 花子 です。</span>
+</code></pre></div>
+<p>これは <code>s</code> という文字列オブジェクトに対して <code>.format()</code> を実行しているため、 <code>"文字列".format(値)</code> の形になります。</p>
+<p>一方で、関数として提供される <code>print()</code> などは、どんなオブジェクトにも適用できる独立した関数です。</p>
+<p><strong>Pythonでは全ての値がオブジェクト</strong></p>
+<p>Pythonでは、すべての値がオブジェクトとして扱われます。これは、数値・文字列・リスト・辞書などのデータ型だけでなく、関数やクラスまでもがオブジェクトであることを意味します。</p>
+<p>例えば、以下のコードを見てみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bit_length</span><span class="p">())</span>  <span class="c1"># 10のビット長を求めるメソッド</span>
+</code></pre></div>
+<p>ここでは <code>x</code> は単なる整数のように見えますが、実際には <code>int</code> クラスのインスタンス（オブジェクト）であり、メソッド <code>bit_length()</code> を持っています。</p>
+<p>また、文字列もオブジェクトです。</p>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>  <span class="c1"># 文字列を大文字に変換するメソッド</span>
+</code></pre></div>
+<p>このように、Pythonではデータ型ごとにオブジェクトが持つメソッドが定義されており、適切な操作を実行できます。</p>
+<p>さらに、関数もオブジェクトなので、変数に代入したり、引数として渡したりできます。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">greet</span>
+<span class="n">f</span><span class="p">()</span>  <span class="c1"># &quot;Hello!&quot; を出力</span>
+</code></pre></div>
+<p>このように、Pythonでは「すべての値がオブジェクトである」という設計が統一されており、一貫した考え方のもとでプログラムを構築できます。</p>
+<hr />
+<h3 id="_2">オブジェクトの型</h3>
+<p>Pythonでは、オブジェクトの型によって利用できるメソッドが決まります。 たとえば、文字列（<code>str</code> 型）のオブジェクトと、リスト（<code>list</code> 型）のオブジェクトでは、それぞれ異なるメソッドを持っています。</p>
+<p><strong>例：文字列 (<code>str</code>) のメソッド</strong>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>HELLO
+Hello
+</code></pre></div></p>
+<p><code>upper()</code> や <code>replace()</code> は <code>str</code> 型のオブジェクトにのみ使えます。</p>
+<p><strong>例：リスト (list) のメソッド</strong>
+<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">]</span>
+</code></pre></div></p>
+<p><code>append()</code> は <code>list</code> 型のオブジェクトに使えますが、文字列には使えません。</p>
+<hr />
+<p><strong>型による制約</strong></p>
+<p>異なる型のオブジェクトに対応しないメソッドを呼び出すとエラーになります。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+AttributeError<span class="w">                            </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_10351/1270942352.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">        </span><span class="m">1</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span>
+----&gt;<span class="w"> </span><span class="m">2</span><span class="w"> </span>s.append<span class="o">(</span><span class="s2">&quot;!&quot;</span><span class="o">)</span>
+
+
+AttributeError:<span class="w"> </span><span class="s1">&#39;str&#39;</span><span class="w"> </span>object<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>attribute<span class="w"> </span><span class="s1">&#39;append&#39;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="_3">文字列オブジェクトが持つメソッド</h3>
+<p>以下にPythonの文字列型が持つ大乗的なメソッドをまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>説明</th>
+<th>使用例</th>
+<th>出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>upper()</code></td>
+<td>すべて大文字に変換</td>
+<td><code>"hello".upper()</code></td>
+<td><code>"HELLO"</code></td>
+</tr>
+<tr>
+<td><code>lower()</code></td>
+<td>すべて小文字に変換</td>
+<td><code>"HELLO".lower()</code></td>
+<td><code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>capitalize()</code></td>
+<td>先頭の1文字を大文字にする</td>
+<td><code>"python".capitalize()</code></td>
+<td><code>"Python"</code></td>
+</tr>
+<tr>
+<td><code>title()</code></td>
+<td>各単語の先頭を大文字にする</td>
+<td><code>"hello world".title()</code></td>
+<td><code>"Hello World"</code></td>
+</tr>
+<tr>
+<td><code>strip()</code></td>
+<td>前後の空白や改行を削除</td>
+<td><code>"  hello  ".strip()</code></td>
+<td><code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>lstrip()</code></td>
+<td>左側の空白を削除</td>
+<td><code>"  hello  ".lstrip()</code></td>
+<td><code>"hello  "</code></td>
+</tr>
+<tr>
+<td><code>rstrip()</code></td>
+<td>右側の空白を削除</td>
+<td><code>"  hello  ".rstrip()</code></td>
+<td><code>"  hello"</code></td>
+</tr>
+<tr>
+<td><code>replace(old, new, count)</code></td>
+<td>文字列を置換（<code>count</code>は置換回数指定）</td>
+<td><code>"apple apple".replace("apple", "orange", 1)</code></td>
+<td><code>"orange apple"</code></td>
+</tr>
+<tr>
+<td><code>split(sep)</code></td>
+<td>指定した区切り文字で分割（リストで返す）</td>
+<td><code>"a,b,c".split(",")</code></td>
+<td><code>["a", "b", "c"]</code></td>
+</tr>
+<tr>
+<td><code>join(iterable)</code></td>
+<td>指定した区切り文字で連結</td>
+<td><code>",".join(["a", "b", "c"])</code></td>
+<td><code>"a,b,c"</code></td>
+</tr>
+<tr>
+<td><code>find(sub)</code></td>
+<td>部分文字列の位置を検索（見つからない場合 <code>-1</code>）</td>
+<td><code>"hello".find("l")</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>count(sub)</code></td>
+<td>指定した部分文字列の出現回数を返す</td>
+<td><code>"banana".count("a")</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>startswith(prefix)</code></td>
+<td>指定した文字列で始まるか判定</td>
+<td><code>"hello".startswith("he")</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>endswith(suffix)</code></td>
+<td>指定した文字列で終わるか判定</td>
+<td><code>"hello".endswith("lo")</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>isalpha()</code></td>
+<td>文字列が英字のみか判定</td>
+<td><code>"hello".isalpha()</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>isdigit()</code></td>
+<td>文字列が数字のみか判定</td>
+<td><code>"123".isdigit()</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>isalnum()</code></td>
+<td>文字列が英数字のみか判定</td>
+<td><code>"abc123".isalnum()</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>使いどころのポイント</strong></p>
+<ul>
+<li>テキスト処理：<code>replace()</code>, <code>split()</code>, <code>join()</code></li>
+<li>大文字・小文字変換：<code>upper()</code>, <code>lower()</code>, <code>capitalize()</code>, <code>title()</code></li>
+<li>不要な空白の処理：<code>strip()</code>, <code>lstrip()</code>, <code>rstrip()</code></li>
+<li>検索・判定：<code>find()</code>, <code>count()</code>, <code>startswith()</code>, <code>endswith()</code></li>
+<li>データのバリデーション：<code>isalpha()</code>, <code>isdigit()</code>, <code>isalnum()</code></li>
+</ul>
+<p>Pythonの文字列メソッドを活用すると、データの加工や整形が効率的に行えます！</p>
+<hr />
+<h2 id="2">2. オブジェクトの設計図</h2>
+<h3 id="_4">オブジェクトの姿を決定づける設計図</h3>
+<p>Pythonでは、すべての値（データ）はオブジェクトとして扱われます。では、オブジェクトの「型」や「ふるまい（メソッド）」を決めるものは何でしょうか？ それを決定づけるのが 「設計図」 にあたる クラス（class） です。</p>
+<dl>
+<dt><strong>クラスとは？</strong></dt>
+<dd>クラスとは、オブジェクトが持つ データ（属性） や 操作（メソッド） を定義する設計図のようなものです。例えば、<code>int</code> や <code>str</code> もクラスであり、それらのクラスによって、整数や文字列のオブジェクトがどのように振る舞うかが決まっています。</dd>
+</dl>
+<p><strong>オブジェクトとクラスの関係</strong></p>
+<p>Pythonのオブジェクトは、それぞれ あるクラスに基づいて作られたインスタンス です。たとえば、次のコードを見てみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
+</code></pre></div>
+<p>このように、<code>42</code> は <code>int</code> クラスのインスタンスであり、<code>"hello"</code> は <code>str</code> クラスのインスタンスです。</p>
+<p><strong>なぜクラスが必要なのか？</strong></p>
+<p>クラスを使うことで、オブジェクトがどのようなデータを持ち、どのような振る舞いをするかを統一的に管理できます。例えば、すべての文字列（<code>str</code> のインスタンス）は <code>.upper()</code> などのメソッドを使えますが、整数（<code>int</code> のインスタンス）には <code>.upper()</code> は存在しません。これは、それぞれのクラスで定義されているメソッドが異なるためです。</p>
+<p><strong>クラスを意識することで得られること</strong></p>
+<ul>
+<li>データと振る舞いを統一的に扱える（オブジェクト指向の基礎）</li>
+<li>カスタムのオブジェクトを作れる（後の章で学ぶクラスの定義へ）</li>
+<li>コードの見通しがよくなる（型ごとに適切なメソッドを利用できる）</li>
+</ul>
+<p>次の項では、実際にクラスを定義することで、オブジェクトの設計図をどのように作るかを解説していきます。</p>
+<hr />
+<h3 id="_5">オリジナルの設計図を作る</h3>
+<p>前の項では、オブジェクトの姿を決定づける設計図として クラス（class） の概念を紹介しました。
+ここでは、実際に クラスを定義し、自分だけのオブジェクトを作る 方法を説明します。</p>
+<p><strong>1. クラスの定義</strong></p>
+<p>Pythonでは <code>class</code> キーワードを使ってクラスを定義します。
+クラスの中には データ（属性） や 操作（メソッド） を定義できます。</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">（</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">breed</span><span class="si">}</span><span class="s2">）: ワンワン！&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>ここでのポイント：</p>
+<ul>
+<li><code>__init__</code> は コンストラクタ と呼ばれ、オブジェクトが作られたときに実行されます。</li>
+<li><code>self.name</code> や <code>self.breed</code> は インスタンス変数（属性） で、オブジェクトごとに異なる値を持ちます。</li>
+<li><code>bark()</code> は メソッド で、オブジェクトが行える動作を定義しています。</li>
+</ul>
+<hr />
+<p><strong>2. クラスからオブジェクトを作る</strong></p>
+<p>クラスを定義したら、それを インスタンス化（オブジェクトの生成） できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">dog1</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;ポチ&quot;</span><span class="p">,</span> <span class="s2">&quot;柴犬&quot;</span><span class="p">)</span>
+<span class="n">dog2</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;レオ&quot;</span><span class="p">,</span> <span class="s2">&quot;ゴールデンレトリバー&quot;</span><span class="p">)</span>
+
+<span class="n">dog1</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+<span class="n">dog2</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>ポチ（柴犬）:<span class="w"> </span>ワンワン！
+レオ（ゴールデンレトリバー）:<span class="w"> </span>ワンワン！
+</code></pre></div></p>
+<ul>
+<li><code>Dog("ポチ", "柴犬")</code> で <code>Dog</code> クラスの新しいオブジェクトを作成</li>
+<li><code>bark()</code> メソッドを呼び出すと、それぞれの <code>name</code> と <code>breed</code> に応じた動作を実行</li>
+</ul>
+<hr />
+<p><strong>3. クラスを使うメリット</strong></p>
+<p>オブジェクトの設計図を定義することで、以下のようなメリットがあります。</p>
+<ul>
+<li>
+<dl>
+<dt>データと動作をひとまとめにできる</dt>
+<dd><code>name</code> や <code>breed</code> というデータと <code>bark()</code> という動作が、<code>Dog</code> クラスの中にまとまっている</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>再利用性が高まる</dt>
+<dd><code>Dog</code> クラスを作れば、新しい犬のオブジェクトを簡単に作れる</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>コードの見通しがよくなる</dt>
+<dd><code>Dog</code> クラスがあることで、「このオブジェクトは犬を表している」と明確になる</dd>
+</dl>
+</li>
+</ul>
+<hr />
+<h2 id="3">3. オブジェクトの落とし穴</h2>
+<h3 id="_6">オブジェクトのアイデンティティ</h3>
+<p>Pythonでは、全てのオブジェクトに一意の識別子（ID）が割り振られます。この識別子は、そのオブジェクトがメモリ上でどこに存在するかを示しており、オブジェクトが一意であることを証明するために使われます。Py 関数を使用してオブジェクトのIDを取得することができます。</p>
+<p><strong>1. オブジェクトのID</strong></p>
+<p><code>id()</code> は、引数に与えたオブジェクトの 一意のID を返します。このIDは、オブジェクトがメモリ上で格納されているアドレスを示しており、オブジェクトがメモリから削除されるまで同じ値を持ち続けます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">140489824279120</span>
+<span class="m">140489824279120</span>
+</code></pre></div></p>
+<p>上記の例では、<code>a</code> と <code>b</code> は両方とも値 10 を持っていますが、Pythonの最適化機能によって、同じ整数オブジェクト <code>10</code> を指し示すため、<code>id()</code> が同じ値を返します。これを 整数のインターン化 と呼びます。</p>
+<p><strong>2. 同じオブジェクトを指す参照</strong></p>
+<p>同じオブジェクトを指す変数が複数ある場合、それらの変数は同じ ID を持ちます。これは、Pythonがメモリを効率的に使うために 参照渡し を行っているためです。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">140489891910976</span>
+<span class="m">140489891910976</span>
+</code></pre></div></p>
+<p>この例では、<code>x</code> と <code>y</code> は同じリストオブジェクトを指し示しており、<code>id(x)</code> と <code>id(y)</code> は同じIDを返します。</p>
+<p><strong>3. 異なるオブジェクトを指す参照</strong></p>
+<p>異なるオブジェクトを指す変数には、当然異なるIDが割り振られます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">140489894591680</span>
+<span class="m">140489894622336</span>
+</code></pre></div></p>
+<p>この例では、<code>a</code> と <code>b</code> は異なるリストオブジェクトを指しており、異なるIDが返されます。たとえ中身が同じであっても、異なるオブジェクトとして扱われます。</p>
+<p><strong>4. 同じオブジェクトであるかどうかの確認</strong></p>
+<p>Pythonでは <code>is</code> 演算子を使うことで、2つのオブジェクトが同じIDを持つか（すなわち、同じオブジェクトを指しているか）を確認することができます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div></p>
+<p>この場合、<code>a</code> と <code>b</code> は同じオブジェクトを指しているため、<code>a is b</code> は <code>True</code> になります。</p>
+<p><strong>オブジェクトのアイデンティティのまとめ</strong></p>
+<ul>
+<li>ID は、Pythonのオブジェクトに一意の識別子として割り当てられるもので、<code>id()</code> を使って取得できます。</li>
+<li>同じオブジェクトを指す変数は同じIDを持ち、異なるオブジェクトは異なるIDを持ちます。</li>
+<li>参照渡しによって、変数はオブジェクトのメモリ内の位置を指し示します。</li>
+<li><code>is</code> 演算子を使うことで、2つのオブジェクトが同じID（同じオブジェクト）を持っているか確認できます。</li>
+</ul>
+<hr />
+<h3 id="_7">参照</h3>
+<p>Pythonでは、変数に値を代入する際に、実際には オブジェクトへの参照 が代入されます。言い換えれば、変数自体がデータを保持するのではなく、データが格納されたメモリ上の位置（アドレス）を指し示すような形になります。この仕組みは「参照渡し」と呼ばれます。</p>
+<p><strong>1. 参照の基本概念</strong></p>
+<p>変数に値を代入すると、実際にはその値が格納されている場所（オブジェクト）を指し示す参照が変数に格納されます。以下の例を見てみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># aの参照をbに渡す</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># [1, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># [1, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># True</span>
+</code></pre></div>
+<p>この場合、<code>b = a</code> の代入によって、<code>b</code> は <code>a</code> と同じリストオブジェクトを指し示すようになっています。ここで <code>a is b</code> が <code>True</code> になるのは、両方の変数が同じオブジェクトを指しているためです。</p>
+<p><strong>2. 参照による変更</strong></p>
+<p>参照が使われる場合、オブジェクトそのものが変更されると、参照を持つ他の変数にも影響が出ます。以下の例で確認してみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># aとbは同じオブジェクトを指している</span>
+
+<span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># bを変更するとaにも反映される</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4]</span>
+</code></pre></div>
+<p>この例では、<code>b.append(4)</code> によってリスト <code>b</code> に <code>4</code> を追加していますが、<code>a</code> も同じリストオブジェクトを参照しているため、<code>a</code> の内容にも <code>4</code> が追加されます。これは、<code>a</code> と <code>b</code> が同じオブジェクトを指しているため、どちらか一方で行った変更が他方にも影響を与えるからです。</p>
+<p><strong>3. 参照による副作用</strong></p>
+<p>参照が使われると、意図せぬ副作用が発生することがあります。例えば、関数の引数としてリストを渡し、関数内でそのリストを変更すると、その変更が呼び出し元にも影響を与えることがあります。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">modify_list</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">modify_list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 5] → 呼び出し元のリストが変更された</span>
+</code></pre></div>
+<p>上記の例では、関数 <code>modify_list</code> 内で引数として渡されたリスト <code>lst</code> に変更が加えられ、その変更が呼び出し元のリスト <code>a</code> にも反映されます。これは、関数の引数として渡されたリストが参照によって渡されたためです。</p>
+<p><strong>4. 参照とコピーの違い</strong></p>
+<p>参照は、オブジェクト自体を指し示すだけであり、オブジェクトの実体を複製しないため、同じオブジェクトを指し示す他の変数や関数にも影響を及ぼす可能性があります。一方、コピー を作成する場合は、オブジェクトの実体を新たに作り直して、新しいオブジェクトを作成します。コピーには「浅いコピー」と「深いコピー」があります。</p>
+<p><strong>5. 参照のまとめ</strong></p>
+<p>Pythonでは、変数に値を代入すると、その変数は実際には オブジェクトへの参照 を持つことになります。</p>
+<p>参照を使うと、複数の変数が同じオブジェクトを指し示し、どちらかを変更すると他方にも影響を与える場合があります。</p>
+<p>関数に渡された引数も、基本的には参照渡しされるため、関数内でオブジェクトを変更すると、呼び出し元にも変更が反映されることに注意が必要です。</p>
+<p>参照の概念をしっかり理解することで、オブジェクトの扱い方や意図しない副作用を避けることができます。次は、参照による副作用 についてさらに詳しく解説していきます。</p>
+<hr />
+<h3 id="_8">参照による副作用</h3>
+<p>Pythonでは、変数がオブジェクトへの参照を持つことから、意図しない副作用が発生することがあります。特に、関数に渡した引数が変更されることで、呼び出し元のデータに影響を与える場合です。これは、「参照渡し」による副作用です。</p>
+<p><strong>関数内での変更</strong></p>
+<p>関数にオブジェクト（リスト、辞書、セットなど）を渡すと、関数内でそのオブジェクトが変更されると、呼び出し元のオブジェクトも変更されてしまうことがあります。これが意図しない副作用になる場合があるため、注意が必要です。</p>
+<p>例えば、以下のようなコードを見てみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">append_to_list</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># リストに4を追加</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">append_to_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4] → 呼び出し元のリストも変更されてしまう</span>
+</code></pre></div>
+<p>ここでは、<code>append_to_list</code> 関数内でリスト <code>lst</code> に要素 <code>4</code> を追加しています。この関数に渡されたリスト <code>my_list</code> が参照渡しされているため、関数内で行った変更が呼び出し元の <code>my_list</code> にも反映されてしまいます。</p>
+<h3 id="_9">防御的コピー</h3>
+<p>このような副作用を防ぐために、関数内で渡されたオブジェクトを変更せず、新しいオブジェクトを作成する方法があります。これを「防御的コピー」と言います。</p>
+<p>防御的コピーは、元のオブジェクトを変更せず、変更したい場合は新たにオブジェクトを作成することで、呼び出し元のデータに影響を与えません。</p>
+<p>次のコードは、防御的コピーを使って、元のリストを変更しないようにした例です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">append_to_new_list</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">new_lst</span> <span class="o">=</span> <span class="n">lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">new_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">new_lst</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="n">append_to_new_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="o">]</span>
+<span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">]</span>
+</code></pre></div></p>
+<p>ここでは、<code>lst.copy()</code> を使用してリストのコピーを作成し、新しいリスト new_lst に変更を加えています。これにより、元のリスト <code>my_list</code> は変更されず、関数内で行った変更が呼び出し元に影響を与えないようになっています。</p>
+<hr />
+<p><strong>リスト、辞書、セットなどのミュータブル（可変）オブジェクトの取り扱い</strong></p>
+<ul>
+<li>リスト、辞書、セット などは、ミュータブル（可変）オブジェクトであり、参照渡しされると変更可能です。これらのオブジェクトを関数に渡す場合、意図せぬ変更が関数内で発生する可能性があるため、特に注意が必要です。</li>
+<li>タプル や 文字列 などのイミュータブル（不変）オブジェクトは、参照渡しされてもその内容を変更することができません。したがって、これらの場合には参照による副作用の心配はありません。</li>
+</ul>
+<hr />
+<p><strong>副作用を防ぐためのベストプラクティス</strong></p>
+<ul>
+<li>関数に渡すオブジェクトがミュータブルである場合、必要に応じてそのコピーを使用する。</li>
+<li>変更が必要な場合、新たにオブジェクトを生成することを検討する。</li>
+<li>関数内での変更が呼び出し元に影響を与える場合、その動作を明確にドキュメントとして記述する。</li>
+</ul>
+<p>参照渡しによって、関数内でオブジェクトを変更すると、呼び出し元のオブジェクトにも変更が反映されてしまいます。この仕組みを理解し、意図しない副作用を防ぐためには、防御的コピーを利用するなどの対策を講じることが重要です。参照による副作用を理解することで、より安全なコードを書くことができます。</p>
+<hr />
+<h3 id="_10">不変オブジェクト</h3>
+<p>不変オブジェクト（Immutable Objects） とは、そのオブジェクトの状態を変更できないオブジェクトのことを指します。Pythonでは、文字列（<code>str</code>） や タプル（<code>tuple</code>） が代表的な不変オブジェクトです。これらのオブジェクトは、作成された後にその内容を変更することができません。</p>
+<p><strong>1. 不変オブジェクトの特徴</strong></p>
+<p>不変オブジェクトは一度作成されると、その後変更が不可能であるため、参照渡しされる際に元のオブジェクトが変更される心配がありません。これにより、関数間での予期しない副作用を回避することができます。</p>
+<p>例えば、文字列やタプルは変更できないため、リストのように直接変更されることはなく、常に新しいオブジェクトが返されます。</p>
+<p><strong>2. 不変オブジェクトの例</strong></p>
+<p>文字列（<code>str</code>）やタプル（<code>tuple</code>）は不変オブジェクトです。次のコードを見てみましょう。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 文字列の例</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="c1"># 文字列は不変なので、新しい文字列を作成する</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1"># タプルの例</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># タプルは不変なので、元のタプルを変更できない</span>
+<span class="n">my_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># エラーが発生する</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+TypeError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_10351/1985596220.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">        </span><span class="m">2</span><span class="w"> </span><span class="nv">my_tuple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="o">)</span>
+<span class="w">        </span><span class="m">3</span><span class="w"> </span><span class="c1"># タプルは不変なので、元のタプルを変更できない</span>
+----&gt;<span class="w"> </span><span class="m">4</span><span class="w"> </span>my_tuple<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">  </span><span class="c1"># エラーが発生する</span>
+
+
+TypeError:<span class="w"> </span><span class="s1">&#39;tuple&#39;</span><span class="w"> </span>object<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>support<span class="w"> </span>item<span class="w"> </span>assignment
+</code></pre></div></p>
+<p>文字列 <code>text</code> は変更できませんが、<code>text.upper()</code> を実行すると新しい文字列 <code>"HELLO"</code> が返されます。同様に、タプル <code>my_tuple</code> の要素を変更しようとするとエラーが発生します。</p>
+<p><strong>3. 不変オブジェクトの利点</strong></p>
+<ul>
+<li>安全性：不変オブジェクトは変更されないため、関数間でオブジェクトが共有されても、他の部分で内容が変わる心配がありません。これにより、副作用が発生しにくくなります。</li>
+<li>効率性：不変オブジェクトは変更できないため、Pythonはこれらを効率的にキャッシュして再利用することができます。</li>
+</ul>
+<p><strong>4. 不変オブジェクトと参照の挙動</strong></p>
+<p>不変オブジェクトの参照は、変更されることがないため、同じオブジェクトを複数の変数が参照することができます。そのため、メモリの使用効率が高くなります。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># a と b は同じ文字列オブジェクトを参照している</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># True - a と b は同じオブジェクトを参照している</span>
+</code></pre></div>
+<p>上記のコードでは、<code>a</code> と <code>b</code> は同じ文字列オブジェクトを参照しており、<code>is</code> 演算子を使って確認すると <code>True</code> が返されます。この挙動は不変オブジェクト特有のものです。</p>
+<p><strong>5. 不変オブジェクトの利用シーン</strong></p>
+<p>不変オブジェクトは主に以下のような場面で有用です：
+- キーとして使用：辞書やセットではキーが不変オブジェクトでなければなりません。文字列やタプルは変更できないため、これらのデータ構造のキーとして使うことができます。
+- スレッド安全性：不変オブジェクトは他のスレッドからの変更を受けることがないため、並行処理が行われる環境でも安全に使うことができます。</p>
+<p><strong>6. 不変オブジェクトのまとめ</strong></p>
+<p>不変オブジェクトは変更不可能なため、関数間での予期しない副作用を避けるのに有効です。また、不変オブジェクトを使用することで、メモリ効率やスレッド安全性を高めることができます。Pythonの標準的な不変オブジェクトである文字列やタプルを理解し、適切に活用することが重要です。</p>
+<hr />
+<h2 id="_11">オブジェクトのまとめ</h2>
+<div class="admonition success">
+<p class="admonition-title">1. オブジェクトの基本構造</p>
+<ul>
+<li>Pythonではすべての値がオブジェクトとして扱われ、オブジェクトはデータとそのデータを操作するメソッドを持っています。</li>
+<li>オブジェクトは、データ（属性）とそのデータに関連する操作（メソッド）を一体化した構造を持っています。</li>
+<li>文字列などの組み込み型オブジェクトは、それぞれ特定のメソッドを提供し、データ操作を容易にします。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. クラスと型</p>
+<ul>
+<li>オブジェクトはクラスという設計図に基づいて作成され、その型（クラス）がオブジェクトの属性やメソッドを決定します。</li>
+<li>クラスを定義し、それを基にインスタンスを生成することでオブジェクトが作られ、クラスによりオブジェクトの特性が決まります。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">3. アイデンティティと参照</p>
+<ul>
+<li>Pythonのオブジェクトには一意の識別子（ID）が割り振られ、<code>id()</code>関数を使用してその識別情報を確認することができます。</li>
+<li>変数はオブジェクトを参照しており、同じオブジェクトを複数の変数が参照することができます。この参照によって、複数の変数が同一のオブジェクトを共有します。</li>
+<li>参照の使い方には注意が必要で、複数の変数が同じオブジェクトを参照している場合、予期しない副作用を引き起こすことがあります。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">4. オブジェクトの不変性</p>
+<ul>
+<li>不変オブジェクト（例：文字列やタプル）はその状態を変更できないオブジェクトです。これにより、変更不可能な状態を保つことができます。</li>
+<li>不変オブジェクトを使うことで、オブジェクトの変更による副作用を防ぐことができ、予測可能な動作が保証されます。</li>
+<li>防御的コピー（deepcopy）などを利用して、参照による副作用を避ける方法もあります。</li>
+</ul>
+</div>
+<p>この章では、Pythonのオブジェクトの基本的な構造、クラスと型、アイデンティティや参照による影響、不変オブジェクトの重要性など、オブジェクト指向の基礎的な概念を学びました。オブジェクトの管理方法や参照の扱いは、実際の開発で非常に重要なポイントとなります。</p>
+<hr />
+<h2 id="_12">練習問題</h2>
+<div class="admonition question">
+<p class="admonition-title">問題 1: オブジェクトの識別子</p>
+<p>次のコードを実行した後、<code>id()</code>関数を使って<code>a</code>と<code>b</code>のIDが同じか確認してください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</code></pre></div>
+<p>質問:</p>
+<ul>
+<li><code>a</code>と<code>b</code>は同じオブジェクトを参照していますか？その理由を説明してください。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 2: 不変オブジェクト</p>
+<p>次のコードを実行した後、リスト<code>a</code>を変更し、文字列<code>b</code>を変更してみて、違いを確認してください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">+=</span> <span class="s2">&quot; World&quot;</span>
+</code></pre></div>
+<p>質問:</p>
+<ul>
+<li>リスト<code>a</code>と文字列<code>b</code>の変更結果について、どのような違いが見られますか？</li>
+<li>それぞれのオブジェクトの性質（可変性、不変性）について説明してください。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 3: 参照による副作用</p>
+<p>次のコードを実行した後、リスト<code>a</code>と<code>b</code>の内容を確認してください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+<p>質問:</p>
+<ul>
+<li><code>a</code>と<code>b</code>の内容に違いはありますか？その理由を説明してください。</li>
+<li>参照による副作用についてどのように対処できますか？</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 4: オブジェクトのコピー</p>
+<p>次のコードを実行した後、<code>a</code>と<code>b</code>が同じオブジェクトを参照しているか、aとbをコピーした場合の違いを説明してください。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+<p>質問:</p>
+<ul>
+<li><code>a</code>と<code>b</code>が同じオブジェクトを参照していますか？また、<code>b</code>を変更すると<code>a</code>はどうなりますか？</li>
+<li><code>copy.copy()</code>の使い方とその目的を説明してください。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題 5: オブジェクトの型とメソッド</p>
+<p>次のコードを実行し、<code>str</code>型と<code>list</code>型のオブジェクトで使用できるメソッドを比較してみてください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>   <span class="c1"># str型のメソッド</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># list型のメソッド</span>
+</code></pre></div>
+<p>質問:</p>
+<ul>
+<li><code>str</code>型と<code>list</code>型のオブジェクトは異なるメソッドを持っています。各オブジェクトが持つメソッドの違いを簡潔に説明してください。</li>
+</ul>
+</div>
+<hr />
+<p>👉 <a href="../module">次の章では、<strong>モジュール</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../function/" class="md-footer__link md-footer__link--prev" aria-label="前: 第６章　関数">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                第６章　関数
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../module/" class="md-footer__link md-footer__link--next" aria-label="次: 第８章　モジュール">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                第８章　モジュール
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
