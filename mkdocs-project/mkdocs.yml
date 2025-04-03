@@ -1,12 +1,13 @@
-site_name: はじめての Python
+site_name: はじめて Python
 site_url: https://pylocode.jp/
-site_description: 初学者向けのPythonのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。
+site_description: 初学者向けのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。
 site_author: Masayuki
 nav:
   - ホーム: index.md
-  - はじめに: introduction.md
-  - 変数とデータ型: variable_and_type.md
-  - コンテナ: container.md
+  - 第１章 はじめに: introduction.md
+  - 第２章 変数とデータ型: variable_and_type.md
+  - 第３章 コンテナ: container.md
+  - 第４章 条件分岐: conditinal_statement.md
 
 theme:
   custom_dir: custom_theme/
@@ -18,6 +19,32 @@ theme:
   language: ja
   logo: img/favicon.ico
   favicon: img/favicon.ico
+  palette:
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    # - navigation.tabs #for too many contants
+    - navigation.footer  
+
 extra:
   generator: false
   analytics:
@@ -29,14 +56,11 @@ markdown_extensions:
   - def_list
   - footnotes
   - attr_list
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-      clickable_checkbox: true
