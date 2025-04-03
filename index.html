@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="初学者向けのPythonのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。">
+        <meta name="description" content="初学者向けのプログラミング教材です。初めてプログライングを学ぶ方に向けてわかりやすく説明します。">
       
       
         <meta name="author" content="Masayuki">
@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="chapter0/">
+        <link rel="next" href="introduction/">
       
       
       <link rel="icon" href="img/favicon.ico">
@@ -24,11 +24,14 @@
     
     
       
-        <title>はじめての Python</title>
+        <title>はじめて Python</title>
       
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -79,7 +82,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -104,7 +114,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="." title="はじめての Python" class="md-header__button md-logo" aria-label="はじめての Python" data-md-component="logo">
+    <a href="." title="はじめて Python" class="md-header__button md-logo" aria-label="はじめて Python" data-md-component="logo">
       
   <img src="img/favicon.ico" alt="logo">
 
@@ -117,7 +127,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            はじめての Python
+            はじめて Python
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -129,6 +139,42 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -201,12 +247,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="はじめての Python" class="md-nav__button md-logo" aria-label="はじめての Python" data-md-component="logo">
+    <a href="." title="はじめて Python" class="md-nav__button md-logo" aria-label="はじめて Python" data-md-component="logo">
       
   <img src="img/favicon.ico" alt="logo">
 
     </a>
-    はじめての Python
+    はじめて Python
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -300,12 +346,12 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter0/" class="md-nav__link">
+      <a href="introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    はじめに
+    第１章 はじめに
     
   </span>
   
@@ -322,12 +368,56 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter1/" class="md-nav__link">
+      <a href="variable_and_type/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    変数とデータ型
+    第２章 変数とデータ型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第３章 コンテナ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第４章 条件分岐
     
   </span>
   
@@ -410,40 +500,40 @@
 <h2 id="_1">🔗 学習を始める</h2>
 <ul>
 <li>
-<p><a href="./chapter0">第０章 ようこそPythonの世界へ</a><br />
-<strong>Python ってどんな言語？</strong> まずは環境構築と基本的な使い方を学ぼう！  </p>
+<p><a href="../introduction">はじめに</a></p>
+<p><strong>Python ってどんな言語？</strong> まずは環境構築と基本的な使い方を学ぼう！  </p>
 </li>
 <li>
-<p><a href="./chapter1">第１章 変数とデータ型</a><br />
-  プログラムの基礎となる「変数」と「データ型」をしっかり理解！  </p>
+<p><a href="../variable_and_type">変数とデータ型</a></p>
+<p>プログラムの基礎となる「変数」と「データ型」をしっかり理解！  </p>
 </li>
 <li>
-<p><a href="./chapter2">第２章 コンテナ</a><br />
-  リスト・タプル・辞書・集合を使いこなして、データを自由に扱おう！  </p>
+<p><a href="../container">コンテナ</a></p>
+<p>リスト・タプル・辞書・集合を使いこなして、データを自由に扱おう！  </p>
 </li>
 <li>
-<p><a href="./chapter3">第３章 条件分岐</a><br />
-  「もし〜ならば？」を表現する <strong>if 文</strong> を学んで、プログラムの流れを制御しよう！  </p>
+<p>条件分岐</p>
+<p>「もし〜ならば？」を表現する <strong>if 文</strong> を学んで、プログラムの流れを制御しよう！  </p>
 </li>
 <li>
-<p><a href="./chapter4">第４章 繰り返し</a><br />
-<strong>for 文・while 文</strong> で同じ処理を効率よく書く方法をマスター！  </p>
+<p>繰り返し</p>
+<p><strong>for 文・while 文</strong> で同じ処理を効率よく書く方法をマスター！  </p>
 </li>
 <li>
-<p><a href="./chapter5">第５章 関数</a><br />
-  コードを整理して再利用しやすくする <strong>関数</strong> の作り方を学ぼう！  </p>
+<p>関数</p>
+<p>コードを整理して再利用しやすくする <strong>関数</strong> の作り方を学ぼう！  </p>
 </li>
 <li>
-<p><a href="./chapter6">第６章 オブジェクト指向</a><br />
-  Python の強力な特徴である <strong>オブジェクト指向</strong> を理解して、より便利なプログラムを作ろう！  </p>
+<p>オブジェクト指向</p>
+<p>Python の強力な特徴である <strong>オブジェクト指向</strong> を理解して、より便利なプログラムを作ろう！  </p>
 </li>
 <li>
-<p><a href="./chapter7">第７章 部品を使おう</a><br />
-<strong>モジュール・ライブラリ・パッケージ</strong> を活用して、Python の可能性を広げよう！  </p>
+<p>第７章 部品を使おう</p>
+<p><strong>モジュール・ライブラリ・パッケージ</strong> を活用して、Python の可能性を広げよう！  </p>
 </li>
 <li>
-<p><a href="./chapter8">第８章 まだまだ広がるPythonの可能性</a><br />
-<strong>データ分析・AI・Web開発・IoT</strong> など、Python でできることをさらに探求！  </p>
+<p>まだまだ広がるPythonの可能性</p>
+<p><strong>データ分析・AI・Web開発・IoT</strong> など、Python でできることをさらに探求！  </p>
 </li>
 </ul>
 <hr />
@@ -457,7 +547,7 @@
 <hr />
 <p>💡 <strong>Python を学ぶことで、できることが無限に広がります！</strong><br />
 さあ、あなたも Python を学んで <strong>「作れる人」</strong> になりましょう！ 🚀  </p>
-<p>👉 <a href="./chapter0"><strong>第０章 ようこそPythonの世界へ</strong></a> からスタート！</p>
+<p>👉 <a href="../introduction">はじめに からスタート！</a></p>
 
 
 
@@ -484,6 +574,30 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+        
+          
+          <a href="introduction/" class="md-footer__link md-footer__link--next" aria-label="次: 第１章 はじめに">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                第１章 はじめに
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -503,7 +617,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
