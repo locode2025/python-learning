@@ -1,25 +1,25 @@
-site_name: あらためてのプログラミング
+site_name: リスキリングコード
 site_url: https://pylocode.jp/
-site_description: プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログライングを学ぶ方にも、わかりやすく説明します。
+site_description: プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。
 site_author: Masayuki
+
 nav:
-  - "改めて Python": index.md
-  - "第１章　はじめに": introduction.md
-  - "第２章　変数とデータ型": variable_and_type.md
-  - "第３章　コンテナ": container.md
-  - "第４章　条件分岐": conditinal_statement.md
-  - "第５章　繰り返し": loop.md
-  - "第６章　関数": function.md
-  - "第７章　オブジェクト": object.md
-  - "第８章　モジュール": module.md
-  - "第９章　おわりに": outro.md
+  - "ホーム": index.md
+  - "リスキリング Python": 
+    - "第１章　はじめに": reskill_py/introduction.md
+    - "第２章　変数とデータ型": reskill_py/variable_and_type.md
+    - "第３章　コンテナ": reskill_py/container.md
+    - "第４章　条件分岐": reskill_py/conditinal_statement.md
+    - "第５章　繰り返し": reskill_py/loop.md
+    - "第６章　関数": reskill_py/function.md
+    - "第７章　オブジェクト": reskill_py/object.md
+    - "第８章　モジュール": reskill_py/module.md
+    - "第９章　おわりに": reskill_py/outro.md
+  - リスキリングブログ:
+    - blog/index.md
 
 theme:
   custom_dir: custom_theme/
-  #for cosmo
-  # name: cosmo
-  # locale: ja
-  #for material
   name: material
   language: ja
   logo: img/favicon.ico
@@ -45,10 +45,12 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
   features:
     # - navigation.tabs #for too many contants
-    - navigation.footer  
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
 
 extra:
   generator: false
@@ -62,6 +64,8 @@ markdown_extensions:
   - footnotes
   - attr_list
   - pymdownx.details
+  - toc:
+      permalink: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
@@ -69,3 +73,14 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search:
+      lang: 'ja'
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: full
+      post_url_format: "{file}"
+      archive: false #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.archive
