@@ -12,7 +12,7 @@
         <meta name="author" content="Masayuki">
       
       
-        <link rel="canonical" href="https://pylocode.jp/reskill_py/variable_and_type/">
+        <link rel="canonical" href="https://pylocode.jp/reskill_py/operator_variable_type/">
       
       
         <link rel="prev" href="../introduction/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>第２章 変数とデータ型 - リスキリングコード</title>
+        <title>第２章 演算・変数・型 - リスキリングプログラミング</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -116,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../.." title="リスキリングコード" class="md-header__button md-logo" aria-label="リスキリングコード" data-md-component="logo">
+    <a href="../.." title="リスキリングプログラミング" class="md-header__button md-logo" aria-label="リスキリングプログラミング" data-md-component="logo">
       
   <img src="../../img/favicon.ico" alt="logo">
 
@@ -129,13 +129,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            リスキリングコード
+            リスキリングプログラミング
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第２章　変数とデータ型
+              第２章　演算・変数・型
             
           </span>
         </div>
@@ -249,12 +249,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="リスキリングコード" class="md-nav__button md-logo" aria-label="リスキリングコード" data-md-component="logo">
+    <a href="../.." title="リスキリングプログラミング" class="md-nav__button md-logo" aria-label="リスキリングプログラミング" data-md-component="logo">
       
   <img src="../../img/favicon.ico" alt="logo">
 
     </a>
-    リスキリングコード
+    リスキリングプログラミング
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -377,15 +377,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    第２章　変数とデータ型
+    第２章　演算・変数・型
     
   </span>
   
@@ -398,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    第２章　変数とデータ型
+    第２章　演算・変数・型
     
   </span>
   
@@ -411,8 +409,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -423,11 +419,11 @@
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 式と演算
+      1. 演算
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 式と演算">
+    <nav class="md-nav" aria-label="1. 演算">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -440,36 +436,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      文字列の演算
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      エスケープシーケンス
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ヒアドキュメント（複数行の文字列）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      式と評価
+      文字の演算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊な文字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      プログラム上での評価
     </span>
   </a>
   
@@ -491,7 +478,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       変数の利用
     </span>
@@ -500,7 +487,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       変数名のルール
     </span>
@@ -509,7 +496,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       変数の上書き
     </span>
@@ -518,7 +505,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
       アンパック代入
     </span>
@@ -527,27 +514,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
-      自分自身の変数に代入する
+      自分自身に代入
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
       複合代入演算子
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      キーボード入力値の代入
     </span>
   </a>
   
@@ -569,7 +547,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       データ型とは
     </span>
@@ -578,7 +556,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
       データ型の変換
     </span>
@@ -587,9 +565,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#format" class="md-nav__link">
     <span class="md-ellipsis">
-      文字列の中に数値を埋め込む方法
+      format関数
     </span>
   </a>
   
@@ -610,7 +588,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_25" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -869,8 +847,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -881,11 +857,11 @@
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 式と演算
+      1. 演算
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 式と演算">
+    <nav class="md-nav" aria-label="1. 演算">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -898,36 +874,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      文字列の演算
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      エスケープシーケンス
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      ヒアドキュメント（複数行の文字列）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      式と評価
+      文字の演算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊な文字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      プログラム上での評価
     </span>
   </a>
   
@@ -949,7 +916,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       変数の利用
     </span>
@@ -958,7 +925,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       変数名のルール
     </span>
@@ -967,7 +934,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       変数の上書き
     </span>
@@ -976,7 +943,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
       アンパック代入
     </span>
@@ -985,27 +952,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
-      自分自身の変数に代入する
+      自分自身に代入
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
       複合代入演算子
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      キーボード入力値の代入
     </span>
   </a>
   
@@ -1027,7 +985,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       データ型とは
     </span>
@@ -1036,7 +994,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
       データ型の変換
     </span>
@@ -1045,9 +1003,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#format" class="md-nav__link">
     <span class="md-ellipsis">
-      文字列の中に数値を埋め込む方法
+      format関数
     </span>
   </a>
   
@@ -1068,7 +1026,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_25" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -1092,62 +1050,72 @@
 
 
 
-<h1 id="_1">変数とデータ型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">演算・変数・データ型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="1">1. 式と演算<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1">1. 演算<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>Pythonでは、数値の演算を簡単に行うことができます。基本的な算術演算子を使って、加算、減算、乗算、除算などを実行できます。</p>
-<hr />
+<p><br></p>
 <h3 id="_2">数値の演算<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、次のような算術演算子を使用できます。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">演算子</th>
-<th style="text-align: left;">説明</th>
-<th style="text-align: left;">例</th>
+<th>演算子</th>
+<th>説明</th>
+<th>プログラム例</th>
+<th>出力</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>+</code></td>
-<td style="text-align: left;">加算</td>
-<td style="text-align: left;"><code>3 + 2  →  5</code></td>
+<td><code>+</code></td>
+<td>加算</td>
+<td><code>3 + 2</code></td>
+<td><code>5</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>-</code></td>
-<td style="text-align: left;">減算</td>
-<td style="text-align: left;"><code>5 - 2  →  3</code></td>
+<td><code>-</code></td>
+<td>減算</td>
+<td><code>5 - 2</code></td>
+<td><code>3</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>*</code></td>
-<td style="text-align: left;">乗算</td>
-<td style="text-align: left;"><code>3 * 4  →  12</code></td>
+<td><code>*</code></td>
+<td>乗算</td>
+<td><code>3 * 4</code></td>
+<td><code>12</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>/</code></td>
-<td style="text-align: left;">除算（浮動小数点）</td>
-<td style="text-align: left;"><code>7 / 2  →  3.5</code></td>
+<td><code>/</code></td>
+<td>除算（浮動小数点）</td>
+<td><code>7 / 2</code></td>
+<td><code>3.5</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>//</code></td>
-<td style="text-align: left;">整数除算（切り捨て）</td>
-<td style="text-align: left;"><code>7 // 2  →  3</code></td>
+<td><code>//</code></td>
+<td>整数除算（切り捨て）</td>
+<td><code>7 // 2</code></td>
+<td><code>3</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>%</code></td>
-<td style="text-align: left;">剰余（余り）</td>
-<td style="text-align: left;"><code>7 % 2  →  1</code></td>
+<td><code>%</code></td>
+<td>剰余（余り）</td>
+<td><code>7 % 2</code></td>
+<td><code>1</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>**</code></td>
-<td style="text-align: left;">累乗</td>
-<td style="text-align: left;"><code>2 ** 3  →  8</code></td>
+<td><code>**</code></td>
+<td>累乗</td>
+<td><code>2 ** 3</code></td>
+<td><code>8</code></td>
 </tr>
 </tbody>
 </table>
-<p>Pythonのコードで、コンピュータに計算させるために用いる記号を演算子（<strong>operator</strong>）といいます。<code>+</code> や <code>-</code> などの数値の四則演算（足す・引く・掛ける・割る）をするための演算子を算術演算子といいます。</p>
+<p>Pythonのコードで、コンピュータに計算させるために用いる記号を演算子（<strong>operator</strong>）や算術演算子（<strong>Math Operators</strong>）といいます。</p>
 <p>実際に演算子を使ったコードを実装して、その動作を確認していきましょう。</p>
-<p>Pythonでは <code>/</code> を使うと常に浮動小数点（<strong>float型</strong>）になります。</p>
+<p><br></p>
+<h4 id="_3">割り算（除算、除法）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><code>/</code> を使って割り算を行うことができます。結果は小数点（浮動小数点数型という）で表示されます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
@@ -1156,6 +1124,8 @@
 <div class="highlight"><pre><span></span><code><span class="m">3</span>.5
 <span class="m">4</span>.0
 </code></pre></div></p>
+<p><br></p>
+<h4 id="_4">切り捨て（整数除算）、あまり（剰余）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>整数除算 <code>//</code> を使うと、小数点以下を切り捨てた整数結果が得られます。
 剰余 <code>%</code> を使うと、割り算の余りが得られます。</p>
 <p><strong>プログラム：</strong>
@@ -1166,6 +1136,8 @@
 <div class="highlight"><pre><span></span><code><span class="m">3</span>
 <span class="m">1</span>
 </code></pre></div></p>
+<p><br></p>
+<h4 id="_5">累乗<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>累乗を計算するには <code>**</code> を使います。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
@@ -1175,103 +1147,57 @@
 <div class="highlight"><pre><span></span><code><span class="m">8</span>
 <span class="m">25</span>
 </code></pre></div></p>
-<p>Pythonには整数（<strong>int</strong>）と浮動小数点数（<strong>float</strong>）の2種類の数値型があります。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>&lt;class<span class="w"> </span><span class="s1">&#39;int&#39;</span>&gt;
-&lt;class<span class="w"> </span><span class="s1">&#39;float&#39;</span>&gt;
-</code></pre></div></p>
-<p>数値の型を変換することもできます。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">3.9</span><span class="p">))</span>   <span class="c1"># 小数点以下切り捨て</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code><span class="m">3</span>
-<span class="m">3</span>.0
-</code></pre></div></p>
 <hr />
-<h3 id="_3">文字列の演算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>Pythonでは、数値だけでなく文字列 (<code>str</code>) も演算に利用できます。主に <code>+</code>（連結）と <code>*</code>（繰り返し）を使用します。</p>
-<p><strong>文字列の結合（連結）</strong></p>
+<h3 id="_6">文字の演算<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Pythonでは、数値だけでなく文字（文字列、<code>str</code>) も演算に利用できます。主に <code>+</code>（連結）と <code>*</code>（繰り返し）を使用します。</p>
+<p><br></p>
+<h4 id="_7">文字列の結合（連結）<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p><code>+</code> 演算子を使うと、文字列を結合できます。</p>
 <p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text1</span> <span class="o">=</span> <span class="s2">&quot;こんにちは&quot;</span>
-<span class="n">text2</span> <span class="o">=</span> <span class="s2">&quot;世界&quot;</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">text1</span> <span class="o">+</span> <span class="n">text2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは&quot;</span> <span class="o">+</span> <span class="s2">&quot;世界&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>こんにちは世界
 </code></pre></div></p>
-<p>ただし、数値 (<strong>int</strong> や <strong>float</strong>) と文字列 (<strong>str</strong>) を <code>+</code> で結合しようとするとエラーになります。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;私は&quot;</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s2">&quot;歳です。&quot;</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
-
-TypeError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
-
-/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_16119/3203378158.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
-<span class="w">        </span><span class="m">1</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span>
-----&gt;<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;私は&quot;</span><span class="w"> </span>+<span class="w"> </span>age<span class="w"> </span>+<span class="w"> </span><span class="s2">&quot;歳です。&quot;</span>
-
-
-TypeError:<span class="w"> </span>can<span class="w"> </span>only<span class="w"> </span>concatenate<span class="w"> </span>str<span class="w"> </span><span class="o">(</span>not<span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="o">)</span><span class="w"> </span>to<span class="w"> </span>str
-</code></pre></div></p>
-<p>システム開発においても、計算しようとする変数のデータ型の考慮漏れによってよくエラーが発生します。
-この場合、<code>str()</code> を使って数値を文字列に変換すればOKです。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;私は&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;歳です。&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>私は25歳です。
-</code></pre></div></p>
-<p><strong>文字列の繰り返し</strong></p>
+<p><br></p>
+<h4 id="_8">文字列の繰り返し<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p><code>*</code> 演算子を使うと、文字列を指定回数繰り返せます。</p>
 <p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">text</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>Hello<span class="w"> </span>Hello<span class="w"> </span>Hello<span class="w"> </span>
+<div class="highlight"><pre><span></span><code>HelloHelloHello
 </code></pre></div></p>
-<p><strong>数値リテラルと文字列リテラルの違い</strong></p>
-<p>数値リテラル（<strong>int</strong> や <strong>float</strong>）と文字列リテラル（<strong>str</strong>）は、見た目が似ていても動作が異なります。</p>
+<p><br></p>
+<h4 id="_9">数値と文字の違い<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>プログラム上で数理を意味する部分を数理リテラル、文字を表す部分を文字列リテラルと言います。数値リテラル（<strong>int</strong> や <strong>float</strong>）と文字列リテラル（<strong>str</strong>）は、見た目が似ていても動作が異なります。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">リテラル</th>
-<th style="text-align: left;">例</th>
-<th style="text-align: left;">型</th>
-<th style="text-align: left;">挙動</th>
+<th>リテラル</th>
+<th>例</th>
+<th>型</th>
+<th>挙動</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">数値リテラル</td>
-<td style="text-align: left;"><code>123</code></td>
-<td style="text-align: left;"><code>int</code></td>
-<td style="text-align: left;"><code>123 + 1 → 124</code></td>
+<td>数値リテラル</td>
+<td><code>123</code></td>
+<td><code>int</code></td>
+<td><code>123 + 1 → 124</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">数値リテラル</td>
-<td style="text-align: left;"><code>3.14</code></td>
-<td style="text-align: left;"><code>float</code></td>
-<td style="text-align: left;"><code>3.14 * 2 → 6.28</code></td>
+<td>数値リテラル</td>
+<td><code>3.14</code></td>
+<td><code>float</code></td>
+<td><code>3.14 * 2 → 6.28</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">文字列リテラル</td>
-<td style="text-align: left;"><code>"123"</code></td>
-<td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;"><code>"123" + "1" → "1231"</code></td>
+<td>文字列リテラル</td>
+<td><code>"123"</code></td>
+<td><code>str</code></td>
+<td><code>"123" + "1" → "1231"</code></td>
 </tr>
 </tbody>
 </table>
@@ -1292,183 +1218,112 @@ TypeError:<span class="w"> </span>can<span class="w"> </span>only<span class="w"
 <p>このように、文字列の演算には <code>+</code>（連結）と <code>*</code>（繰り返し）が使えます。
 また、数値リテラルと文字列リテラルは見た目が似ていても動作が異なるので注意が必要です。</p>
 <hr />
-<h3 id="_4">エスケープシーケンス<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>エスケープシーケンスとは、文字列の中で特殊な意味を持つ記号を使うための方法です。<br />
-Pythonでは <code>\</code>（バックスラッシュ）を使って、改行やタブ、特殊文字を表現できます。</p>
-<p><strong>エスケープシーケンスの一覧</strong></p>
+<h3 id="_10">特殊な文字<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>プログラミングで特別な文字を扱うには、エスケープシーケンスを使います。エスケープシーケンスとは、文字列の中で特殊な意味を持つ記号を使うための方法です。  例えば、Pythonでは <code>\</code>（バックスラッシュ）を使って、改行やタブ、特殊文字を表現できます。</p>
 <p>以下は、Pythonでよく使われるエスケープシーケンスの一覧です。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">エスケープシーケンス</th>
-<th style="text-align: left;">説明</th>
-<th style="text-align: left;">例</th>
+<th>エスケープシーケンス</th>
+<th>説明</th>
+<th>例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><code>\n</code></td>
-<td style="text-align: left;">改行</td>
-<td style="text-align: left;"><code>"Hello\nWorld"</code> → Hello（改行）World</td>
+<td><code>\n</code></td>
+<td>改行</td>
+<td><code>"Hello\nWorld"</code> → Hello（改行）World</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>\t</code></td>
-<td style="text-align: left;">タブ</td>
-<td style="text-align: left;"><code>"Hello\tWorld"</code> → Hello    World</td>
+<td><code>\t</code></td>
+<td>タブ</td>
+<td><code>"Hello\tWorld"</code> → Hello    World</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>\\</code></td>
-<td style="text-align: left;">バックスラッシュ</td>
-<td style="text-align: left;"><code>"C:\\Program Files\\"</code> → C:\Program Files\</td>
+<td><code>\\</code></td>
+<td>バックスラッシュ</td>
+<td><code>"C:\\Program Files\\"</code> → C:\Program Files\</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>\'</code></td>
-<td style="text-align: left;">シングルクォート</td>
-<td style="text-align: left;"><code>'It\'s OK'</code> → It's OK</td>
+<td><code>\'</code></td>
+<td>シングルクォート</td>
+<td><code>'It\'s OK'</code> → It's OK</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>\"</code></td>
-<td style="text-align: left;">ダブルクォート</td>
-<td style="text-align: left;"><code>"He said \"Hello\""</code> → He said "Hello"</td>
+<td><code>\"</code></td>
+<td>ダブルクォート</td>
+<td><code>"He said \"Hello\""</code> → He said "Hello"</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">改行（<code>\n</code>）</p>
+<p><br></p>
+<h4 id="n">改行（<code>\n</code>）<a class="headerlink" href="#n" title="Permanent link">&para;</a></h4>
 <p>文字列の途中で改行したい場合は <code>\n</code> を使います。</p>
-</div>
 <p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;こんにちは</span><span class="se">\n</span><span class="s2">世界&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは</span><span class="se">\n</span><span class="s2">世界&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>こんにちは
 世界
 </code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">タブ（<code>\t</code>）</p>
+<p><br></p>
+<h4 id="t">タブ（<code>\t</code>）<a class="headerlink" href="#t" title="Permanent link">&para;</a></h4>
 <p>タブ（スペース4つ分または8つ分の空白）を入れたいときは <code>\t</code> を使います。</p>
-</div>
 <p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;名前:</span><span class="se">\t</span><span class="s2">田中</span><span class="se">\n</span><span class="s2">年齢:</span><span class="se">\t</span><span class="s2">25&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;名前:</span><span class="se">\t</span><span class="s2">田中</span><span class="se">\n</span><span class="s2">年齢:</span><span class="se">\t</span><span class="s2">25&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>名前:<span class="w"> </span>田中
 年齢:<span class="w"> </span><span class="m">25</span>
 </code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">バックスラッシュ（<code>\\</code>）</p>
+<p><br></p>
+<h4 id="_11">バックスラッシュ（<code>\\</code>）<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>パスなどで <code>\</code>（バックスラッシュ）を使いたい場合は <code>\\</code> と書きます。</p>
-</div>
 <p><strong>プログラム</strong>
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">User</span><span class="se">\\</span><span class="s2">Documents&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">User</span><span class="se">\\</span><span class="s2">Documents&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>C:<span class="se">\U</span>sers<span class="se">\U</span>ser<span class="se">\D</span>ocuments
 </code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">クォートのエスケープ（<code>\'</code> と <code>\"</code>）</p>
+<p><br></p>
+<h4 id="_12">クォートのエスケープ（<code>\'</code> と <code>\"</code>）<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>シングルクォート（<code>'</code>）やダブルクォート（<code>"</code>）を文字列内に含めたい場合に使います。</p>
-</div>
 <p><strong>プログラム:</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text1</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s a pen.&#39;</span>
-<span class="n">text2</span> <span class="o">=</span> <span class="s2">&quot;He said </span><span class="se">\&quot;</span><span class="s2">Hello</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s a pen.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;He said </span><span class="se">\&quot;</span><span class="s2">Hello</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>It<span class="err">&#39;</span>s<span class="w"> </span>a<span class="w"> </span>pen.
 He<span class="w"> </span>said<span class="w"> </span><span class="s2">&quot;Hello&quot;</span>
 </code></pre></div></p>
-<hr />
-<h3 id="_5">ヒアドキュメント（複数行の文字列）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>Pythonでは、長い文字列を複数行にわたって記述したい場合、ヒアドキュメント（複数行文字列リテラル）を使用できます。<br />
-ヒアドキュメントとは、<code>"""</code>（ダブルクォート3つ）または <code>'''</code>（シングルクォート3つ）で囲んだ文字列のことです。</p>
-<p><strong>ヒアドキュメントの基本</strong></p>
-<p>通常、文字列は <code>"</code> または <code>'</code> で囲みますが、1行が長くなると見づらくなります。<br />
-そのため、複数行の文字列を扱うときは <code>"""</code> または <code>'''</code> を使います。</p>
+<p><br></p>
+<div class="admonition tip">
+<p class="admonition-title">複数行の文字</p>
+<p>Pythonでは、長い文字列を複数行にわたって記述したい場合、複数行文字列リテラル（In triple-quoted literals）を使用できます。複数行文字列リテラルは、<code>"""</code>（ダブルクォート3つ）または <code>'''</code>（シングルクォート3つ）で囲んだ文字列のことです。通常、文字列は <code>"</code> または <code>'</code> で囲みますが、1行が長くなると見づらくなります。そのため、複数行の文字列を扱うときは <code>"""</code> または <code>'''</code> を使います。</p>
 <p><strong>プログラム:</strong>
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;これは</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">これは</span>
 <span class="s2">複数行の</span>
-<span class="s2">文字列です。&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="s2">文字列です。&quot;&quot;&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>これは
 複数行の
 文字列です。
 </code></pre></div></p>
-<p><strong>ヒアドキュメントの特徴</strong></p>
 <ul>
 <li><code>"""</code>（ダブルクォート3つ）と <code>'''</code>（シングルクォート3つ）のどちらでもOK</li>
 <li><code>\n</code> を使わなくても改行される</li>
 <li>変数への代入や関数の返り値として使える</li>
 </ul>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Pythonでは</span>
-<span class="s1">ヒアドキュメントを使うと</span>
-<span class="s1">長い文字列を簡単に扱えます。&#39;&#39;&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>出力</strong>
-<div class="highlight"><pre><span></span><code>Pythonでは
-ヒアドキュメントを使うと
-長い文字列を簡単に扱えます。
-</code></pre></div></p>
-<p><strong>ヒアドキュメントのインデント調整</strong></p>
-<p>関数やクラスの中でヒアドキュメントを使うと、インデントによって余計なスペースが入ることがあります。
-その場合、<code>textwrap.dedent()</code> を使うときれいに整形できます。</p>
-<p><strong>プログラム:</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">textwrap</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_message</span><span class="p">():</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
-<span class="s2">    これは</span>
-<span class="s2">    インデント付きの</span>
-<span class="s2">    ヒアドキュメントです。&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">dedent</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">get_message</span><span class="p">())</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>これは
-インデント付きの
-ヒアドキュメントです。
-</code></pre></div></p>
-<p><strong>ヒアドキュメントをコメントとして使う</strong></p>
-<p><code>"""</code> や <code>'''</code> で囲まれた文字列は変数に代入しなければ無視されるため、コメントのように使うこともできます。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sample_function</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    これは関数の説明です。</span>
-<span class="sd">    ここに関数の仕様や使い方を書きます。</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;関数が実行されました。&quot;</span><span class="p">)</span>
-
-<span class="n">sample_function</span><span class="p">()</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>関数が実行されました。
-</code></pre></div></p>
-<p>このようなコメントは 「ドキュメンテーション文字列（<strong>Docstring</strong>）」 と呼ばれ、<code>help()</code> で確認できます。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="n">sample_function</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>Help<span class="w"> </span>on<span class="w"> </span><span class="k">function</span><span class="w"> </span>sample_function<span class="w"> </span><span class="k">in</span><span class="w"> </span>module<span class="w"> </span>__main__:
-
-sample_function<span class="o">()</span>
-<span class="w">    </span>これは関数の説明です。
-<span class="w">    </span>ここに関数の仕様や使い方を書きます。
-</code></pre></div></p>
+</div>
 <hr />
-<h3 id="_6">式と評価<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_13">プログラム上での評価<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、<strong>式（Expression）</strong> は <strong>オペランド（値）と演算子（<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> など）</strong> で構成されます。<br />
 式が実行されると、演算子ごとに処理が行われ、最終的に1つの値に置き換えられます。この <strong>計算の過程</strong> を <strong>評価（Evaluation）</strong> と呼びます。</p>
 <p>例えば、以下の式を考えてみます。</p>
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><code><span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 <p>この式の評価（計算の流れ）は、次のように進みます。</p>
 <table>
@@ -1497,11 +1352,8 @@ sample_function<span class="o">()</span>
 </tr>
 </tbody>
 </table>
-<p>Python は 演算子の優先順位 に従い、まず <code>*</code>（掛け算）を評価し、その結果を <code>+</code>（足し算）に適用します。</p>
-<p>より複雑な式を見てみましょう。</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span>
+<p>Python は 演算子の優先順位 に従い、まず <code>*</code>（掛け算）を評価し、その結果を <code>+</code>（足し算）に適用します。次は、より複雑な式を見てみましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span>
 </code></pre></div>
 <p>この式の評価の流れは以下のようになります。</p>
 <table>
@@ -1515,134 +1367,100 @@ sample_function<span class="o">()</span>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;"><code>(2 + 3) ** 2 / 2 - 4</code></td>
-<td style="text-align: left;"><code>x</code> と <code>y</code> をそれぞれ <code>2</code>, <code>3</code> に置き換える</td>
+<td style="text-align: left;"><code>5 ** 2 / 2 - 4</code></td>
+<td style="text-align: left;"><code>2 + 3 = 5</code> を計算（加算）</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;"><code>5 ** 2 / 2 - 4</code></td>
-<td style="text-align: left;"><code>2 + 3 = 5</code> を計算</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
 <td style="text-align: left;"><code>25 / 2 - 4</code></td>
 <td style="text-align: left;"><code>5 ** 2 = 25</code> を計算（べき乗）</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
 <td style="text-align: left;"><code>12.5 - 4</code></td>
 <td style="text-align: left;"><code>25 / 2 = 12.5</code> を計算（除算）</td>
 </tr>
 <tr>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
 <td style="text-align: left;"><code>8.5</code></td>
 <td style="text-align: left;"><code>12.5 - 4 = 8.5</code> を計算（減算）</td>
 </tr>
 </tbody>
 </table>
-<p>このように、優先順位の高い演算から順に評価 され、最終的に <code>8.5</code> という値が <code>result</code> に代入されます。</p>
-<p>Python では、式がどのように評価されるかを <code>print()</code> を使って確認できます。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">step1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 1:&quot;</span><span class="p">,</span> <span class="n">step1</span><span class="p">)</span>
-
-<span class="n">step2</span> <span class="o">=</span> <span class="n">step1</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 2:&quot;</span><span class="p">,</span> <span class="n">step2</span><span class="p">)</span>
-
-<span class="n">step3</span> <span class="o">=</span> <span class="n">step2</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 3:&quot;</span><span class="p">,</span> <span class="n">step3</span><span class="p">)</span>
-
-<span class="n">step4</span> <span class="o">=</span> <span class="n">step3</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 4:&quot;</span><span class="p">,</span> <span class="n">step4</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>Step<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="m">5</span>
-Step<span class="w"> </span><span class="m">2</span>:<span class="w"> </span><span class="m">25</span>
-Step<span class="w"> </span><span class="m">3</span>:<span class="w"> </span><span class="m">12</span>.5
-Step<span class="w"> </span><span class="m">4</span>:<span class="w"> </span><span class="m">8</span>.5
-</code></pre></div></p>
-<p>このように、演算の途中経過を表示することで、式の評価の流れを追う ことができます。</p>
-<p><strong>まとめ</strong></p>
-<ul>
-<li>式（Expression） はオペランド（値）と演算子（<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> など）で構成される。</li>
-<li>評価（Evaluation） とは、式が計算されて最終的な値に変わっていく過程のこと。</li>
-<li>演算の優先順位 に従って、高いものから順に評価 される。</li>
-<li><code>print()</code> を使うことで、評価の流れを確認 できる。</li>
-</ul>
-<p>この考え方を理解すると、プログラムがどのように実行されるのかが明確になり、バグを防ぐ助けにもなります！</p>
+<p>このように、優先順位の高い演算から順に評価 され、最終的に <code>8.5</code> という値もとめられます。この演算子における優先度は、<a href="#_2">算術演算子の表</a> の下から上に評価されます。</p>
 <hr />
 <h2 id="2">2. 変数<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>続いてPythonの変数を見ていきましょう！</p>
-<hr />
-<h3 id="_7">変数の利用<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>ここまでで演算した数値や文字は、Python の変数に保存することができます。変数はプログラミングにおいて箱に例えられます。それではPythonの変数を見ていきましょう！</p>
+<h3 id="_14">変数の利用<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>プログラミングにおいて <strong>変数（variable）</strong> は、データを一時的に保存するための <strong>識別子（identifier）</strong> です。Python では、変数に値を 代入することで使用でき、その値を参照することができます。</p>
-<p><strong>変数を定義する</strong></p>
 <p>変数を使用するためには、まず定義する必要があります。Pythonでは、<code>=</code> を使って変数に値を代入します。この <code>=</code> は <strong>代入演算子（assignment operator）</strong> と呼ばれます。</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># x に 10 を代入</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># y に 20 を代入</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 変数 x を参照し、その値を出力（10）</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># 変数 y を参照し、その値を出力（20）</span>
-</code></pre></div>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">30</span>
+</code></pre></div></p>
 <hr />
-<h3 id="_8">変数名のルール<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_15">変数名のルール<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>変数名（識別子）は、自由に決められますが、以下のルールを守る必要があります。</p>
-<div class="admonition note">
-<p class="admonition-title">使用できる文字</p>
-<ul>
+<ol>
+<li>使用できる文字<ul>
 <li>英字（a-z, A-Z）、数字（0-9）、アンダースコア（_）が使える。</li>
 <li>数字で始めることはできない（1var ❌）</li>
 </ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Pythonの予約語（keyword）を使えない</p>
-<ul>
+</li>
+<li>Pythonの予約語（keyword）を使えない<ul>
 <li><code>if</code>, <code>for</code>, <code>while</code>, <code>def</code>, <code>class</code> などの 予約語（keyword） は変数名にできない。</li>
 </ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">変数名のケース（記法）</p>
-<p>変数の命名方法として、次のスタイルがよく使われます。</p>
+</li>
+<li>
+<p>変数名のケース（記法）</p>
+<ul>
+<li>変数の命名方法として、次のスタイルがよく使われます。</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">スタイル名</th>
-<th style="text-align: center;">例</th>
-<th style="text-align: left;">説明</th>
+<th>スタイル名</th>
+<th>例</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>スネークケース（snake_case）</strong></td>
-<td style="text-align: center;"><code>my_variable</code></td>
-<td style="text-align: left;">Python では一般的</td>
+<td><strong>スネークケース（snake_case）</strong></td>
+<td><code>my_variable</code></td>
+<td>Python では一般的</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>キャメルケース（camelCase）</strong></td>
-<td style="text-align: center;"><code>myVariable</code></td>
-<td style="text-align: left;">JavaScript などで使用される</td>
+<td><strong>キャメルケース（camelCase）</strong></td>
+<td><code>myVariable</code></td>
+<td>Java や JavaScript などで使用される</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>アッパーキャメルケース（UpperCamelCase）</strong></td>
-<td style="text-align: center;"><code>MyVariable</code></td>
-<td style="text-align: left;">クラス名によく使われる</td>
+<td><strong>アッパーキャメルケース（UpperCamelCase）</strong></td>
+<td><code>MyVariable</code></td>
+<td>クラス名によく使われる</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>チェインケース（chain-case）</strong></td>
-<td style="text-align: center;"><code>my-variable</code></td>
-<td style="text-align: left;">Python の変数名では使えない</td>
+<td><strong>チェインケース（chain-case）</strong></td>
+<td><code>my-variable</code></td>
+<td><strong>Python の変数名では使えない</strong></td>
 </tr>
 </tbody>
 </table>
-</div>
+</li>
+</ol>
 <p>Pythonでは、一般的に スネークケース（snake_case） を使用するのが推奨されます。</p>
 <div class="highlight"><pre><span></span><code><span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>  <span class="c1"># スネークケース（推奨）</span>
 <span class="n">userAge</span> <span class="o">=</span> <span class="mi">25</span>         <span class="c1"># ロワーキャメルケース（非推奨）</span>
 <span class="n">UserAge</span> <span class="o">=</span> <span class="mi">25</span>         <span class="c1"># アッパーキャメルケース（クラス名向き）</span>
 </code></pre></div>
-<p>Python の予約後は次のコードで出力することもできます。</p>
+<div class="admonition note">
+<p class="admonition-title">Python の予約語</p>
+<p>予約語は次のコードで出力することもできます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">keyword</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>
@@ -1650,13 +1468,14 @@ Step<span class="w"> </span><span class="m">4</span>:<span class="w"> </span><sp
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code><span class="o">[</span><span class="s1">&#39;False&#39;</span>,<span class="w"> </span><span class="s1">&#39;None&#39;</span>,<span class="w"> </span><span class="s1">&#39;True&#39;</span>,<span class="w"> </span><span class="s1">&#39;__peg_parser__&#39;</span>,<span class="w"> </span><span class="s1">&#39;and&#39;</span>,<span class="w"> </span><span class="s1">&#39;as&#39;</span>,<span class="w"> </span><span class="s1">&#39;assert&#39;</span>,<span class="w"> </span><span class="s1">&#39;async&#39;</span>,<span class="w"> </span><span class="s1">&#39;await&#39;</span>,<span class="w"> </span><span class="s1">&#39;break&#39;</span>,<span class="w"> </span><span class="s1">&#39;class&#39;</span>,<span class="w"> </span><span class="s1">&#39;continue&#39;</span>,<span class="w"> </span><span class="s1">&#39;def&#39;</span>,<span class="w"> </span><span class="s1">&#39;del&#39;</span>,<span class="w"> </span><span class="s1">&#39;elif&#39;</span>,<span class="w"> </span><span class="s1">&#39;else&#39;</span>,<span class="w"> </span><span class="s1">&#39;except&#39;</span>,<span class="w"> </span><span class="s1">&#39;finally&#39;</span>,<span class="w"> </span><span class="s1">&#39;for&#39;</span>,<span class="w"> </span><span class="s1">&#39;from&#39;</span>,<span class="w"> </span><span class="s1">&#39;global&#39;</span>,<span class="w"> </span><span class="s1">&#39;if&#39;</span>,<span class="w"> </span><span class="s1">&#39;import&#39;</span>,<span class="w"> </span><span class="s1">&#39;in&#39;</span>,<span class="w"> </span><span class="s1">&#39;is&#39;</span>,<span class="w"> </span><span class="s1">&#39;lambda&#39;</span>,<span class="w"> </span><span class="s1">&#39;nonlocal&#39;</span>,<span class="w"> </span><span class="s1">&#39;not&#39;</span>,<span class="w"> </span><span class="s1">&#39;or&#39;</span>,<span class="w"> </span><span class="s1">&#39;pass&#39;</span>,<span class="w"> </span><span class="s1">&#39;raise&#39;</span>,<span class="w"> </span><span class="s1">&#39;return&#39;</span>,<span class="w"> </span><span class="s1">&#39;try&#39;</span>,<span class="w"> </span><span class="s1">&#39;while&#39;</span>,<span class="w"> </span><span class="s1">&#39;with&#39;</span>,<span class="w"> </span><span class="s1">&#39;yield&#39;</span><span class="o">]</span>
 </code></pre></div></p>
+</div>
 <hr />
-<h3 id="_9">変数の上書き<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_16">変数の上書き<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>変数に値を代入し、その後に参照することでプログラム内でデータを扱えます。</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># 変数 name を参照し、出力（Python）</span>
 </code></pre></div>
-<p>Python は <strong>動的型付け言語</strong> なので、異なる型の値を同じ変数に代入できます。</p>
+<p>Python では、異なる型の値を同じ変数に代入することができます。このような特徴を持つプログラミング言語のことを、<strong>動的型付け言語</strong> といったりもします。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
@@ -1669,7 +1488,7 @@ Step<span class="w"> </span><span class="m">4</span>:<span class="w"> </span><sp
 hello
 </code></pre></div></p>
 <hr />
-<h3 id="_10">アンパック代入<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_17">アンパック代入<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>プログラムが複雑になっていきたくさんの変数を利用すると、それだけでコード量が多くなる場合があります。そんな時に複数の変数をいっぺんに代入する方法としてアンパック代入があります。</p>
 <p><strong>プログラム:</strong>
 <div class="highlight"><pre><span></span><code><span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;まさゆき&#39;</span><span class="p">,</span> <span class="mi">32</span>
@@ -1681,7 +1500,7 @@ hello
 <span class="m">32</span>
 </code></pre></div></p>
 <hr />
-<h3 id="_11">自分自身の変数に代入する<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_18">自分自身に代入<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <p>Python では、変数に新しい値を代入すると、それまでの値は <strong>上書き</strong> されます。<br />
 この仕組みを利用して、<strong>自分自身の変数を使って値を更新</strong> することができます。</p>
 <p>例えば、カウンターを 1 ずつ増やす処理を考えてみましょう。</p>
@@ -1697,7 +1516,7 @@ hello
 </ol>
 <p>このように、変数の現在の値を使って、新しい値を計算し 再代入 することができます。</p>
 <hr />
-<h3 id="_12">複合代入演算子<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_19">複合代入演算子<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p>上記のような 自分自身の変数に新しい値を代入する処理 は、複合代入演算子（<strong>compound assignment operator</strong>） を使うと より簡潔に記述 できます。</p>
 <p>例えば、次の 2 つのコードは同じ意味を持ちます。</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1706,6 +1525,7 @@ hello
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="mi">3</span>  <span class="c1"># x に 3 を加算（簡潔な書き方）</span>
 </code></pre></div>
+<p>複合代入演算子はほかにも、下記があります。</p>
 <table>
 <thead>
 <tr>
@@ -1778,8 +1598,8 @@ hello
 <span class="m">20</span>
 </code></pre></div></p>
 <p>複合代入演算子を使うメリットとして、コードがシンプルになり、読みやすくなります。</p>
-<hr />
-<h3 id="_13">キーボード入力値の代入<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">キーボード入力値の代入</p>
 <p>Python では、<code>input()</code> 関数を使ってキーボードから入力を受け取り、それを変数に代入できます。<br />
 この機能を利用すると、<strong>ユーザーの入力をプログラム内で扱う</strong> ことができます。</p>
 <p>キーボードから入力を受け取り、変数に代入する基本的なコードは次のようになります。</p>
@@ -1814,7 +1634,7 @@ hello
 <div class="highlight"><pre><span></span><code>あなたの身長を入力してください（cm）:<span class="w"> </span><span class="m">167</span>.5
 あなたの身長は<span class="w"> </span><span class="m">167</span>.5<span class="w"> </span>cm<span class="w"> </span>ですね！
 </code></pre></div></p>
-<p>Python では <code>split()</code> を使うことで、スペース区切りの入力を 複数の変数に同時に代入 できます。<code>split()</code> を使うことで、ユーザーが <strong>Alice Smith</strong> のようにスペース区切りで入力した場合、<code>first_name</code> に <strong>Alice</strong>、<code>last_name</code> に <strong>Smith</strong> が代入される。</p>
+<p>Python では <code>split()</code> を使うことで、スペース区切りの入力を 複数の変数に同時に代入 できます。<code>split()</code> を使うことで、ユーザーが <strong>John Doe</strong> のようにスペース区切りで入力した場合、<code>first_name</code> に <strong>John</strong>、<code>last_name</code> に <strong>Doe</strong> が代入される。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;名前と名字をスペースで区切って入力してください: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;あなたの名前は&quot;</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="s2">&quot;ですね！&quot;</span><span class="p">)</span>
@@ -1823,11 +1643,11 @@ hello
 <div class="highlight"><pre><span></span><code>名前と名字をスペースで区切って入力してください:<span class="w"> </span>John<span class="w"> </span>Doe
 あなたの名前は<span class="w"> </span>John<span class="w"> </span>Doe<span class="w"> </span>ですね！
 </code></pre></div></p>
+</div>
 <hr />
 <h2 id="3">3. データ型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>続いてPythonのデータ型を見ていきましょう！</p>
-<hr />
-<h3 id="_14">データ型とは<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>ここまで、数値や文字の演算と、その演算結果を変数に格納することを学びました。プログラムの数値型、文字列型に触れましたが、Python には数値型、文字列型の他にも型（データ型）が存在します。それではPythonのデータ型を見ていきましょう！</p>
+<h3 id="_20">データ型とは<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <p>Python では、データには <strong>「型（データ型）」</strong> という概念があり、値の種類によって分類されます。<br />
 データ型を正しく理解することで、適切な計算やデータの操作ができるようになります。</p>
 <p>Python にはさまざまなデータ型がありますが、基本的なものは次のとおりです。</p>
@@ -1835,45 +1655,45 @@ hello
 <thead>
 <tr>
 <th>データ型</th>
-<th style="text-align: left;">説明</th>
-<th style="text-align: left;">例</th>
+<th>説明</th>
+<th>例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td style="text-align: left;"><strong>整数型</strong>（小数なし）</td>
-<td style="text-align: left;"><code>10, -3, 1000</code></td>
+<td><strong>整数型</strong>（小数なし）</td>
+<td><code>10, -3, 1000</code></td>
 </tr>
 <tr>
 <td><code>float</code></td>
-<td style="text-align: left;"><strong>浮動小数点数型</strong>（小数あり）</td>
-<td style="text-align: left;"><code>3.14, -0.5, 2.0</code></td>
+<td><strong>浮動小数点数型</strong>（小数あり）</td>
+<td><code>3.14, -0.5, 2.0</code></td>
 </tr>
 <tr>
 <td><code>str</code></td>
-<td style="text-align: left;"><strong>文字列型</strong>（テキスト）</td>
-<td style="text-align: left;"><code>"Hello", 'Python'</code></td>
+<td><strong>文字列型</strong>（テキスト）</td>
+<td><code>"Hello", 'Python'</code></td>
 </tr>
 <tr>
 <td><code>bool</code></td>
-<td style="text-align: left;"><strong>真偽値型</strong>（真 or 偽）</td>
-<td style="text-align: left;"><code>True, False</code></td>
+<td><strong>真偽値型</strong>（真 or 偽）</td>
+<td><code>True, False</code></td>
 </tr>
 <tr>
 <td><code>list</code></td>
-<td style="text-align: left;"><strong>リスト型</strong>（複数の値を格納）</td>
-<td style="text-align: left;"><code>[1, 2, 3]</code></td>
+<td><strong>リスト型</strong>（複数の値を格納）</td>
+<td><code>[1, 2, 3]</code></td>
 </tr>
 <tr>
 <td><code>tuple</code></td>
-<td style="text-align: left;"><strong>タプル型</strong>（変更不可のリスト）</td>
-<td style="text-align: left;"><code>(1, 2, 3)</code></td>
+<td><strong>タプル型</strong>（変更不可のリスト）</td>
+<td><code>(1, 2, 3)</code></td>
 </tr>
 <tr>
 <td><code>dict</code></td>
-<td style="text-align: left;"><strong>辞書型</strong>（キーと値のペア）</td>
-<td style="text-align: left;"><code>{"name": "Alice", "age": 25}</code></td>
+<td><strong>辞書型</strong>（キーと値のペア）</td>
+<td><code>{"name": "Alice", "age": 25}</code></td>
 </tr>
 </tbody>
 </table>
@@ -1912,10 +1732,11 @@ TypeError:<span class="w"> </span>can<span class="w"> </span>only<span class="w"
 <p>これは、<strong>age</strong>（整数型 <code>int</code>）と <strong>message</strong>（文字列型 <code>str</code>）を直接結合できない ためです。
 このようなエラーを防ぐには、データ型を適切に変換（<strong>キャスト</strong>） する必要があります。</p>
 <hr />
-<h3 id="_15">データ型の変換<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_21">データ型の変換<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p>プログラムを作成する際、異なるデータ型を適切に扱うことが重要です。<br />
 Python では、<strong>データ型を変換（キャスト）</strong> することで、型の違いによるエラーを防ぎ、適切な処理を行うことができます。</p>
-<p><strong>暗黙的な型変換（自動変換）</strong></p>
+<p><br></p>
+<h4 id="_22">暗黙的な型変換（自動変換）<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>Python では、<strong>異なるデータ型が混在する演算を行うと、自動的に型変換が行われることがあります。</strong><br />
 このことを <strong>暗黙的な型変換（implicit type conversion）</strong> といいます。</p>
 <p><strong>プログラム：</strong>
@@ -1931,7 +1752,8 @@ Python では、<strong>データ型を変換（キャスト）</strong> する�
 &lt;class<span class="w"> </span><span class="s1">&#39;float&#39;</span>&gt;
 </code></pre></div></p>
 <p>整数（<code>int</code>）と小数（<code>float</code>）の計算結果は、自動的に <code>float</code> に変換されます。</p>
-<p><strong>明示的な型変換（キャスト）</strong></p>
+<p><br></p>
+<h4 id="_23">明示的な型変換（キャスト）<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>異なるデータ型を手動で変換することを「<strong>明示的な型変換（explicit type conversion）</strong>」または「<strong>キャスト</strong>」と呼びます。
 Python では、以下の関数を使ってデータ型を変換できます。</p>
 <table>
@@ -1956,14 +1778,10 @@ Python では、以下の関数を使ってデータ型を変換できます。<
 </tr>
 </tbody>
 </table>
-<p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;あなたの年齢は &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; 歳です。&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>あなたの年齢は<span class="w"> </span><span class="m">25</span><span class="w"> </span>歳です。
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><strong>age</strong> は <code>int</code> 型なので、直接 <code>str</code> 型の文字列と結合するとエラーになります。</li>
 <li><code>str(age)</code> を使って <strong>age</strong> を <code>str</code> 型に変換することで、文字列の結合が可能になります。</li>
@@ -1986,7 +1804,8 @@ Python では、以下の関数を使ってデータ型を変換できます。<
 <div class="highlight"><pre><span></span><code><span class="m">3</span>
 </code></pre></div></p>
 <p><code>int()</code> を使うと、小数点以下を切り捨てた整数 になる。</p>
-<p><strong>型変換の注意点</strong></p>
+<p><br></p>
+<h4 id="_24">型変換の注意点<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>文字列を数値に変換するとき、数値以外の文字が含まれているとエラーになる ので注意。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;100円&quot;</span>
@@ -2014,7 +1833,7 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <div class="highlight"><pre><span></span><code><span class="m">100</span>
 </code></pre></div></p>
 <hr />
-<h3 id="_16">文字列の中に数値を埋め込む方法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="format"><code>format</code>関数<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
 <p>文字列と数値を合わせて出力する方法として、<code>str()</code>を使ってデータ型を変換して、文字列として<code>+</code>結合する方法を学びました。</p>
 <div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;あなたの年齢は &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; 歳です。&quot;</span>
@@ -2113,45 +1932,38 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>番号は<span class="w"> </span><span class="m">007</span><span class="w"> </span>です。
 </code></pre></div></p>
-<p><strong>f-string のメリット</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>メリット</strong></th>
-<th style="text-align: left;"><strong>説明</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>シンプルで直感的</strong></td>
-<td style="text-align: left;"><code>{}</code> 内に変数を書くことで、すぐに埋め込める。</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>コードの可読性が高い</strong></td>
-<td style="text-align: left;"><code>format()</code> よりも短くて見やすい。</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>計算や関数の戻り値を埋め込める</strong></td>
-<td style="text-align: left;"><code>{a + b}</code> や <code>{get_name()}</code> など、直接記述が可能。</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>書式指定が簡単</strong></td>
-<td style="text-align: left;"><code>{:.2f}</code> で小数点以下の桁数を調整、<code>{:,}</code> でカンマ区切りなどができる。</td>
-</tr>
-</tbody>
-</table>
+<p>f-string を使うことで以下のようなメリットがあります。</p>
+<ol>
+<li>
+<p>シンプルで直感的</p>
+<p><code>{}</code> 内に変数を書くことで、すぐに埋め込める。</p>
+</li>
+<li>
+<p>コードの可読性が高い</p>
+<p><code>format()</code> よりも短くて見やすい。</p>
+</li>
+<li>
+<p>計算や関数の戻り値を埋め込める</p>
+<p><code>{a + b}</code> や <code>{get_name()}</code> など、直接記述が可能。</p>
+</li>
+<li>
+<p>書式指定が簡単</p>
+<p><code>{:.2f}</code> で小数点以下の桁数を調整、<code>{:,}</code> でカンマ区切りなどができる。</p>
+</li>
+</ol>
 <p>Python 3.6 以降では <strong>f-string</strong> が最も簡単で推奨される方法 です！
 従来の <code>format()</code> に比べて、短く・分かりやすく・柔軟に 記述できます。</p>
 <p>次のステップでは、<strong>f-string</strong> を活用してより高度なフォーマットを実践してみましょう！</p>
 <hr />
-<h2 id="_17">この章のまとめ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p><br></p>
+<h2 id="_25">この章のまとめ<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">1. 式と演算</p>
 <ul>
 <li><strong>数値の演算</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code> などの算術演算子を使って計算ができる。</li>
 <li><strong>文字列の演算</strong>: <code>+</code> で連結、<code>*</code> で繰り返しが可能。</li>
 <li><strong>エスケープシーケンス</strong>: <code>\n</code>（改行）, <code>\t</code>（タブ）など、特殊な文字を表現できる。</li>
-<li><strong>ヒアドキュメント</strong>: <code>"""</code> や <code>'''</code> を使って複数行の文字列を扱う。</li>
+<li><strong>複数行文字列リテラル</strong>: <code>"""</code> や <code>'''</code> を使って複数行の文字列を扱う。</li>
 <li><strong>式と評価</strong>: 演算の優先順位に従い、演算子が順に評価されて最終的な結果を得る。</li>
 </ul>
 </div>
