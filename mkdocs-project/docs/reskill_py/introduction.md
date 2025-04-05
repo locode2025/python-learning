@@ -330,4 +330,4 @@ print(r)
 
 これからも一緒にPythonを楽しみながら学んでいきましょう！😊🎵
 
-👉 [次は、**変数とデータ型**について説明していきます。](variable_and_type.md)
+👉 [次は、**Python の演算と変数、さらにはデータ型**について説明していきます。](./operator_variable_type.md)

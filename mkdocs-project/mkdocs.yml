@@ -1,4 +1,4 @@
-site_name: リスキリングコード
+site_name: リスキリングプログラミング
 site_url: https://pylocode.jp/
 site_description: プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。
 site_author: Masayuki
@@ -7,7 +7,7 @@ nav:
   - "ホーム": index.md
   - "リスキリング Python": 
     - "第１章　はじめに": reskill_py/introduction.md
-    - "第２章　変数とデータ型": reskill_py/variable_and_type.md
+    - "第２章　演算・変数・型": reskill_py/operator_variable_type.md
     - "第３章　コンテナ": reskill_py/container.md
     - "第４章　条件分岐": reskill_py/conditinal_statement.md
     - "第５章　繰り返し": reskill_py/loop.md
@@ -66,6 +66,7 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
+      toc_depth: 2-3
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
@@ -84,3 +85,4 @@ plugins:
       post_date_format: full
       post_url_format: "{file}"
       archive: false #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.archive
+  - tags

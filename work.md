@@ -23,3 +23,9 @@
 - `mkdocs gh-deploy` で認証を求められ、パスワード入力で失敗する
     - GitHubアカウントのClassic tokenを使って認証を通過する https://qiita.com/NumLock7019/items/c867e01c5451dc7d06e3
 - 取得したドメインにDNSを設定して、GitHub Pagesにカスタムドメインとして設定する https://qiita.com/eshun-mikuro-tama/items/8fc3cfceab3281a8c24f
+
+## Python document
+
+- [Public] Beginner's Guide to Pyrhon https://wiki.python.org/moin/BeginnersGuide
+- Automate the Boring Stuff with Python https://automatetheboringstuff.com/
+- Pyhon Turorial@Python Land https://python.land/python-tutorialhttps://python.land/python-tutorial
