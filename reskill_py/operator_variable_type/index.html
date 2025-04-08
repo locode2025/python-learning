@@ -579,7 +579,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -1008,7 +1008,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -1198,7 +1198,7 @@
 </tr>
 </tbody>
 </table>
-<p>このように、優先順位の高い演算から順に評価 され、最終的に <code>8.5</code> という値もとめられます。この演算子における優先度は、<a href="#_2">算術演算子の表</a> の下から上に評価されます。</p>
+<p>このように、優先順位の高い演算から順に評価 され、最終的に <code>8.5</code> という値を計算します。この演算子における優先度は、<a href="#_2">算術演算子の表</a> の下から上に評価されます。</p>
 <hr />
 <h3 id="_7">文字の演算<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、数値だけでなく文字（文字列、<code>str</code>) も演算に利用できます。主に <code>+</code>（連結）と <code>*</code>（繰り返し）を使用します。</p>
@@ -1629,7 +1629,7 @@ hello
 <h2 id="3">3. データ型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>ここまで、数値や文字の演算と、その演算結果を変数に格納することを学びました。プログラムの数値型、文字列型に触れましたが、Python には数値型、文字列型の他にも型（データ型）が存在します。それではPythonのデータ型を見ていきましょう！</p>
 <h3 id="_19">データ型とは<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
-<p>Python では、データには <strong>「型（データ型）」</strong> という概念があり、値の種類によって分類されます。<br />
+<p>Python では、データに <strong>「型（データ型）」</strong> という概念があり、値の種類によって分類されます。<br />
 データ型を正しく理解することで、適切な計算やデータの操作ができるようになります。</p>
 <p>Python にはさまざまなデータ型がありますが、基本的なものは次のとおりです。</p>
 <table>
@@ -1681,7 +1681,7 @@ hello
 <p>Python では、<strong>変数に値を代入すると、その値のデータ型が自動的に決まります</strong>。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>      <span class="c1"># 整数型 (int)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>    <span class="c1"># 浮動小数点型 (float)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>    <span class="c1"># 浮動小数点数型 (float)</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>  <span class="c1"># 文字列型 (str)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -1717,24 +1717,7 @@ TypeError:<span class="w"> </span>can<span class="w"> </span>only<span class="w"
 <p>プログラムを作成する際、異なるデータ型を適切に扱うことが重要です。<br />
 Python では、<strong>データ型を変換（キャスト）</strong> することで、型の違いによるエラーを防ぎ、適切な処理を行うことができます。</p>
 <p><br></p>
-<h4 id="_21">暗黙的な型変換（自動変換）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
-<p>Python では、<strong>異なるデータ型が混在する演算を行うと、自動的に型変換が行われることがあります。</strong><br />
-このことを <strong>暗黙的な型変換（implicit type conversion）</strong> といいます。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># int型</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mf">2.5</span> <span class="c1"># float型</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>  <span class="c1"># int + float</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code><span class="m">12</span>.5
-&lt;class<span class="w"> </span><span class="s1">&#39;float&#39;</span>&gt;
-</code></pre></div></p>
-<p>整数（<code>int</code>）と小数（<code>float</code>）の計算結果は、自動的に <code>float</code> に変換されます。</p>
-<p><br></p>
-<h4 id="_22">明示的な型変換（キャスト）<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<h4 id="_21">明示的な型変換（キャスト）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>異なるデータ型を手動で変換することを「<strong>明示的な型変換（explicit type conversion）</strong>」または「<strong>キャスト</strong>」と呼びます。
 Python では、以下の関数を使ってデータ型を変換できます。</p>
 <table>
@@ -1751,7 +1734,7 @@ Python では、以下の関数を使ってデータ型を変換できます。<
 </tr>
 <tr>
 <td style="text-align: center;">float(x)</td>
-<td style="text-align: left;"><code>x</code> を浮動小数点型（<code>float</code>）に変換</td>
+<td style="text-align: left;"><code>x</code> を浮動小数点数型（<code>float</code>）に変換</td>
 </tr>
 <tr>
 <td style="text-align: center;">str(x)</td>
@@ -1785,8 +1768,8 @@ Python では、以下の関数を使ってデータ型を変換できます。<
 <div class="highlight"><pre><span></span><code><span class="m">3</span>
 </code></pre></div></p>
 <p><code>int()</code> を使うと、小数点以下を切り捨てた整数 になる。</p>
-<p><br></p>
-<h4 id="_23">型変換の注意点<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">型変換の注意点</p>
 <p>文字列を数値に変換するとき、数値以外の文字が含まれているとエラーになる ので注意。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;100円&quot;</span>
@@ -1813,6 +1796,24 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code><span class="m">100</span>
 </code></pre></div></p>
+</div>
+<p><br></p>
+<h4 id="_22">暗黙的な型変換（自動変換）<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<p>Python では、<strong>異なるデータ型が混在する演算を行うと、自動的に型変換が行われることがあります。</strong><br />
+このことを <strong>暗黙的な型変換（implicit type conversion）</strong> といいます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># int型</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">2.5</span> <span class="c1"># float型</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>  <span class="c1"># int + float</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">12</span>.5
+&lt;class<span class="w"> </span><span class="s1">&#39;float&#39;</span>&gt;
+</code></pre></div></p>
+<p>整数（<code>int</code>）と小数（<code>float</code>）の計算結果は、自動的に <code>float</code> に変換されます。</p>
 <hr />
 <h3 id="format"><code>format</code>関数<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
 <p>文字列と数値を合わせて出力する方法として、<code>str()</code>を使ってデータ型を変換して、文字列として<code>+</code>結合する方法を学びました。</p>
@@ -1937,7 +1938,7 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <p>次のステップでは、<strong>f-string</strong> を活用してより高度なフォーマットを実践してみましょう！</p>
 <hr />
 <p><br></p>
-<h2 id="_24">この章のまとめ<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<h2 id="_23">この章のまとめ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">1. 式と演算</p>
 <ul>
