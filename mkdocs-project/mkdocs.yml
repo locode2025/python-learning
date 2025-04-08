@@ -17,6 +17,8 @@ nav:
     - "第９章　おわりに": reskill_py/outro.md
   - リスキリングブログ:
     - blog/index.md
+  - プライバシーポリシー: privacy_policy.md
+  - お問い合わせ: request_form.md
 
 theme:
   custom_dir: custom_theme/
@@ -46,7 +48,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   features:
-    # - navigation.tabs #for too many contants
+    - navigation.tabs
     - navigation.expand
     - navigation.indexes
     - navigation.footer
@@ -84,5 +86,5 @@ plugins:
       blog_toc: true
       post_date_format: full
       post_url_format: "{file}"
-      archive: false #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.archive
+      # archive: false #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.archive
   - tags

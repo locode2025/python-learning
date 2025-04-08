@@ -30,3 +30,7 @@
 - Automate the Boring Stuff with Python https://automatetheboringstuff.com/
 - Pyhon Turorial@Python Land https://python.land/python-tutorialhttps://python.land/python-tutorial
 - パワポ用にコードをハイライト https://romannurik.github.io/SlidesCodeHighlighter
+
+## Webサイト
+
+- Google Analytics利用時のプライバシーポリシー
