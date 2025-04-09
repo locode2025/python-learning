@@ -1,0 +1,2032 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/reskill_py/dictionary/">
+      
+      
+        <link rel="prev" href="../list_tuple_set/">
+      
+      
+        <link rel="next" href="../conditinal_statement/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>ディクショナリ - リスキリングプログラミング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="リスキリングプログラミング" class="md-header__button md-logo" aria-label="リスキリングプログラミング" data-md-component="logo">
+      
+  <img src="../../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            リスキリングプログラミング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ディクショナリ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ホーム
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  リスキリング Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  リスキリングブログ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy_policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  プライバシーポリシー
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../request_form/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  お問い合わせ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="リスキリングプログラミング" class="md-nav__button md-logo" aria-label="リスキリングプログラミング" data-md-component="logo">
+      
+  <img src="../../img/favicon.ico" alt="logo">
+
+    </a>
+    リスキリングプログラミング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    リスキリング Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            リスキリング Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operator_and_variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    演算と変数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list_tuple_set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    リストとタプルとセット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ディクショナリとは
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ディクショナリとは">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の追加と変更
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の削除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリ要素の追加・変更・削除のまとめ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ディクショナリとリストの比較
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. コンテナの応用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. コンテナの応用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      コンテナの相互変換
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      コンテナのネスト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    リスキリングブログ
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            リスキリングブログ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    過去の投稿
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            過去の投稿
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プライバシーポリシー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../request_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    お問い合わせ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ディクショナリとは
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ディクショナリとは">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の追加と変更
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリの要素の削除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ディクショナリ要素の追加・変更・削除のまとめ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ディクショナリとリストの比較
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. コンテナの応用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. コンテナの応用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      コンテナの相互変換
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      コンテナのネスト
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      この章のまとめ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">ディクショナリ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. ディクショナリとは<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>ディクショナリ（<strong>辞書型</strong>）は、キーと値のペアを格納するデータ構造です。
+リストがインデックスで要素を管理するのに対して、ディクショナリは<strong>任意のキー</strong>（数値、文字列など）を使って、対応する値を格納します。</p>
+<div class="admonition note">
+<p class="admonition-title">ディクショナリの特徴</p>
+<p>ディクショナリは、キーと値のペアを管理するため、リストやタプルとは異なる特徴を持っています。</p>
+<ul>
+<li>順序は保証されない（Python 3.7以降は挿入順序が保持されますが、基本的に順序に依存しません）</li>
+<li>キーはユニークでなければならない</li>
+<li>値は任意のデータ型（文字列、リスト、数値など）を格納できます</li>
+</ul>
+</div>
+<h3 id="_2">ディクショナリの作成<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><strong>基本的なディクショナリの作成</strong></p>
+<p>ディクショナリは波括弧 <code>{}</code> を使って作成します。
+また、キーと値はコロン <code>:</code> で区切り、複数のペアはコンマ <code>,</code> で区切ります。</p>
+<p>例えば、以下のように<code>name</code>というキーに対して<code>"Alice"</code>という値を設定することができます。<code>"name"</code>, <code>"age"</code>, <code>"city"</code> がキーで、<code>"Alice"</code>, <code>30</code>, <code>"Tokyo"</code> がそれぞれ対応する値です。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<p><strong>空のディクショナリの作成</strong></p>
+<p>空のディクショナリも簡単に作成できます。
+空のディクショナリは、波括弧 <code>{}</code> を使って作成します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">empty_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">empty_dict</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{}</span>
+</code></pre></div></p>
+<p>ディクショナリに後から要素を追加することもできます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">empty_dict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">empty_dict</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">empty_dict</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<p><strong><code>dict()</code> を使ってディクショナリを作成</strong></p>
+<p>Pythonには <code>dict()</code> という関数もあり、これを使ってディクショナリを作成することもできます。
+例えば、以下のようにキーと値をタプルとして渡してディクショナリを作成します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;Tokyo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="_3">ディクショナリの要素の参照<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>ディクショナリでは、キーを使って対応する値を参照できます。
+リストと異なり、ディクショナリはインデックスではなくキーを使ってアクセスするため、非常に柔軟にデータを扱うことができます。
+今回は、ディクショナリの要素を参照する方法について学びましょう。</p>
+<p><strong>キーを使って値を取得する</strong></p>
+<p>ディクショナリの要素にアクセスする最も基本的な方法は、キーを使うことです。
+キーを指定して、対応する値を取得します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">])</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Alice
+<span class="m">30</span>
+Tokyo
+</code></pre></div></p>
+<p>このように、<code>person["name"]</code> という形でキーを指定することで、対応する値を取得できます。
+もし、指定したキーが存在しない場合は、KeyError が発生します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="n">person</span><span class="p">[</span><span class="s1">&#39;unknown&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+KeyError<span class="w">                                  </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_26027/3585071311.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+----&gt;<span class="w"> </span><span class="m">1</span><span class="w"> </span>person<span class="o">[</span><span class="s1">&#39;unknown&#39;</span><span class="o">]</span>
+
+
+KeyError:<span class="w"> </span><span class="s1">&#39;unknown&#39;</span>
+</code></pre></div></p>
+<hr />
+<p><strong><code>get()</code> メソッドを使って値を取得する</strong></p>
+<p><code>get()</code> メソッドを使うと、キーが存在しない場合でもエラーを防ぐことができます。
+<code>get()</code> メソッドは、キーが見つかった場合は対応する値を返し、見つからなかった場合には指定したデフォルト値（省略すると None）を返します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;address&quot;</span><span class="p">,</span> <span class="s2">&quot;Not available&quot;</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>Alice
+Not<span class="w"> </span>available
+</code></pre></div></p>
+<p><code>person.get("name")</code> は、<code>"name"</code> に対応する値 <code>"Alice"</code> を返します。
+<code>person.get("address", "Not available")</code> は、<code>"address"</code> キーがないため、デフォルトの <code>"Not available"</code> を返します。</p>
+<hr />
+<p><strong>キーが存在するか確認する (<code>in</code> 演算子)</strong></p>
+<p>ディクショナリのキーが存在するかどうかを確認するには、<code>in</code> 演算子を使います。
+もし指定したキーがディクショナリに存在すれば <code>True</code> を、存在しなければ <code>False</code> を返します。
+これを使えば、キーの存在確認を簡単に行うことができます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;name&quot;</span> <span class="ow">in</span> <span class="n">person</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;address&quot;</span> <span class="ow">in</span> <span class="n">person</span><span class="p">)</span> 
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>True
+False
+</code></pre></div></p>
+<hr />
+<p><strong>複数の要素を取得する（<code>items()</code> メソッド）</strong></p>
+<p>ディクショナリには、キーと値のペアを全て取得するための <code>items()</code> メソッドがあります。
+<code>items()</code> メソッドを使うと、ディクショナリ内のすべてのキーと値をタプルの形で取得できます。
+次のように、<code>for</code> ループを使ってディクショナリ内のすべてのキーと値を順に参照できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">person</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>name<span class="w"> </span>Alice
+age<span class="w"> </span><span class="m">30</span>
+city<span class="w"> </span>Tokyo
+</code></pre></div></p>
+<hr />
+<p><strong>キーのリストを取得する（<code>keys()</code> メソッド）</strong></p>
+<p><code>keys()</code> メソッドを使うと、ディクショナリ内のすべてのキーをリストとして取得することができます。
+取得されるのは、<code>dict_keys</code> という特殊なオブジェクトですが、リストのように扱えます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>dict_keys<span class="o">([</span><span class="s1">&#39;name&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span><span class="o">])</span>
+&lt;class<span class="w"> </span><span class="s1">&#39;dict_keys&#39;</span>&gt;
+</code></pre></div></p>
+<hr />
+<p><strong>値のリストを取得する（<code>values()</code> メソッド）</strong></p>
+<p><code>values()</code> メソッドを使うと、ディクショナリ内のすべての値をリストとして取得することができます。
+これも、<code>dict_values</code> というオブジェクトが返されますが、リストのように扱えます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>dict_values<span class="o">([</span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">])</span>
+&lt;class<span class="w"> </span><span class="s1">&#39;dict_values&#39;</span>&gt;
+</code></pre></div></p>
+<hr />
+<p><strong>ディクショナリの要素の参照方法のまとめ</strong></p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>書き方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>キーを使って値を取得</td>
+<td><code>person["name"]</code></td>
+<td>キーを使って値を取得</td>
+</tr>
+<tr>
+<td><code>get()</code> メソッドで値を取得</td>
+<td><code>person.get("name")</code></td>
+<td><code>get()</code> メソッドで値を取得（エラー回避）</td>
+</tr>
+<tr>
+<td>キーが存在するか確認 (<code>in</code> 演算子)</td>
+<td><code>"name" in person</code></td>
+<td>キーが存在するか確認</td>
+</tr>
+<tr>
+<td><code>items()</code> メソッドで複数の要素を取得</td>
+<td><code>person.items()</code></td>
+<td>キーと値のペアを全て取得</td>
+</tr>
+<tr>
+<td><code>keys()</code> メソッドでキーのリストを取得</td>
+<td>`person.keys()</td>
+<td>ディクショナリのキーを取得</td>
+</tr>
+<tr>
+<td><code>values()</code> メソッドで値のリストを取得</td>
+<td><code>person.values()</code></td>
+<td>ディクショナリの値を取得</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_4">ディクショナリの要素の追加と変更<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>ディクショナリに新しい要素を追加したり、既存の要素の値を変更する方法について解説します。
+ディクショナリは、キーと値のペアを管理しているため、簡単に要素を追加・変更できます。</p>
+<p><strong>要素の追加</strong></p>
+<p>ディクショナリに要素を追加するには、新しいキーを指定し、そのキーに対応する値を代入します。
+新しいキーを指定すると、そのキーと値のペアがディクショナリに追加されます。
+次の例では、<code>person["city"] = "Tokyo"</code> という形で新しいキー <code>"city"</code> を追加しています。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">}</span>
+
+<span class="n">person</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<p><strong>要素の変更</strong></p>
+<p>ディクショナリの要素を変更するには、既存のキーを指定して新しい値を代入します。
+もし指定したキーがすでに存在していれば、その値が新しい値に変更されます。
+次の例では、<code>"age"</code> の値が <code>30</code> から <code>31</code> に変更されています。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="n">person</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">31</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力；</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">31</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<p><strong>ディクショナリ内での更新（<code>update()</code> メソッド）</strong></p>
+<p>複数の要素を同時に追加したり変更したりするには、<code>update()</code> メソッドを使います。
+<code>update()</code> メソッドは、別のディクショナリやキーと値のペアを指定して、ディクショナリを更新することができます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">}</span>
+
+<span class="n">person</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">31</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="_5">ディクショナリの要素の削除<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>ディクショナリから要素を削除する方法について解説します。
+ディクショナリでは、キーを使ってそのキーに対応する値を削除できます。</p>
+<p><strong><code>del</code> を使った削除</strong></p>
+<p><code>del</code> を使うことで、指定したキーをディクショナリから削除することができます。
+指定したキーが存在しない場合は、<code>KeyError</code> が発生します。
+次の例では、<code>"city"</code> キーを削除しています。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="k">del</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong><code>pop()</code> メソッドを使った削除</strong></p>
+<p><code>pop()</code> メソッドを使うことで、指定したキーに対応する値を削除すると同時に、その値を返すことができます。
+<code>pop()</code> メソッドを使うと、削除した値を取得できるため、削除した値が必要な場合に便利です。
+次の例では、<code>pop("age")</code> で <code>"age"</code> キーを削除し、削除した値 <code>30</code> を返しています。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="n">person</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;city&#39;</span>:<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">}</span>
+<span class="m">30</span>
+</code></pre></div></p>
+<p><strong><code>popitem()</code> メソッドを使った削除</strong></p>
+<p><code>popitem()</code> メソッドを使うと、ディクショナリから最後の要素（キーと値のペア）を削除することができます。
+これも削除したペアを返します。
+次の例では、ディクショナリの最後の要素（<code>"city": "Tokyo"</code>) を削除し、そのペアがタプルとして返されています。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="p">}</span>
+
+<span class="n">item</span> <span class="o">=</span> <span class="n">person</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Alice&#39;</span>,<span class="w"> </span><span class="s1">&#39;age&#39;</span>:<span class="w"> </span><span class="m">30</span><span class="o">}</span>
+<span class="o">(</span><span class="s1">&#39;city&#39;</span>,<span class="w"> </span><span class="s1">&#39;Tokyo&#39;</span><span class="o">)</span>
+</code></pre></div></p>
+<hr />
+<h3 id="_6">ディクショナリ要素の追加・変更・削除のまとめ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>書き方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>要素の追加</td>
+<td><code>person["city"] = "Tokyo"</code></td>
+<td>新しいキーと値のペアを追加</td>
+</tr>
+<tr>
+<td>要素の変更</td>
+<td><code>person["age"] = 31</code></td>
+<td>既存のキーの値を変更</td>
+</tr>
+<tr>
+<td>複数の要素を追加・変更</td>
+<td><code>person.update({"city": "Tokyo", "age": 31})</code></td>
+<td>update() メソッドで複数の要素を一度に変更・追加</td>
+</tr>
+<tr>
+<td><code>del</code> を使った削除</td>
+<td><code>del person["city"]</code></td>
+<td>指定したキーと対応する値を削除</td>
+</tr>
+<tr>
+<td><code>pop()</code> メソッドを使った削除</td>
+<td><code>person.pop("age")</code></td>
+<td>指定したキーを削除し、その値を返す</td>
+</tr>
+<tr>
+<td><code>popitem()</code> メソッドを使った削除</td>
+<td><code>person.popitem()</code></td>
+<td>最後の要素（キーと値のペア）を削除し、そのペアを返す</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2">2. ディクショナリとリストの比較<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>リストとディクショナリは、どちらもデータを格納するためのコンテナですが、それぞれの特徴にはいくつかの違いがあります。
+ここでは、リストとディクショナリを比較し、それぞれの適した使い方を理解しましょう。</p>
+<div class="admonition note">
+<p class="admonition-title">1. データの格納方法</p>
+<p>リストは、 インデックス（順番）を使ってデータを格納します。
+リストの要素は順番が重要で、インデックス番号（<code>0</code>, <code>1</code>, <code>2</code>, ...）でアクセスします。</p>
+<p>ディクショナリは、キーと値のペアでデータを格納します。
+ディクショナリではキーを使ってデータにアクセスしますが、順番は基本的に関係ありません（Python 3.7以降、挿入順序が保持されますが、それでも順番よりキーの意味が重要です）。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">2. データへのアクセス方法</p>
+<p>リストは、インデックス番号を使って要素にアクセスします。
+インデックスは整数であり、順番に依存しています。</p>
+<p>ディクショナリは、キーを使って値にアクセスします。
+キーは任意の <strong>不変の型（文字列、整数、タプルなど）</strong> であり、順番に依存せず、キーで明示的に指定して値を取得します。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">3. データの順序</p>
+<p>リストは、要素が順番通り格納されます。
+インデックス番号に基づいて要素が並べられているため、順番が重要です。</p>
+<p>ディクショナリは、Python 3.7以降、挿入順序は保持されますが、順番に依存しません。
+ディクショナリでは、キーによって値にアクセスするため、順番に意味を持たせることは少ないです。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">4. データの格納目的</p>
+<p>リストは、順序付きのデータが必要な場合に適しています。
+同じ種類のデータを順番に格納したい場合に便利です。例えば、商品リストや名前のリストなど。</p>
+<p>ディクショナリは、キーを使って特定のデータを迅速に取り出したい場合に適しています。
+名前と年齢、IDと名前など、キーと値の対応を持つデータを扱いたい場合に使います。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">5. メモリ効率</p>
+<p>リストは、順番に格納されたデータを扱うため、インデックスを使って要素にアクセスできますが、キーを使ってデータを探すことはできません。
+リストはメモリ的に効率的で、順番通りに要素を格納するシンプルなデータ構造です。</p>
+<p>ディクショナリは、キーと値のペアを格納するため、アクセスが高速ですが、キーに対するハッシュを使うため、リストよりもメモリを多く消費する場合があります。
+ディクショナリは、キーに基づいてデータを高速に検索できるため、大規模なデータに対して有効です。</p>
+</div>
+<p><strong>まとめ</strong></p>
+<p>リストは、順序が重要なデータを扱うのに適しており、ディクショナリはキーと値の対応が重要なデータに適しています。それぞれの特徴を理解し、使い分けることで、より効果的にデータを管理できるようになります。
+次の表を参考に、リストとディクショナリを使い分けてデータを管理する方法を理解しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">特徴</th>
+<th style="text-align: left;">リスト</th>
+<th style="text-align: left;">ディクショナリ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. データの格納方法</td>
+<td style="text-align: left;">順番に格納、インデックスを使用</td>
+<td style="text-align: left;">キーと値のペア、キーを使用</td>
+</tr>
+<tr>
+<td style="text-align: left;">2. データのアクセス方法</td>
+<td style="text-align: left;">インデックス番号を使用</td>
+<td style="text-align: left;">キーを使用</td>
+</tr>
+<tr>
+<td style="text-align: left;">3. データの順序</td>
+<td style="text-align: left;">順番通り（インデックス順）</td>
+<td style="text-align: left;">挿入順序（Python 3.7以降）</td>
+</tr>
+<tr>
+<td style="text-align: left;">4. 使用目的</td>
+<td style="text-align: left;">順序を保持したデータの管理</td>
+<td style="text-align: left;">キーと値のペアで特定のデータを管理</td>
+</tr>
+<tr>
+<td style="text-align: left;">5. メモリ効率</td>
+<td style="text-align: left;">効率的（順番通りのデータ）</td>
+<td style="text-align: left;">キーと値にハッシュテーブルを使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3">3. コンテナの応用<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="_7">コンテナの相互変換<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>Pythonでは、リスト（<code>list</code>）、タプル（<code>tuple</code>）、セット（<code>set</code>）、ディクショナリ（<code>dict</code>） などのコンテナ同士を相互に変換することができます。
+データの特性に応じて適切なコンテナを選択し、柔軟に使い分けるために重要なテクニックです。</p>
+<hr />
+<p><strong>1. リスト ⇔ タプル の変換</strong></p>
+<p>リストとタプルは、<code>list()</code> や <code>tuple()</code> を使って簡単に変換できます。</p>
+<p>使い分け：</p>
+<ul>
+<li>リスト は変更可能（ミュータブル）で、データの追加・削除ができる</li>
+<li>タプル は変更不可（イミュータブル）で、安全性が高い</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># リスト → タプル</span>
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">numbers_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_tuple</span><span class="p">)</span>
+
+<span class="c1"># タプル → リスト</span>
+<span class="n">numbers_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numbers_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">(</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="o">)</span>
+<span class="o">[</span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span><span class="o">]</span>
+</code></pre></div></p>
+<hr />
+<p><strong>2. リスト ⇔ セット の変換</strong></p>
+<p>セットに変換すると重複が自動的に削除されます。</p>
+<p>使い分け:</p>
+<ul>
+<li>リスト は順序を保持するが、重複を許す</li>
+<li>セット は順序を保持しないが、重複を削除する</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># リスト → セット（重複削除）</span>
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">numbers_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_set</span><span class="p">)</span>
+
+<span class="c1"># セット → リスト（順序がなくなる可能性あり）</span>
+<span class="n">numbers_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numbers_set</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span> 
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span><span class="o">}</span>
+<span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span><span class="o">]</span>
+</code></pre></div></p>
+<hr />
+<p><strong>3. リスト ⇔ ディクショナリ の変換</strong></p>
+<p>リストとディクショナリは構造が異なるため、リストをキーと値のペアに変換する必要があります。</p>
+<p>使い分け:</p>
+<ul>
+<li>リスト は単純なデータの並びに適している</li>
+<li>ディクショナリ はキーと値の関係を管理するのに適している</li>
+</ul>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># リスト（タプルのリスト） → ディクショナリ</span>
+<span class="n">pairs</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)]</span>
+<span class="n">fruits_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits_dict</span><span class="p">)</span>
+
+<span class="c1"># ディクショナリ → リスト（キーや値のリストに）</span>
+<span class="n">keys_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fruits_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">values_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fruits_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">keys_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values_list</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s1">&#39;apple&#39;</span>:<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="s1">&#39;banana&#39;</span>:<span class="w"> </span><span class="m">200</span>,<span class="w"> </span><span class="s1">&#39;cherry&#39;</span>:<span class="w"> </span><span class="m">300</span><span class="o">}</span>
+<span class="o">[</span><span class="s1">&#39;apple&#39;</span>,<span class="w"> </span><span class="s1">&#39;banana&#39;</span>,<span class="w"> </span><span class="s1">&#39;cherry&#39;</span><span class="o">]</span>
+<span class="o">[</span><span class="m">100</span>,<span class="w"> </span><span class="m">200</span>,<span class="w"> </span><span class="m">300</span><span class="o">]</span>
+</code></pre></div></p>
+<hr />
+<p><strong>コンテナの相互変換のまとめ</strong></p>
+<p>コンテナの相互変換を活用することで、データを適切な形に整え、効率的に処理できます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>変換元</strong> → <strong>変換先</strong></th>
+<th style="text-align: center;"><strong>変換方法</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">リスト → タプル</td>
+<td style="text-align: center;"><code>tuple(list_data)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">タプル → リスト</td>
+<td style="text-align: center;"><code>list(tuple_data)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">リスト → セット</td>
+<td style="text-align: center;"><code>set(list_data)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">セット → リスト</td>
+<td style="text-align: center;"><code>list(set_data)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">リスト → 辞書</td>
+<td style="text-align: center;"><code>dict(list_of_tuples)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">辞書 → リスト（キー）</td>
+<td style="text-align: center;"><code>list(dict.keys())</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">辞書 → リスト（値）</td>
+<td style="text-align: center;"><code>list(dict.values())</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_8">コンテナのネスト<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>コンテナのネスト（入れ子） とは、リストの中にリストを入れる、ディクショナリの中にリストを入れる など、
+異なるデータ構造を組み合わせて使うことを指します。
+ネストを活用することで、より複雑なデータを整理・管理しやすくなります。</p>
+<p><strong>1. リストのネスト</strong></p>
+<p>リストの中にリストを含めると、2次元リスト（リストのリスト） を作ることができます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="o">]</span>
+<span class="m">2</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">応用</p>
+<p>リストのリストを使うことで、表（テーブル）データ を扱えます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">95</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Bobの2つ目の点数を取得</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">students</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># 92</span>
+</code></pre></div>
+</div>
+<hr />
+<p><strong>2. ディクショナリのネスト</strong></p>
+<p>ディクショナリの中にリストや別のディクショナリを入れることで、
+データをより意味のある形で整理 できます。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">},</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">},</span>
+    <span class="s2">&quot;Charlie&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">:</span> <span class="mi">95</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">student_scores</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">][</span><span class="s2">&quot;english&quot;</span><span class="p">])</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">92</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">応用</p>
+<p>辞書をリストに入れることで、複数のデータを扱いやすく なります。</p>
+<div class="highlight"><pre><span></span><code><span class="n">employees</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;HR&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;IT&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;Finance&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Bobの部署を取得</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">employees</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;department&quot;</span><span class="p">])</span>  <span class="c1"># IT</span>
+</code></pre></div>
+</div>
+<p><strong>3. セットのネスト</strong></p>
+<p>セットはネストできない（リストや辞書のように入れ子にできない）ため、
+セットの中にセットを入れることはできません。セットは「変更できない（ミュータブル）データ型」を要素として持てないため、セットの中にセットを入れることは不可能となっています</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">set_a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}}</span>  <span class="c1"># エラー</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+TypeError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+
+/var/folders/lc/k7jt3gx9283453ptp9t9ty5m0000gn/T/ipykernel_26027/1420277885.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+----&gt;<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">set_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="o">{</span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">}}</span><span class="w">  </span><span class="c1"># エラー</span>
+
+
+TypeError:<span class="w"> </span>unhashable<span class="w"> </span>type:<span class="w"> </span><span class="s1">&#39;set&#39;</span>
+</code></pre></div></p>
+<hr />
+<p><strong>4. ネストしたデータのアクセス</strong></p>
+<p>ネストしたコンテナのデータにアクセスするときは、インデックスやキーを順に指定 します。</p>
+<p><strong>プログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">},</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">92</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student_scores</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">][</span><span class="s2">&quot;math&quot;</span><span class="p">])</span>
+</code></pre></div></p>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code><span class="m">6</span>
+<span class="m">85</span>
+</code></pre></div></p>
+<hr />
+<h2 id="_9">この章のまとめ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>本章では、データを整理・管理するための「コンテナ」について学びました。</p>
+<div class="admonition success">
+<p class="admonition-title">1. 変数が持つ不便さ</p>
+<ul>
+<li>変数は1つの値しか保持できず、多くのデータを扱うのに不便。</li>
+<li>より効率的なデータ管理のために「リスト」「ディクショナリ」「タプル」「セット」といったコンテナを活用する。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. リスト</p>
+<ul>
+<li>特徴: 複数の要素を順番に保持でき、変更が可能。</li>
+<li>作成: <code>[]</code> を使ってリストを作成。</li>
+<li>要素の参照: インデックスを使ってアクセス。</li>
+<li>合計と要素数の取得: <code>sum()</code> や <code>len()</code> を利用。</li>
+<li>追加・削除・変更: <code>append()</code>, <code>remove()</code>,<code>insert()</code> などのメソッドを使用。</li>
+<li>高度な指定: スライスで部分的に取り出しや更新が可能。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">3. ディクショナリ</p>
+<ul>
+<li>特徴: キーと値のペアでデータを管理し、高速にアクセス可能。</li>
+<li>作成: <code>{}</code> を使ってキーと値を定義。</li>
+<li>要素の参照: <code>dict[key]</code> で値を取得。</li>
+<li>追加・変更: <code>dict[key] = value</code> で設定。</li>
+<li>削除: <code>del dict[key]</code> で削除。</li>
+<li>リストとの比較: ディクショナリはキーを利用するため、リストよりも検索が高速な場合がある。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">4. タプルとセット</p>
+<ul>
+<li>タプル: <code>()</code> で定義し、変更不可（イミュータブル）。リストより安全にデータを保持できる。</li>
+<li>セット: <code>{}</code> で定義し、重複を許さない。集合演算が可能。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">5. コンテナの応用</p>
+<ul>
+<li>相互変換: <code>list()</code>, <code>tuple()</code>, <code>set()</code>, <code>dict()</code> を使ってコンテナ間の変換が可能。</li>
+<li>ネスト: コンテナの中に別のコンテナを入れることで複雑なデータ構造を管理。</li>
+</ul>
+</div>
+<p>これらのコンテナを適切に活用することで、プログラムのデータ管理がより柔軟かつ効率的になります。</p>
+<hr />
+<p>👉 <a href="../conditinal_statement/">次の章では、<strong>条件分岐</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../list_tuple_set/" class="md-footer__link md-footer__link--prev" aria-label="前: リストとタプルとセット">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                リストとタプルとセット
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../conditinal_statement/" class="md-footer__link md-footer__link--next" aria-label="次: 条件分岐">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                条件分岐
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

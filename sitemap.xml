@@ -2,70 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pylocode.jp/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/privacy_policy/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/request_form/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/blog/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/blog/20250404_dx/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/blog/20250404_program_around_us/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/blog/20250404_programming_language/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/conditinal_statement/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
-         <loc>https://pylocode.jp/reskill_py/container/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <loc>https://pylocode.jp/reskill_py/dictionary/</loc>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/function/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/introduction/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
+    </url>
+    <url>
+         <loc>https://pylocode.jp/reskill_py/list_tuple_set/</loc>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/loop/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/module/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/object/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
-         <loc>https://pylocode.jp/reskill_py/operator_variable_type/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <loc>https://pylocode.jp/reskill_py/operator_and_variable/</loc>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/reskill_py/outro/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
     <url>
          <loc>https://pylocode.jp/blog/archive/2025/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-09</lastmod>
     </url>
 </urlset>

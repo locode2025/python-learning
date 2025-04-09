@@ -12,13 +12,13 @@
         <meta name="author" content="Masayuki">
       
       
-        <link rel="canonical" href="https://pylocode.jp/reskill_py/operator_variable_type/">
+        <link rel="canonical" href="https://pylocode.jp/reskill_py/operator_and_variable/">
       
       
         <link rel="prev" href="../introduction/">
       
       
-        <link rel="next" href="../container/">
+        <link rel="next" href="../list_tuple_set/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>第２章 演算・変数・型 - リスキリングプログラミング</title>
+        <title>演算と変数 - リスキリングプログラミング</title>
       
     
     
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第２章　演算・変数・型
+              演算と変数
             
           </span>
         </div>
@@ -422,6 +422,8 @@
       
         
       
+        
+      
     
     
     
@@ -471,7 +473,7 @@
   
   
   <span class="md-ellipsis">
-    第１章　はじめに
+    はじめに
     
   </span>
   
@@ -501,7 +503,7 @@
   
   
   <span class="md-ellipsis">
-    第２章　演算・変数・型
+    演算と変数
     
   </span>
   
@@ -514,7 +516,7 @@
   
   
   <span class="md-ellipsis">
-    第２章　演算・変数・型
+    演算と変数
     
   </span>
   
@@ -648,26 +650,17 @@
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. データ型
+      3. 数値や文字列の演算テクニック
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. データ型">
+    <nav class="md-nav" aria-label="3. 数値や文字列の演算テクニック">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
-      データ型とは
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      データ型の変換
+      キャスト
     </span>
   </a>
   
@@ -697,7 +690,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -721,12 +714,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../container/" class="md-nav__link">
+      <a href="../list_tuple_set/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    第３章　コンテナ
+    リストとタプルとセット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
     
   </span>
   
@@ -749,7 +765,7 @@
   
   
   <span class="md-ellipsis">
-    第４章　条件分岐
+    条件分岐
     
   </span>
   
@@ -772,7 +788,7 @@
   
   
   <span class="md-ellipsis">
-    第５章　繰り返し
+    繰り返し
     
   </span>
   
@@ -795,7 +811,7 @@
   
   
   <span class="md-ellipsis">
-    第６章　関数
+    関数
     
   </span>
   
@@ -818,7 +834,7 @@
   
   
   <span class="md-ellipsis">
-    第７章　オブジェクト
+    オブジェクト
     
   </span>
   
@@ -841,7 +857,7 @@
   
   
   <span class="md-ellipsis">
-    第８章　モジュール
+    モジュール
     
   </span>
   
@@ -864,7 +880,7 @@
   
   
   <span class="md-ellipsis">
-    第９章　おわりに
+    おわりに
     
   </span>
   
@@ -1211,26 +1227,17 @@
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. データ型
+      3. 数値や文字列の演算テクニック
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. データ型">
+    <nav class="md-nav" aria-label="3. 数値や文字列の演算テクニック">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
-      データ型とは
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      データ型の変換
+      キャスト
     </span>
   </a>
   
@@ -1260,7 +1267,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -1284,7 +1291,7 @@
 
 
 
-<h1 id="_1">演算と変数とデータ型など<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">演算と変数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="1">1. 演算<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>Pythonでは、数値の演算を簡単に行うことができます。基本的な算術演算子を使って、加算、減算、乗算、除算などを実行できます。</p>
@@ -1878,73 +1885,7 @@ hello
 </code></pre></div></p>
 </div>
 <hr />
-<h2 id="3">3. データ型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>ここまで、数値や文字の演算と、その演算結果を変数に格納することを学びました。プログラムの数値型、文字列型に触れましたが、Python には数値型、文字列型の他にも型（データ型）が存在します。それではPythonのデータ型を見ていきましょう！</p>
-<h3 id="_19">データ型とは<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
-<p>Python では、データに <strong>「型（データ型）」</strong> という概念があり、値の種類によって分類されます。<br />
-データ型を正しく理解することで、適切な計算やデータの操作ができるようになります。</p>
-<p>Python にはさまざまなデータ型がありますが、基本的なものは次のとおりです。</p>
-<table>
-<thead>
-<tr>
-<th>データ型</th>
-<th>説明</th>
-<th>例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td><strong>整数型</strong>（小数なし）</td>
-<td><code>10, -3, 1000</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td><strong>浮動小数点数型</strong>（小数あり）</td>
-<td><code>3.14, -0.5, 2.0</code></td>
-</tr>
-<tr>
-<td><code>str</code></td>
-<td><strong>文字列型</strong>（テキスト）</td>
-<td><code>"Hello", 'Python'</code></td>
-</tr>
-<tr>
-<td><code>bool</code></td>
-<td><strong>真偽値型</strong>（真 or 偽）</td>
-<td><code>True, False</code></td>
-</tr>
-<tr>
-<td><code>list</code></td>
-<td><strong>リスト型</strong>（複数の値を格納）</td>
-<td><code>[1, 2, 3]</code></td>
-</tr>
-<tr>
-<td><code>tuple</code></td>
-<td><strong>タプル型</strong>（変更不可のリスト）</td>
-<td><code>(1, 2, 3)</code></td>
-</tr>
-<tr>
-<td><code>dict</code></td>
-<td><strong>辞書型</strong>（キーと値のペア）</td>
-<td><code>{"name": "Alice", "age": 25}</code></td>
-</tr>
-</tbody>
-</table>
-<p>Python では、<strong>変数に値を代入すると、その値のデータ型が自動的に決まります</strong>。</p>
-<p><strong>プログラム：</strong>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>      <span class="c1"># 整数型 (int)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>    <span class="c1"># 浮動小数点数型 (float)</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>  <span class="c1"># 文字列型 (str)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
-</code></pre></div></p>
-<p><strong>出力：</strong>
-<div class="highlight"><pre><span></span><code>&lt;class<span class="w"> </span><span class="s1">&#39;int&#39;</span>&gt;
-&lt;class<span class="w"> </span><span class="s1">&#39;float&#39;</span>&gt;
-&lt;class<span class="w"> </span><span class="s1">&#39;str&#39;</span>&gt;
-</code></pre></div></p>
+<h2 id="3">3. 数値や文字列の演算テクニック<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>Python では、異なるデータ型を混ぜて計算しようとするとエラーが発生することがあります。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
@@ -1965,11 +1906,11 @@ TypeError:<span class="w"> </span>can<span class="w"> </span>only<span class="w"
 <p>これは、<strong>age</strong>（整数型 <code>int</code>）と <strong>message</strong>（文字列型 <code>str</code>）を直接結合できない ためです。
 このようなエラーを防ぐには、データ型を適切に変換（<strong>キャスト</strong>） する必要があります。</p>
 <hr />
-<h3 id="_20">データ型の変換<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<h3 id="_19">キャスト<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p>プログラムを作成する際、異なるデータ型を適切に扱うことが重要です。<br />
 Python では、<strong>データ型を変換（キャスト）</strong> することで、型の違いによるエラーを防ぎ、適切な処理を行うことができます。</p>
 <p><br></p>
-<h4 id="_21">明示的な型変換（キャスト）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h4 id="_20">明示的な型変換（キャスト）<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>異なるデータ型を手動で変換することを「<strong>明示的な型変換（explicit type conversion）</strong>」または「<strong>キャスト</strong>」と呼びます。
 Python では、以下の関数を使ってデータ型を変換できます。</p>
 <table>
@@ -2050,7 +1991,7 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 </code></pre></div></p>
 </div>
 <p><br></p>
-<h4 id="_22">暗黙的な型変換（自動変換）<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<h4 id="_21">暗黙的な型変換（自動変換）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>Python では、<strong>異なるデータ型が混在する演算を行うと、自動的に型変換が行われることがあります。</strong><br />
 このことを <strong>暗黙的な型変換（implicit type conversion）</strong> といいます。</p>
 <p><strong>プログラム：</strong>
@@ -2190,7 +2131,7 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <p>次のステップでは、<strong>f-string</strong> を活用してより高度なフォーマットを実践してみましょう！</p>
 <hr />
 <p><br></p>
-<h2 id="_23">この章のまとめ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h2 id="_22">この章のまとめ<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">1. 式と演算</p>
 <ul>
@@ -2213,18 +2154,8 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
 <li><strong>キーボード入力値の代入</strong>: <code>input()</code> を使ってユーザーからの入力を受け取り、変数に代入できる。</li>
 </ul>
 </div>
-<div class="admonition success">
-<p class="admonition-title">3. データ型</p>
-<ul>
-<li><strong>データ型とは</strong>: <code>int</code>（整数）, <code>float</code>（浮動小数点数）, <code>str</code>（文字列）, <code>bool</code>（真偽値）などがある。</li>
-<li><strong>データ型の変換</strong>: <code>int()</code>, <code>float()</code>, <code>str()</code> を使って型を変換できる。</li>
-<li><strong>文字列の中に数値を埋め込む</strong>: <code>format()</code> や <code>f-string</code> を使って変数の値を文字列に組み込める。</li>
-<li><strong>f-string</strong>: <code>f"{変数}"</code> の形式で簡潔に文字列フォーマットができる。</li>
-</ul>
-</div>
 <hr />
-<p>この章では、Python の基本的な <strong>計算・変数・データ型</strong> の基礎を学びました。<br />
-👉 <a href="../container/">次の章では、<strong>コンテナ</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
+<p>👉 <a href="container.md">次の章では、<strong>コンテナ</strong> について学び、より実用的なプログラムを作成していきましょう！</a></p>
 
 
 
@@ -2262,7 +2193,7 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
       <nav class="md-footer__inner md-grid" aria-label="フッター" >
         
           
-          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="前: 第１章　はじめに">
+          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="前: はじめに">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2272,20 +2203,20 @@ ValueError:<span class="w"> </span>invalid<span class="w"> </span>literal<span c
                 前
               </span>
               <div class="md-ellipsis">
-                第１章　はじめに
+                はじめに
               </div>
             </div>
           </a>
         
         
           
-          <a href="../container/" class="md-footer__link md-footer__link--next" aria-label="次: 第３章　コンテナ">
+          <a href="../list_tuple_set/" class="md-footer__link md-footer__link--next" aria-label="次: リストとタプルとセット">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 次
               </span>
               <div class="md-ellipsis">
-                第３章　コンテナ
+                リストとタプルとセット
               </div>
             </div>
             <div class="md-footer__button md-icon">
