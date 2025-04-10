@@ -786,17 +786,12 @@ print(numbers)
 # カンマ区切りだけ（括弧なしでもOK）
 colors = "red", "green", "blue"
 print(colors)
-
-# 1つの要素のタプル（カンマが必要）
-single = ("apple",)  # カンマがないと単なる文字列と認識される
-print(single)
 ```
 
 **出力：**
 ```bash
 (1, 2, 3, 4, 5)
 ('red', 'green', 'blue')
-('apple',)
 ```
 
 ---
@@ -981,7 +976,7 @@ __2. 集合演算の種類__
 | **差集合** | `A - B` | `A.difference(B)` | AにあってBにない要素 |
 | **対称差** | `A ^ B` | `A.symmetric_difference(B)` | AとBのどちらか一方にある要素 |
 | **部分集合** | `A <= B` | `A.issubset(B)` | AがBの一部であるか |
-| **超集合** | `A >= B` | `A.issuperset(B)` | BがAを含んでいるか |
+| **超集合** | `A >= B` | `A.issuperset(B)` | AがBを含んでいるか |
 
 __3. 各演算の具体例__
 
