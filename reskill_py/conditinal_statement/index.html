@@ -634,7 +634,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       ブロックとインデント
     </span>
@@ -658,7 +658,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       比較演算子
     </span>
@@ -676,7 +676,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       真偽値
     </span>
@@ -685,7 +685,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
+  <a href="#python_1" class="md-nav__link">
     <span class="md-ellipsis">
       Pythonで「偽」と判定される値
     </span>
@@ -694,7 +694,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       論理演算子
     </span>
@@ -727,7 +727,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#if_1" class="md-nav__link">
+  <a href="#if_3" class="md-nav__link">
     <span class="md-ellipsis">
       ifのネスト（入れ子）
     </span>
@@ -741,7 +741,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -750,7 +750,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       演習問題
     </span>
@@ -1133,7 +1133,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       ブロックとインデント
     </span>
@@ -1157,7 +1157,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       比較演算子
     </span>
@@ -1175,7 +1175,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       真偽値
     </span>
@@ -1184,7 +1184,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
+  <a href="#python_1" class="md-nav__link">
     <span class="md-ellipsis">
       Pythonで「偽」と判定される値
     </span>
@@ -1193,7 +1193,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       論理演算子
     </span>
@@ -1226,7 +1226,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#if_1" class="md-nav__link">
+  <a href="#if_3" class="md-nav__link">
     <span class="md-ellipsis">
       ifのネスト（入れ子）
     </span>
@@ -1240,7 +1240,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       この章のまとめ
     </span>
@@ -1249,7 +1249,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       演習問題
     </span>
@@ -1277,13 +1277,49 @@
 <hr />
 <h2 id="1">1. プログラムの流れ<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>プログラムは基本的に上から順番に実行されますが、「制御構造」と呼ばれる仕組みを使うことで、実行の流れを変えることができます。これにより、より柔軟で賢いプログラムを作成できます。</p>
-<p><strong>文と制御構造</strong></p>
+<h4 id="_2">文と制御構造<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>Pythonのプログラムは「文（<strong>statement</strong>）」の集合です。文は通常、上から順に1つずつ実行されます。しかし、以下のような「<strong>制御構造</strong>」を用いることで、実行の流れを変えることができます。</p>
-<ul>
-<li>順次実行: 通常の処理。上から下へ順番にコードが実行される。</li>
-<li>分岐（条件分岐）: 条件に応じて異なる処理を行う（例：<strong>if文</strong>）。</li>
-<li>繰り返し（ループ）: 同じ処理を繰り返す（例：<strong>for文</strong>、<strong>while文</strong>）。</li>
-</ul>
+<dl>
+<dt>順次:</dt>
+<dd>通常の処理。上から下へ順番にコードが実行される。</dd>
+</dl>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Process1[処理１]
+    Process2[処理２]
+    Process3[処理３]
+    End([終了])
+
+    Start --&gt; Process1 --&gt; Process2 --&gt; Process3 --&gt; End</code></pre>
+<dl>
+<dt>分岐（条件分岐）:</dt>
+<dd>条件に応じて異なる処理を行う（例：<strong>if文</strong>）。</dd>
+</dl>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Process1[処理１]
+    Decision{条件}
+    Process2[処理２]
+    Process3[処理３]
+    End([終了])
+
+    Start --&gt; Process1 --&gt; Decision
+    Decision -- TRUE の場合 --&gt; Process2 --&gt; End
+    Decision -- FALSE の場合 --&gt; Process3 --&gt; End</code></pre>
+<dl>
+<dt>繰り返し（ループ）:</dt>
+<dd>同じ処理を繰り返す（例：<strong>for文</strong>、<strong>while文</strong>）。</dd>
+</dl>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Check{条件}
+    Process[処理]
+    End([終了])
+
+    Start --&gt; Check
+    Check -- TRUE の場合 --&gt; Process
+    Process --&gt; Check
+    Check -- FALSE の場合 --&gt; End</code></pre>
 <p>if文を使って「ある条件を満たすときだけ処理を行う」といったことが可能になります。</p>
 <div class="admonition note">
 <p class="admonition-title">構造化定理</p>
@@ -1292,7 +1328,7 @@
 <hr />
 <h2 id="2">2. 条件分岐の基本構造<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="if">if文<a class="headerlink" href="#if" title="Permanent link">&para;</a></h3>
-<p><strong>if文の基本構造</strong></p>
+<h4 id="if_1">if文の基本構造<a class="headerlink" href="#if_1" title="Permanent link">&para;</a></h4>
 <p>Pythonの <code>if</code> 文は、次のような構造になっています。</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件式</span><span class="p">:</span>
     <span class="n">条件がTrueのときに実行する処理</span>
@@ -1303,7 +1339,7 @@
 <li><code>if</code> 文の後には コロン（<code>:</code>） を付ける必要があります。</li>
 </ul>
 <hr />
-<p><strong>if文の基本的な例</strong></p>
+<h4 id="if_2">if文の基本的な例<a class="headerlink" href="#if_2" title="Permanent link">&para;</a></h4>
 <p>例えば、ユーザーが入力した数が10以上なら「10以上です」と表示するプログラムを考えてみます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;数値を入力してください: &quot;</span><span class="p">))</span>
@@ -1325,13 +1361,13 @@
 </code></pre></div></p>
 <p>これは、<code>if</code> 文の条件 <code>number &gt;= 10</code> が <code>False</code> になったため、<code>print("10以上です")</code> の処理が実行されなかったからです。</p>
 <hr />
-<h3 id="_2">ブロックとインデント<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_3">ブロックとインデント<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、条件分岐やループの処理をまとめるときに 「<strong>ブロック</strong>」 という概念を使います。ブロックを区別するためには 「<strong>インデント（字下げ）</strong>」 を正しく使う必要があります。</p>
-<p><strong>ブロックとは？</strong></p>
+<h4 id="_4">ブロックとは？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>ブロックとは、 ある処理をまとめてひとつのグループにすること です。
 Pythonでは、<code>if</code> 文やループなどの制御構造の後に続く処理を <strong>ブロック</strong> として記述します。</p>
 <hr />
-<p><strong>Pythonのインデント</strong></p>
+<h4 id="python">Pythonのインデント<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
 <p>Pythonでは、 ブロックの始まりをインデント（字下げ）で表現 します。</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件式</span><span class="p">:</span>
     <span class="n">条件がTrueのときに実行する処理1</span>
@@ -1341,7 +1377,7 @@ Pythonでは、<code>if</code> 文やループなどの制御構造の後に続�
 <li><code>if</code> 文の 次の行から、半角スペース4つ分（またはTabキー1回）の インデント をつけて処理を記述 します。</li>
 <li>インデントがあることで、<code>if</code> 文の条件が <code>True</code> のときに実行されるブロックであることがわかります。</li>
 </ul>
-<p><strong>正しいインデントの例</strong></p>
+<h4 id="_5">正しいインデントの例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>以下のコードでは、<code>if</code> 文の条件が <code>True</code> のときに、2つの <code>print</code> 文が実行されます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">85</span>
@@ -1354,7 +1390,7 @@ Pythonでは、<code>if</code> 文やループなどの制御構造の後に続�
 <div class="highlight"><pre><span></span><code>合格です
 おめでとうございます！
 </code></pre></div></p>
-<p><strong>間違ったインデントの例（エラー）</strong></p>
+<h4 id="_6">間違ったインデントの例（エラー）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>Pythonでは、インデントを間違えると エラー になります。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">85</span>
@@ -1373,7 +1409,7 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 <h2 id="3">3. 条件式<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>条件分岐を使うためには、「<strong>条件式</strong>」を理解することが重要です。
 条件式は、 ある条件が「<strong>真（True）</strong>」か「<strong>偽（False）</strong>」かを判定するための式 です。</p>
-<h3 id="_3">比較演算子<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_7">比較演算子<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、数値や文字列を比較するときに「比較演算子」を使います。</p>
 <table>
 <thead>
@@ -1439,7 +1475,7 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 <h3 id="in"><code>in</code> 演算子<a class="headerlink" href="#in" title="Permanent link">&para;</a></h3>
 <p><code>in</code> 演算子は、リストや文字列、タプル、セット、辞書 などの中に 特定の値が含まれているかどうか を判定するときに使います。
 また、<code>not in</code> を使うと、値が含まれていないかどうか を判定できます。</p>
-<p><strong><code>in</code> 演算子の基本</strong></p>
+<h4 id="in_1"><code>in</code> 演算子の基本<a class="headerlink" href="#in_1" title="Permanent link">&para;</a></h4>
 <p><code>in</code> を使うと、ある値がリストや文字列の中にあるかを確認できます。</p>
 <hr />
 <p>文字列の中での使用</p>
@@ -1454,7 +1490,7 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 </code></pre></div></p>
 <hr />
 <p>リストの中での利用</p>
-<p><strong>*プログラム：</strong>
+<p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
 
 <span class="k">if</span> <span class="s2">&quot;banana&quot;</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
@@ -1484,7 +1520,7 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 <div class="highlight"><pre><span></span><code>スコア90が存在します！
 </code></pre></div></p>
 <hr />
-<p><strong>not in 演算子</strong></p>
+<h4 id="not-in">not in 演算子<a class="headerlink" href="#not-in" title="Permanent link">&para;</a></h4>
 <p><code>not in</code> を使うと、値が含まれていない場合の判定 ができます。</p>
 <p>例：リストの中に値がない場合</p>
 <p><strong>プログラム：</strong>
@@ -1497,10 +1533,10 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 <div class="highlight"><pre><span></span><code>グレープはありません！
 </code></pre></div></p>
 <hr />
-<h3 id="_4">真偽値<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_8">真偽値<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>プログラムでは、「ある条件が真か偽か」を判断して処理を分岐させることがよくあります。
 この「真（True）か偽（False）か」を表すデータ型を 「<strong>真偽値（Boolean型）</strong>」 といいます。</p>
-<p><strong>真偽値とは？</strong></p>
+<h4 id="_9">真偽値とは？<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>Python では、真偽値は以下の2つの値をとります：</p>
 <ul>
 <li><code>True</code>（真）</li>
@@ -1518,7 +1554,7 @@ IndentationError:<span class="w"> </span>expected<span class="w"> </span>an<span
 <div class="highlight"><pre><span></span><code>True
 False
 </code></pre></div></p>
-<p><strong>比較演算の結果としての真偽値</strong></p>
+<h4 id="_10">比較演算の結果としての真偽値<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>比較演算子（<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> など）を使うと、結果として <code>True</code> か <code>False</code> が返されます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
@@ -1545,7 +1581,7 @@ False
 <div class="highlight"><pre><span></span><code>成人です
 </code></pre></div></p>
 <hr />
-<h3 id="python">Pythonで「偽」と判定される値<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<h3 id="python_1">Pythonで「偽」と判定される値<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
 <p>Pythonでは、以下の値は <code>False</code>（偽）と判定されます。</p>
 <table>
 <thead>
@@ -1599,7 +1635,7 @@ False
 <div class="highlight"><pre><span></span><code>データが空です
 </code></pre></div></p>
 <hr />
-<p><strong><code>bool()</code> を使った真偽値の確認</strong></p>
+<h4 id="bool"><code>bool()</code> を使った真偽値の確認<a class="headerlink" href="#bool" title="Permanent link">&para;</a></h4>
 <p><code>bool()</code> 関数を使うと、任意の値が <code>True</code> か <code>False</code> かを調べることができます。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
@@ -1617,7 +1653,7 @@ False
 False
 True
 </code></pre></div></p>
-<p><strong>真偽値を使った実践例</strong></p>
+<h4 id="_11">真偽値を使った実践例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>例：パスワードの入力チェック</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;パスワードを入力してください: &quot;</span><span class="p">)</span>
@@ -1632,14 +1668,14 @@ True
 パスワードが入力されていません
 </code></pre></div></p>
 <hr />
-<h3 id="_5">論理演算子<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_12">論理演算子<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>論理演算子は、複数の条件式を組み合わせて、一つの条件式として評価するための演算子です。Pythonでは、主に次の3つの論理演算子が使われます。</p>
 <ul>
 <li>and（かつ）</li>
 <li>or（または）</li>
 <li>not（否定）</li>
 </ul>
-<p><strong><code>and</code></strong></p>
+<h4 id="and"><code>and</code><a class="headerlink" href="#and" title="Permanent link">&para;</a></h4>
 <p><code>and</code> 演算子は、左側と右側の条件が両方ともTrue（真）である場合にのみ、全体がTrueになります。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1651,7 +1687,7 @@ True
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>xもyも正の数です
 </code></pre></div></p>
-<p><strong><code>or</code></strong></p>
+<h4 id="or"><code>or</code><a class="headerlink" href="#or" title="Permanent link">&para;</a></h4>
 <p><code>or</code> 演算子は、左側または右側の条件が少なくとも一方がTrueであれば、全体がTrueになります。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1664,7 +1700,7 @@ True
 <div class="highlight"><pre><span></span><code>xまたはyのいずれかが正の数です
 </code></pre></div></p>
 <hr />
-<p><strong><code>not</code></strong></p>
+<h4 id="not"><code>not</code><a class="headerlink" href="#not" title="Permanent link">&para;</a></h4>
 <p><code>not</code> 演算子は、条件式の結果を反転させます。TrueがFalseになり、FalseがTrueになります。</p>
 <p><strong>プログラム：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1697,7 +1733,7 @@ True
 <li>if-elif構文</li>
 </ol>
 <hr />
-<p><strong>1. if-else 構文</strong></p>
+<h4 id="1-if-else">1. if-else 構文<a class="headerlink" href="#1-if-else" title="Permanent link">&para;</a></h4>
 <p><strong>if-else構文</strong>は、条件がTrueの場合とFalseの場合の両方を処理する基本的な条件分岐です。</p>
 <p><strong>構文：</strong>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件</span><span class="p">:</span>
@@ -1717,7 +1753,7 @@ True
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>xは正の数です
 </code></pre></div></p>
-<p><strong>2. ifのみの構文</strong></p>
+<h4 id="2-if">2. ifのみの構文<a class="headerlink" href="#2-if" title="Permanent link">&para;</a></h4>
 <p><code>if</code>のみを使って、条件がTrueの場合にのみ処理を実行するパターンです。条件がFalseの場合、何も実行されません。</p>
 <p><strong>構文:</strong>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件</span><span class="p">:</span>
@@ -1733,7 +1769,7 @@ True
 <p><strong>出力：</strong>
 <div class="highlight"><pre><span></span><code>xは正の数です
 </code></pre></div></p>
-<p><strong>3. if-elif 構文</strong></p>
+<h4 id="3-if-elif">3. if-elif 構文<a class="headerlink" href="#3-if-elif" title="Permanent link">&para;</a></h4>
 <p><strong>if-elif構文</strong>は、複数の条件をチェックするために使います。最初の条件がFalseだった場合に、次の条件を評価します。elseを使うと、どの条件にも当てはまらない場合の処理を記述できます。</p>
 <p><strong>構文:</strong>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件1</span><span class="p">:</span>
@@ -1758,7 +1794,7 @@ True
 <div class="highlight"><pre><span></span><code>xはゼロです
 </code></pre></div></p>
 <hr />
-<h3 id="if_1">ifのネスト（入れ子）<a class="headerlink" href="#if_1" title="Permanent link">&para;</a></h3>
+<h3 id="if_3">ifのネスト（入れ子）<a class="headerlink" href="#if_3" title="Permanent link">&para;</a></h3>
 <p>複数の条件を組み合わせて処理したい場合、<code>if</code>文を入れ子にすることができます。これにより、複雑な条件を階層的に処理することが可能です。</p>
 <p><strong>構文:</strong>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">条件1</span><span class="p">:</span>
@@ -1786,7 +1822,7 @@ True
 <div class="highlight"><pre><span></span><code>xもyも正の数です
 </code></pre></div></p>
 <p>これらの構文バリエーションを使いこなすことで、Pythonでの条件分岐がより柔軟で強力に扱えるようになります。複雑なプログラムでも、条件を整理して読みやすく記述することが可能です。</p>
-<h2 id="_6">この章のまとめ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_13">この章のまとめ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <p>この章では、Pythonの条件分岐について解説しました。</p>
 <div class="admonition success">
 <p class="admonition-title">1. プログラムの流れ</p>
@@ -1806,7 +1842,7 @@ True
 </div>
 <p>これらを組み合わせることで、条件に応じた柔軟で読みやすいプログラムが書けるようになります。</p>
 <hr />
-<h2 id="_7">演習問題<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_14">演習問題<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">基本的なif文の使い方</p>
 <p><code>x</code> が <code>0</code> より大きい場合に「 <code>xは正の数です</code> 」と表示するプログラムを作成してください。<code>x</code> が <code>0</code> 以下の場合は何も表示しないようにしてください。</p>
