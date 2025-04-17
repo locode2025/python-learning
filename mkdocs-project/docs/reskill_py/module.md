@@ -559,7 +559,7 @@ plt.show()
 
 **出力：**
 
-![png](../img/output_30_0.png)
+![png](../images/output_30_0.png)
 
 解説
 

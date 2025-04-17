@@ -25,8 +25,8 @@ theme:
   custom_dir: custom_theme/
   name: material
   language: ja
-  logo: img/favicon.ico
-  favicon: img/favicon.ico
+  logo: favicon.ico
+  favicon: favicon.ico
   palette:
     # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
     # Palette toggle for automatic mode
@@ -60,6 +60,9 @@ extra:
   analytics:
     provider: google
     property: !ENV GA_TRACKING_ID
+  meta:
+    - name: google-adsense-account
+      content: ca-pub-3953371500811296
 
 markdown_extensions:
   - admonition
