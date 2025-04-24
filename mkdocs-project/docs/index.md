@@ -80,6 +80,9 @@ Python は、シンプルで読みやすく、初心者でもすぐにプログ�
 !!! note
     Python 公式サイト [https://www.python.org/](https://www.python.org/)
 
+!!! note
+    Python 日本語チュートリアル [https://docs.python.org/ja/3/tutorial/](https://docs.python.org/ja/3/tutorial/)
+
 💡 **Python を学ぶことで、できることが無限に広がります！**  
 さあ、あなたも Python を学んで **「作れる人」** になりましょう！ 🚀  
 
