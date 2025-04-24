@@ -9,16 +9,18 @@ tags:
   - IT
   - リスキリング
   - 学習
-summary: 地方におけるIT人材育成が日本のデジタル化・経済成長にどのように貢献するのかを解説。
-description: 地方におけるIT人材育成が日本のデジタル化・経済成長にどのように貢献するのかを解説。
-images: 
+summary: プログラミング言語である Python の特徴、利点、用途をおさらいして、今後の日本経済におけるITか、特に製造業での利用について解説します。
+description: プログラミング言語である Python の特徴、利点、用途をおさらいして、今後の日本経済におけるITか、特に製造業での利用について解説します。
+images: ../../images/20250424_usefulness_of_python.png
 ---
 
-# プログラミング言語Pythonの有用性
+# プログラミング言語 Python の有用性
+
+![プログラミング言語 Python の有用性](../../images/20250424_usefulness_of_python.png)
 
 Pythonは、汎用的で高レベルなプログラミング言語であり、1980年代後半にグイド・ヴァンロッサムによって開発されました。以下に、Pythonの主要な特徴や利点、用途について詳しく説明します。
 
-!!! Note
+!!! info
     Python サイト [https://www.python.org](https://www.python.org)
 
 ## 特徴
