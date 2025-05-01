@@ -19,6 +19,7 @@ nav:
   - リスキリングブログ:
     - blog/index.md
   - プライバシーポリシー: privacy_policy.md
+  - 運営者情報: about_us.md
   - お問い合わせ: request_form.md
 
 theme:
