@@ -1,0 +1,2984 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/reskill_java/basic/">
+      
+      
+        <link rel="prev" href="../../reskill_py/outro/">
+      
+      
+        <link rel="next" href="../../blog/">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>基礎編 - ペアリスキリング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-3953371500811296">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variables" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="ペアリスキリング" class="md-header__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ペアリスキリング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基礎編
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ホーム
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reskill_py/introduction/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Java
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  リスキリングブログ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy_policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  プライバシーポリシー
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about_us/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  運営者情報
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../request_form/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  お問い合わせ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ペアリスキリング" class="md-nav__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    ペアリスキリング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/operator_and_variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    演算と変数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/list_tuple_set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    リストとタプルとセット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    基礎編
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    基礎編
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      変数; Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="変数; Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      変数の種類
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primitive-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      プリミティブ型; Primitive Data Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列; Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配列; Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列のメリット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の「要素」と「添え字」
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の扱い方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 配列とfor文の組み合わせ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forfor-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 拡張for文（for-each文）の使い方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 配列とfor文を使って塩基記号を表示するプログラム
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Javaにおける配列とメモリの仕組み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java のガーベージコレクション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      多次元配列
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      制御構文; Control Flow Statements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="制御構文; Control Flow Statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      制御構文とは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      比較演算子の基本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if文の基本構文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if / else文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-else-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if / else if / else文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ネストされたif文（入れ子構造）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch文の活用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件演算子（三項演算子）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      よくある間違いと注意点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      演習問題
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    リスキリングブログ
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            リスキリングブログ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    過去の投稿
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            過去の投稿
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プライバシーポリシー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about_us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    運営者情報
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../request_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    お問い合わせ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      変数; Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="変数; Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      変数の種類
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primitive-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      プリミティブ型; Primitive Data Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列; Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配列; Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列のメリット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の「要素」と「添え字」
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の扱い方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 配列とfor文の組み合わせ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forfor-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 拡張for文（for-each文）の使い方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 配列とfor文を使って塩基記号を表示するプログラム
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Javaにおける配列とメモリの仕組み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java のガーベージコレクション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      多次元配列
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      制御構文; Control Flow Statements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="制御構文; Control Flow Statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      制御構文とは
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      比較演算子の基本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if文の基本構文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if / else文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-else-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if / else if / else文
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ネストされたif文（入れ子構造）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch文の活用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件演算子（三項演算子）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      よくある間違いと注意点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      演習問題
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="java-language-basics">Javaの基礎; Language Basics<a class="headerlink" href="#java-language-basics" title="Permanent link">&para;</a></h1>
+<h2 id="variables">変数; Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
+<h3 id="_1">変数の種類<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Javaの変数は次の種類があります：</p>
+<ul>
+<li>インスタンス変数; Instance Variables (Non-Static Fields)</li>
+<li>クラス変数; Class Variables (Static Fields)</li>
+<li>ローカル変数; Local Variables</li>
+<li>パラメータ; Parameters</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>宣言場所</th>
+<th>キーワード</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インスタンス変数</td>
+<td>クラス内</td>
+<td>（なし）</td>
+<td>各オブジェクトごとに存在する</td>
+</tr>
+<tr>
+<td>クラス変数</td>
+<td>クラス内</td>
+<td><code>static</code></td>
+<td>クラス全体で1つだけ共有する</td>
+</tr>
+<tr>
+<td>ローカル変数</td>
+<td>メソッド内</td>
+<td>（なし）</td>
+<td>メソッド内だけで有効</td>
+</tr>
+<tr>
+<td>パラメータ</td>
+<td>メソッドの引数</td>
+<td>（なし）</td>
+<td>呼び出し元から値を受け取る</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-instance-variables">🔸 1. インスタンス変数（Instance Variables）<a class="headerlink" href="#1-instance-variables" title="Permanent link">&para;</a></h4>
+<ul>
+<li>クラスの中で static をつけずに宣言した変数</li>
+<li>各オブジェクト（インスタンス）が自分専用に持つ</li>
+<li>オブジェクトごとに値が異なる</li>
+</ul>
+<p>🧠 例：自転車オブジェクトごとに異なるスピード
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">currentSpeed</span><span class="p">;</span><span class="w">  </span><span class="c1">// ← インスタンス変数</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="2-class-variables">🔸 2. クラス変数（Class Variables）<a class="headerlink" href="#2-class-variables" title="Permanent link">&para;</a></h4>
+<ul>
+<li>static をつけて宣言する変数</li>
+<li>クラス全体で1つだけ存在する（すべてのインスタンスで共通）</li>
+<li>通常、クラス名からアクセスされる</li>
+</ul>
+<p>🧠 例：全自転車で共通のギアの数
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numGears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">  </span><span class="c1">// ← クラス変数</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="3-local-variables">🔸 3. ローカル変数（Local Variables）<a class="headerlink" href="#3-local-variables" title="Permanent link">&para;</a></h4>
+<ul>
+<li>メソッドの中で宣言する変数</li>
+<li>そのメソッドの中でだけ使える（外からアクセスできない）</li>
+<li>自動的に初期化されないため、使う前に必ず代入が必要</li>
+</ul>
+<p>🧠 例：一時的に使うカウント
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ride</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// ← ローカル変数</span>
+<span class="w">    </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="4-parameters">🔸 4. パラメータ（Parameters）<a class="headerlink" href="#4-parameters" title="Permanent link">&para;</a></h4>
+<ul>
+<li>メソッドやコンストラクタの引数として渡される変数</li>
+<li>メソッド内でのみ使えるが、呼び出し元から値が渡される</li>
+<li>フィールドではなく、一時的な入力用変数</li>
+</ul>
+<p>🧠 例：main メソッドの args や、クラスの引数
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// speed ← パラメータ</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">currentSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="primitive-data-types">プリミティブ型; Primitive Data Types<a class="headerlink" href="#primitive-data-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>ビット数</th>
+<th>主な用途・特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>8</td>
+<td>-128〜127。メモリ節約に有効。制限ある範囲で意味を明示できる。</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td>-32,768〜32,767。byteと同様、メモリ節約向け。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td>-2³¹〜2³¹-1。最も一般的な整数型。Java SE 8以降は符号なしとしても利用可。</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td>-2⁶³〜2⁶³-1。大きな範囲の整数に使用。符号なしの扱いも可能（Java SE 8以降）。</td>
+</tr>
+<tr>
+<td>float</td>
+<td>32</td>
+<td>単精度浮動小数点数。メモリ節約向け。通貨などの精密計算には不向き。</td>
+</tr>
+<tr>
+<td>double</td>
+<td>64</td>
+<td>倍精度浮動小数点数。一般的な小数表現に使用。floatより精度が高い。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>不定</td>
+<td>true / false の2値。フラグ処理に使う。サイズは厳密には未定義。</td>
+</tr>
+<tr>
+<td>char</td>
+<td>16</td>
+<td>Unicode文字1つ。'\u0000'〜'\uffff'（0〜65,535）。</td>
+</tr>
+</tbody>
+</table>
+<p>プリミティブ型のビット数の違いとは、そのデータ型が扱える情報量（数値の範囲や精度）やメモリ使用量に直結する、非常に重要な違いです。</p>
+<h4 id="_2">🔹ビット数とは？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>1ビットは「0」または「1」の 2通りの状態 を表す最小単位です。つまり、Nビットの型は、</p>
+<ul>
+<li>符号なしなら「2ⁿ通り」</li>
+<li>符号ありなら「-2ⁿ⁻¹〜2ⁿ⁻¹ - 1」</li>
+</ul>
+<p>の数値を表現できます。</p>
+<h4 id="_3">🔸ビット数の違いによる影響<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>ビット数</th>
+<th>メモリ使用量</th>
+<th>表せる値の範囲または精度</th>
+<th>主な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>8ビット</td>
+<td>非常に小さい</td>
+<td>-128 ～ 127</td>
+<td>メモリ節約、バイト単位の処理</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16ビット</td>
+<td>小さい</td>
+<td>-32,768 ～ 32,767</td>
+<td>byteより広いが軽量な数値処理</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>32ビット</td>
+<td>標準的</td>
+<td>-2,147,483,648 ～ 2,147,483,647</td>
+<td>一般的な整数処理</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64ビット</td>
+<td>多い</td>
+<td>-9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807</td>
+<td>大きな数値の処理</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32ビット</td>
+<td>標準的</td>
+<td>小数点以下約7桁の精度</td>
+<td>軽量な浮動小数点</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64ビット</td>
+<td>多い</td>
+<td>小数点以下約15桁の精度</td>
+<td>精度が必要な浮動小数点</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16ビット</td>
+<td>小さい</td>
+<td>'\u0000' ～ '\uffff'（Unicode）</td>
+<td>1文字（Unicode）</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>不定</td>
+<td>実装依存</td>
+<td><code>true</code> または <code>false</code></td>
+<td>真偽値フラグ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="int-vs-long">🔹例で比較（int vs long）<a class="headerlink" href="#int-vs-long" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">population</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">130000000</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK: 約1.3億人</span>
+<span class="kt">long</span><span class="w"> </span><span class="n">worldPopulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8000000000L</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK: 約80億人（intではオーバーフロー）</span>
+</code></pre></div>
+<h4 id="_4">✅ まとめ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ビット数が大きいほど → より大きな値 or 高精度な小数が扱える（そのぶんメモリも多く使う）</li>
+<li>ビット数が小さいほど → メモリ節約になる（ただし扱える値の範囲に注意）</li>
+</ul>
+<p>用途に応じて適切な型を選ぶのが、パフォーマンスや安全性のカギです。</p>
+<h2 id="arrays">配列; Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
+<h3 id="_5">配列のメリット<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>たとえば、英語・数学・国語・理科・社会の5教科の点数を管理するプログラムを作ろうとするとします。</p>
+<p>配列を使わずにそれぞれの点数を変数で管理しようとすると、次のように一つひとつ別の名前をつけて変数を定義することになります。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScoreExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">score1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合計点: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;平均点: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">average</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>このように変数を個別に用意する方法には、いくつかの問題があります。</p>
+<ol>
+<li>
+<dl>
+<dt>変数が増えるとコードが複雑になる</dt>
+<dd>教科が増えるたびに、新しい変数を用意しなければなりません。同じようなデータが並ぶだけなのに、名前を毎回考えて記述するのは手間がかかります。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>処理が繰り返しになりやすい</dt>
+<dd>平均点を計算したいときなどに、すべての変数を一つずつ足し合わせる必要があり、同じような処理を何度も書くことになります。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>柔軟性が低い</dt>
+<dd>もし教科の数が変更されたり、別の用途で同様の構造のデータを扱う必要が出てきたとき、コードをすべて書き換える必要があります。これはメンテナンス性が悪く、ミスが起きやすくなります。</dd>
+</dl>
+</li>
+</ol>
+<p>こうした課題を解決するために登場するのが配列です。配列を使えば、同じ種類のデータを「まとめてひとつの変数」として扱えるようになり、コードが簡潔で柔軟になります。</p>
+<p><strong>配列でこの課題を解決する</strong></p>
+<p>先ほどのように、5教科の点数を管理する場合、配列を使えば次のように記述できます。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">};</span>
+</code></pre></div>
+<p>このように、同じ型のデータをまとめてひとつに管理できるのが配列の特徴です。これによって次のようなメリットがあります。</p>
+<ul>
+<li>教科の数が増減しても、変数名をたくさん用意する必要がありません。</li>
+<li>すべての教科の合計や平均を求める処理を、繰り返し（ループ）を使って簡潔に書くことができます。</li>
+</ul>
+<h3 id="_6">配列の「要素」と「添え字」<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>配列には複数のデータが順番に並んで格納されています。このひとつひとつのデータのことを<strong>要素（element）</strong>と呼びます。</p>
+<p>それぞれの要素には番号が振られており、その番号を使ってアクセスします。この番号のことを<strong>添え字（index）</strong>と言います。</p>
+<p>Javaでは、添え字は0から始まるのが特徴です。</p>
+<table>
+<thead>
+<tr>
+<th>インデックス</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>値（スコア）</td>
+<td>80</td>
+<td>75</td>
+<td>90</td>
+<td>85</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p>たとえば、3番目の教科の点数を使いたい場合は、次のように書きます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 結果: 90</span>
+</code></pre></div>
+<p>このように、配列を使えば、データの管理・処理がずっと効率的になります。</p>
+<h3 id="_7">配列の扱い方<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>■ 配列の作成（宣言と代入）</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 5つのint型の要素を持つ配列</span>
+</code></pre></div>
+<p>※ 要素の中身は、初期化しない限り 0 が自動で入る（基本型の場合）。</p>
+<p>■ 配列の利用（代入と参照）</p>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 70 と出力される</span>
+</code></pre></div>
+<p>■ 配列の初期化（同時に値を代入）</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">■ インデックス（添え字）の注意点</p>
+<ul>
+<li>配列のインデックスは 0からスタート。</li>
+<li>範囲外のインデックスにアクセスすると、ArrayIndexOutOfBoundsException になる。</li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// エラー：5番目は存在しない</span>
+</code></pre></div>
+<p>■ for文との組み合わせ</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>scores.length</code> で配列の長さを取得。</li>
+<li>添え字 i を使って要素を順番に処理。</li>
+</ul>
+<h3 id="for">📘 配列とfor文の組み合わせ<a class="headerlink" href="#for" title="Permanent link">&para;</a></h3>
+<p>配列は、同じ型のデータをまとめて管理するための箱でしたね。
+でも、それぞれの要素にアクセスしたり、まとめて処理したりするには、繰り返し処理が必要になります。</p>
+<p>そこで登場するのが、for文との組み合わせです。</p>
+<p><strong>✅ 例：5科目の点数の合計を計算する</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span><span class="w">  </span><span class="c1">// 英数国理社の点数</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// i番目の点数を足していく</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合計点は &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 点です&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>scores.length</code> で、配列の要素数。<code>5</code>が返るので、<code>i = 0</code> から <code>i &lt; 5</code> まで繰り返します。<code>for (int i = 0; i &lt; scores.length; i++)</code> のように、「length」 を使えば、要素数が変わっても対応可能です。</li>
+<li><code>scores[i]</code> で、i番目の要素にアクセスします（0番目が最初）。</li>
+<li><code>sum += scores[i];</code> で、毎回のループで点数を加算します。</li>
+</ul>
+<p><strong>💡 この構文を使うと便利な場面:</strong></p>
+<ul>
+<li>合計点・平均点の計算</li>
+<li>条件に合うデータの抽出</li>
+<li>全体に同じ処理を適用（例：10点加点など）</li>
+</ul>
+<h3 id="forfor-each">🔁 拡張for文（for-each文）の使い方<a class="headerlink" href="#forfor-each" title="Permanent link">&para;</a></h3>
+<p>Javaでは、配列やリストなどを1つずつ順番に処理したい場合、
+通常のfor文よりも シンプルに書ける構文 があります。
+それが、<strong>拡張for文（for-each文）</strong>です。</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">型</span><span class="w"> </span><span class="n">変数名</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">配列名</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 各要素に対しての処理</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>:</code> は「in」のような意味と捉えるとわかりやすいです。</li>
+<li>各要素が順番に取り出されて、変数に入ります。</li>
+</ul>
+<p><strong>✅ 実例：5科目の点数を出力する:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">scores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;点数：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意点</p>
+<p>拡張for文では 要素のインデックス番号（0, 1, 2…）は使えません。
+インデックスを使いたい場合は、通常のfor文を使いましょう。</p>
+</div>
+<h3 id="for_1">🔬 配列とfor文を使って塩基記号を表示するプログラム<a class="headerlink" href="#for_1" title="Permanent link">&para;</a></h3>
+<p>サイズ10の配列に 1〜4 のランダムな整数を格納し、それぞれに対応する塩基記号（A, T, G, C）を表示するプログラムを、switch文を使って記述します。</p>
+<p><strong>例1：switch文で塩基記号を対応させる</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">baseChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;T&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;?&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">baseChar</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>1〜4の数値に応じて、塩基「A」「T」「G」「C」を対応させています。JavaではJava 14以降で導入された<strong>「switch式（switch expressions）」</strong>において、yield を使うことができます。</p>
+<ul>
+<li><code>-&gt;</code> の形式で式として使えるswitch。</li>
+<li>複数行ブロックにしたいときは <code>{}</code> を使い、その中で値を返すには <code>yield</code> が必要。</li>
+</ul>
+<p><strong>🔁 より簡潔に書く方法：配列を使って直接変換する</strong></p>
+<p>この処理は、塩基記号を配列として持っておくことで、インデックスを使ってシンプルに記述できます。</p>
+<p><strong>例2：配列で塩基記号を直接参照する方法</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BaseExampleArray</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">baseSymbols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;T&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">};</span><span class="w">  </span><span class="c1">// 0番は使わない</span>
+
+<span class="w">        </span><span class="c1">// 配列に1〜4のランダムな数値を格納</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// 数値をインデックスとして塩基を取得・出力</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">baseSymbols</span><span class="o">[</span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>✅ 解説：</p>
+<ul>
+<li><code>baseSymbols[bases[i]]</code> という一文で塩基記号が取り出せるので、switch文よりも可読性・保守性に優れています。</li>
+<li>0番目に空白を入れることで、1〜4をそのままインデックスとして使えるよう工夫しています。</li>
+<li>この方法は「マッピング（対応関係）の明示」にもなっており、他のケースにも応用が可能です。</li>
+</ul>
+<h3 id="java">🧠 Javaにおける配列とメモリの仕組み<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<p>💡 配列は「参照型（Reference Type）」</p>
+<p>Javaでは、配列は参照型に分類されます。つまり、配列変数は<strong>配列そのものではなく、配列のデータが格納されているメモリ領域への参照（アドレス）</strong>を保持しています。</p>
+<p>🔍 具体的なイメージ</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<p>このとき、Javaは以下のような処理を行います：</p>
+<ol>
+<li>int型のデータを5個格納できるメモリ領域を確保</li>
+<li>そのメモリ領域の先頭アドレスを、numbersという変数に保持</li>
+</ol>
+<p>イメージとしてはこんな構造です：</p>
+<div class="highlight"><pre><span></span><code>numbers ──┐
+          ▼
+     [ 0, 0, 0, 0, 0 ]  ← 実体（メモリ上の配列）
+</code></pre></div>
+<p>このように、numbersには実際の配列データではなく、配列のアドレスが入っているのです。</p>
+<p><strong>📌 配列を別の変数に代入した場合</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">;</span>
+</code></pre></div>
+このとき、<code>numbers</code> と <code>other</code> は同じ配列を指すことになります。つまり、どちらかの変数を使って配列の要素を変更すれば、もう一方にも反映されます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">other</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// → 100</span>
+</code></pre></div>
+<ul>
+<li>otherに新しい配列をコピーしているわけではなく、同じ配列のアドレスを渡しているだけ。</li>
+<li>この性質を知らないと、「意図しない値の変更」が起こることがあります。</li>
+</ul>
+<p><strong>❗ 値型との違いに注意</strong></p>
+<p>たとえば、以下のようなint（プリミティブ型）の代入では、値そのものがコピーされます。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">  </span><span class="c1">// → 10（変化なし）</span>
+</code></pre></div>
+<p><strong>🧭 まとめ</strong></p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>値型 (<code>int</code>, <code>double</code> など)</th>
+<th>参照型（配列など）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代入時の動作</td>
+<td>値そのものがコピーされる</td>
+<td>アドレス（参照）がコピーされる</td>
+</tr>
+<tr>
+<td>メモリの格納場所</td>
+<td>スタック</td>
+<td>ヒープに実体、スタックに参照</td>
+</tr>
+<tr>
+<td>変更の影響範囲</td>
+<td>代入先のみ</td>
+<td>すべての参照元に影響あり</td>
+</tr>
+<tr>
+<td><code>==</code>の比較結果</td>
+<td>値を比較する</td>
+<td>アドレスを比較する</td>
+</tr>
+<tr>
+<td><code>null</code>を代入可能か</td>
+<td>不可</td>
+<td>可</td>
+</tr>
+</tbody>
+</table>
+<h3 id="java_1">Java のガーベージコレクション<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h3>
+<p><strong>ガーベージコレクションとは？</strong></p>
+<p>Javaでは、<code>new</code> キーワードを使ってオブジェクトを作成すると、そのオブジェクトはヒープと呼ばれるメモリ領域に配置されます。しかし、プログラムが進むにつれて、使わなくなったオブジェクトもメモリ上に残り続けてしまうと、メモリが不足してしまいます。
+そこで、Javaでは使われなくなったオブジェクト（＝誰からも参照されていないオブジェクト）を自動的に削除する機能が用意されています。これが「ガーベージコレクション」です。</p>
+<p><strong>どのように動くの？</strong></p>
+<p>Javaのガーベージコレクタは、次のようなタイミングで動作します。</p>
+<ul>
+<li>メモリが不足しそうになったとき</li>
+<li>明示的に <code>System.gc()</code> を呼び出したとき（ただし、実行される保証はありません）</li>
+</ul>
+<p>ガーベージコレクタは、現在使われていないオブジェクトを探索し、それらを削除してメモリを回収します。これによって、プログラマはメモリ解放の処理を記述する必要がなくなり、安全かつ効率的にプログラムを開発できるのです。</p>
+<p><strong>「使われていないオブジェクト」とは？</strong></p>
+<p>以下のような状態になると、オブジェクトは「不要」とみなされます：</p>
+<div class="highlight"><pre><span></span><code><span class="n">MyObject</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyObject</span><span class="p">();</span><span class="w"> </span><span class="c1">// オブジェクトを生成</span>
+<span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// 参照を切る → この時点でガーベージコレクションの対象になる</span>
+</code></pre></div>
+<p>参照が切れたり、スコープの外に出てアクセスできなくなった場合、そのオブジェクトは「誰からも使われていない」と判断され、削除の候補になります。</p>
+<table>
+<thead>
+<tr>
+<th>メリット</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メモリ管理を自動化できる</td>
+<td>実行タイミングは制御できない</td>
+</tr>
+<tr>
+<td>メモリリークのリスクを減らせる</td>
+<td>処理が重くなることがあり、動作が一時止まることも</td>
+</tr>
+<tr>
+<td>コードがシンプルに保てる</td>
+<td>リアルタイム性が求められる処理には不向き</td>
+</tr>
+</tbody>
+</table>
+<p><strong>まとめ</strong></p>
+<p>Javaのガーベージコレクションは、プログラム中で不要になったオブジェクトを自動的に削除してくれる仕組みで、Javaが「メモリ管理がしやすい言語」と言われる理由の一つです。ガーベージコレクションのおかげで、開発者はメモリ解放のことをそれほど意識せずに、より本質的なロジックに集中することができます。</p>
+<h3 id="_8">多次元配列<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>多次元配列とは？</strong></p>
+<p>Javaでは、配列の中に配列を格納することで多次元配列を表現します。特によく使われるのが「2次元配列」です。これは、表（表形式のデータ）やマス目のようなデータを表すときに便利です。</p>
+<p><strong>2次元配列の宣言と初期化:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<p>この例では、3行4列の整数の表（3×4の2次元配列）を作成しています。</p>
+<div class="highlight"><pre><span></span><code>matrix ──▶ [ [0, 0, 0, 0],
+              [0, 0, 0, 0],
+              [0, 0, 0, 0] ]
+</code></pre></div>
+<ul>
+<li>行数：3</li>
+<li>列数：4</li>
+<li>添え字でアクセス：matrix[0][1] は1行目の2列目の要素</li>
+</ul>
+<p><strong>要素へのアクセス・変更:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matrix</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 出力：99</span>
+</code></pre></div>
+<p><strong>配列の初期化時に直接値を入れる方法:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>これは、2行3列の2次元配列で、初期値があらかじめ与えられています。</p>
+<p><strong>for文による走査（ネスト構造）:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li>外側のiが行</li>
+<li>内側のjが列</li>
+<li><code>scores.length</code> は行数</li>
+<li><code>scores[i].length</code> はその行の列数</li>
+</ul>
+<p><strong>不規則な配列（ジャグ配列）にも対応</strong></p>
+<p>Javaの2次元配列は「配列の配列」なので、各行の長さが異なる「ジャグ配列」も作れます：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">jagged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>これは、各行の要素数が異なる特殊な形の配列です。</p>
+<p><strong>まとめ：2次元配列の特徴</strong></p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>構造</td>
+<td>配列の中に配列（＝行ごとの配列）で構成される</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>表形式のデータ、行列、マス目状のデータなどに便利</td>
+</tr>
+<tr>
+<td>走査方法</td>
+<td>二重の for 文（ネスト構造）を用いて各要素にアクセス</td>
+</tr>
+<tr>
+<td>初期化</td>
+<td><code>{ {1,2}, {3,4,5}, {6} }</code> のように異なる長さの配列も定義可能</td>
+</tr>
+<tr>
+<td>柔軟性</td>
+<td>各行の列数が異なる「ジャグ配列（Jagged Array）」も作成できる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-flow-statements">制御構文; Control Flow Statements<a class="headerlink" href="#control-flow-statements" title="Permanent link">&para;</a></h2>
+<h3 id="_9">制御構文とは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>プログラムは基本的に上から下へ、1行ずつ順番に実行されます。しかし、すべての処理をただ順番に実行するだけでは、複雑な判断や繰り返し処理ができません。
+制御構文は、このような「処理の流れ」を必要に応じて変えるための仕組みです。</p>
+<p>Javaでは主に以下の3つの構造で処理を制御します：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>構造</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>順次構造</td>
+<td>上から順に処理を実行する基本の流れ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>分岐構造</td>
+<td>条件によって処理を分ける（if文やswitch文など）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>反復構造</td>
+<td>同じ処理を繰り返す（for文やwhile文など）</td>
+</tr>
+</tbody>
+</table>
+<p>この3つの構造だけで、あらゆるプログラムを組み立てることができるという考え方を「構造化定理」と呼びます。</p>
+<div class="admonition note">
+<p class="admonition-title">1. 順次構造: 最も基本的な実行の流れで、上から順に処理されます。</p>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Process1[処理１]
+    Process2[処理２]
+    Process3[処理３]
+    End([終了])
+
+    Start --&gt; Process1 --&gt; Process2 --&gt; Process3 --&gt; End</code></pre>
+</div>
+<div class="admonition note">
+<p class="admonition-title">2. 分岐構造: 条件に応じて異なる処理を行います（例：<strong>if文</strong>）。</p>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Process1[処理１]
+    Decision{条件}
+    Process2[処理２]
+    Process3[処理３]
+    End([終了])
+
+    Start --&gt; Process1 --&gt; Decision
+    Decision -- TRUE の場合 --&gt; Process2 --&gt; End
+    Decision -- FALSE の場合 --&gt; Process3 --&gt; End</code></pre>
+</div>
+<div class="admonition note">
+<p class="admonition-title">3. 反復構文: 同じ処理を何度も繰り返します（例：<strong>for文</strong>、<strong>while文</strong>）。</p>
+<pre class="mermaid"><code>flowchart TD
+    Start([開始])
+    Check{条件}
+    Process[処理]
+    End([終了])
+
+    Start --&gt; Check
+    Check -- TRUE の場合 --&gt; Process
+    Process --&gt; Check
+    Check -- FALSE の場合 --&gt; End</code></pre>
+</div>
+<p><strong>なぜ制御構文が重要か？</strong></p>
+<p>たとえば次のような場面では、制御構文が欠かせません：</p>
+<ul>
+<li>条件に応じて異なるメッセージを表示したい（例：成績が合格かどうか）</li>
+<li>複数の入力値を順に処理したい（例：データの集計）</li>
+<li>条件を満たすまで処理を繰り返したい（例：ゲームのループ処理）</li>
+</ul>
+<p>制御構文を理解することで、プログラムが「状況に応じた行動」を取れるようになり、より柔軟で高度な処理が可能になります。</p>
+<h3 id="_10">比較演算子の基本<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>分岐や繰り返しを行う際には、「条件」を判定する必要があります。この条件式を作るために使うのが比較演算子です。
+比較演算子は、2つの値を比較して真（true）か偽（false）かを返します。Javaでよく使われる比較演算子は以下の通りです：</p>
+<table>
+<thead>
+<tr>
+<th>比較演算子</th>
+<th>意味</th>
+<th>例（aが5, bが3）</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>等しい</td>
+<td><code>a == b</code></td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>等しくない</td>
+<td><code>a != b</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>より大きい</td>
+<td><code>a &gt; b</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>より小さい</td>
+<td><code>a &lt; b</code></td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>以上</td>
+<td><code>a &gt;= b</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>以下</td>
+<td><code>a &lt;= b</code></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>条件として使う例：</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合格です&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>このように、比較演算子によって得られた真偽値（boolean型）を使って、条件によって処理を分けることができます。</p>
+<p><strong>比較演算子の演算結果を確認するプログラム：</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// false（等しくない）</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// true（等しくないのでtrue）</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// true（5は3より大きい）</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// false（5は3より小さくない）</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// true（5は3以上）</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// false（5は3以下ではない）</span>
+</code></pre></div></p>
+<div class="admonition warninig">
+<p class="admonition-title">注意点</p>
+<ul>
+<li><code>=</code>（代入演算子）と <code>==</code>（比較演算子）を混同しないように注意しましょう。</li>
+<li>結果はすべて boolean 型（true または false）で返されます。</li>
+</ul>
+</div>
+<h3 id="if">if文の基本構文<a class="headerlink" href="#if" title="Permanent link">&para;</a></h3>
+<p>if 文は、プログラムに「条件分岐」を与えるための構文です。ある条件が成り立ったときだけ、特定の処理を実行するように書きます。日常の「もし〇〇だったら、××する」に対応しています。</p>
+<p>!!! success　"基本構文:"</p>
+<pre><code>```java
+if (条件式) {
+    // 条件がtrueのときに実行される処理
+}
+```
+</code></pre>
+<p><strong>プログラム例:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;よくできました！&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>出力結果：</strong>
+<div class="highlight"><pre><span></span><code>よくできました！
+</code></pre></div></p>
+<p>この例では、<code>score</code> の値が <code>80</code> 以上であれば「よくできました！」と表示されます。条件式が <code>true</code> であれば <code>{}</code> 内の文が実行され、<code>false</code> であれば何も実行されません。</p>
+<p><strong>ポイント</strong></p>
+<ul>
+<li>条件式には、前の章で学んだ比較演算子を使うことが多いです。</li>
+<li><code>{}</code>（ブロック）は1行だけなら省略可能ですが、初心者のうちは必ずブロックで囲むことを推奨します。読みやすさとバグ防止のためです。</li>
+<li>if 文だけでは「条件が成り立たなかったとき」の処理は書けません。これは次の if-else 文で学びます。</li>
+</ul>
+<h3 id="if-else">if / else文<a class="headerlink" href="#if-else" title="Permanent link">&para;</a></h3>
+<p>if / else 文は、「条件が成り立つ場合の処理」と「条件が成り立たない場合の処理」の両方を記述したいときに使います。いわば「そうでなければ〜する」を明示的に書く構文です。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 条件がtrueのときに実行される処理</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 条件がfalseのときに実行される処理</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p><strong>例：</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;よくできました！&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;がんばりましょう！&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>出力結果：</strong>
+<div class="highlight"><pre><span></span><code>がんばりましょう！
+</code></pre></div></p>
+<p><strong>ポイント:</strong></p>
+<ul>
+<li><code>if</code> の条件が <code>true</code> なら <code>if</code> の中身だけが実行され、<code>false</code> なら <code>else</code> の中身が実行されます。</li>
+<li><code>if</code> と <code>else</code> のどちらか一方のブロックだけが必ず1回実行されます。</li>
+<li>「2択」のような状況で使うと、処理を簡潔に表現できます。</li>
+</ul>
+<h3 id="if-else-if-else">if / else if / else文<a class="headerlink" href="#if-else-if-else" title="Permanent link">&para;</a></h3>
+<p>if / else if / else 文は、複数の条件を順番に評価して、最初に成り立った条件の処理だけを実行したいときに使います。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 条件1がtrueのときに実行される処理</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 条件1がfalseで、条件2がtrueのときに実行</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// すべての条件がfalseのときに実行</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p><strong>例:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;たいへんよくできました！&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;よくできました！&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;がんばりましょう！&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>出力結果：</strong>
+<div class="highlight"><pre><span></span><code>よくできました！
+</code></pre></div></p>
+<p>この例では、<code>score</code> が70以上90未満なので、<code>else if</code> の部分が実行されます。</p>
+<p><strong>ポイント</strong></p>
+<ul>
+<li>上から順に条件を評価し、最初にtrueになった処理だけが実行されます。</li>
+<li>すべての条件がfalseのときは、else が実行されます（省略可能）。</li>
+<li>条件が3つ以上ある場合でも、コードを読みやすく整理できます。</li>
+</ul>
+<h3 id="if_1">ネストされたif文（入れ子構造）<a class="headerlink" href="#if_1" title="Permanent link">&para;</a></h3>
+<p>if 文の中にさらに if 文を書くことで、より細かい条件分岐ができるようになります。これを「<strong>ネスト（入れ子）</strong>された if 文」と呼びます。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 条件1と条件2の両方がtrueのとき実行される</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 条件1がtrue かつ 条件2がfalseのとき</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 条件1がfalseのとき</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p><strong>例：</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">submitted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">submitted</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;提出もバッチリ！優秀です！&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;提出はOK、でももう少し頑張ろう！&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;まずは提出してください！&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>出力結果：</strong>
+<div class="highlight"><pre><span></span><code><span class="n">提出もバッチリ</span><span class="err">！</span><span class="n">優秀です</span><span class="err">！</span>
+</code></pre></div></p>
+<p>このように、条件が複雑な場合はネストして使うことで判断の分岐を細かくコントロールできます。ネストは便利ですが、深くなりすぎると読みにくくなるので注意が必要です。</p>
+<h3 id="switch">switch文の活用<a class="headerlink" href="#switch" title="Permanent link">&para;</a></h3>
+<p>switch 文は、変数の値によって分岐処理を行う構文です。特に「値に応じて多数の選択肢を処理する」場合に、if / else if よりもすっきりと記述できるのが特徴です。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文</p>
+<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">変数</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">case</span><span class="w"> </span><span class="n">値1</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// 値1の場合の処理</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="k">case</span><span class="w"> </span><span class="n">値2</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// 値2の場合の処理</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="k">default</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// 上記以外の場合の処理</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p><strong>ポイント解説</strong>*</p>
+<ul>
+<li><code>case</code> は、条件に一致する値に応じた処理を記述します</li>
+<li><code>break</code> は、各ケースの処理が終わったら分岐を終了します（省略すると次のケースに流れます）</li>
+<li><code>default</code> は、どのケースにも一致しなかった場合に実行されます（elseのような役割）</li>
+</ul>
+<p><strong>例：</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;月曜日です&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;火曜日です&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;水曜日です&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;他の曜日です&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>出力結果：</strong></p>
+<div class="highlight"><pre><span></span><code>水曜日です
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意点</p>
+<ul>
+<li><code>switch</code> は <code>int</code>、<code>char</code>、<code>String</code>、<code>enum</code> 型などに使用できます（<code>boolean</code> や <code>float</code> は使えません）。</li>
+<li><code>break</code> を忘れると意図しない分岐の連続実行が起こるため注意しましょう（これを<strong>フォールスルー</strong>と呼びます）。</li>
+</ul>
+</div>
+<h4 id="switchjava-14">switch式（Java 14以降）<a class="headerlink" href="#switchjava-14" title="Permanent link">&para;</a></h4>
+<p>従来との違い</p>
+<p>従来の switch 文は命令文（statement）として使われ、処理だけを行いましたが、
+switch式（expression） は値を返すことができるのが大きな違いです。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">値</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">値1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;結果1&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">値2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;結果2&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;その他&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+</div>
+<table>
+<thead>
+<tr>
+<th>特徴・メリット</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>値を返せる</td>
+<td>式として使えるため、switchの結果を変数に直接代入できる</td>
+</tr>
+<tr>
+<td>記述が簡潔</td>
+<td><code>-&gt;</code> を使うことで、<code>break</code> や <code>{}</code> を省略可能</td>
+</tr>
+<tr>
+<td>安全性が高い</td>
+<td><code>break</code> の書き忘れによるバグが起きにくい</td>
+</tr>
+<tr>
+<td>複数条件に対応可能</td>
+<td><code>case 1, 2 -&gt;</code> のように、同じ処理をまとめて記述できる</td>
+</tr>
+<tr>
+<td>複雑な処理にも対応</td>
+<td>ブロックと <code>yield</code> を使うことで、複数行の処理も記述できる</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例：曜日番号から名前を得る</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;月曜日&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;火曜日&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;水曜日&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;木曜日&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;金曜日&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;週末&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;不明な日&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dayName</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>出力：</strong>
+<div class="highlight"><pre><span></span><code>水曜日
+</code></pre></div></p>
+<p><strong>複雑な処理が必要な場合（ブロック付き）:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">値</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 複数行処理も可能</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">put</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;処理中&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">yield</span><span class="w"> </span><span class="s">&quot;結果1&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;その他&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><strong>まとめ:</strong></p>
+<ul>
+<li>switch式 はコードの簡潔さと安全性を高めるモダンな書き方。</li>
+<li>Javaの初学者にも今後は基本の一部として学んでおく価値がある構文です。</li>
+</ul>
+<h3 id="_11">条件演算子（三項演算子）<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>◆ 条件演算子とは？</p>
+<p>条件演算子（または三項演算子）は、if / else 文を1行で簡潔に書ける構文です。</p>
+<div class="admonition success">
+<p class="admonition-title">基本構文</p>
+<div class="highlight"><pre><span></span><code><span class="n">条件式</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">値1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">値2</span>
+</code></pre></div>
+</div>
+<ul>
+<li>条件式が true の場合は 値1 が選ばれ、</li>
+<li>条件式が false の場合は 値2 が選ばれます。</li>
+</ul>
+<p>◆ 例：数値の大小を比較</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;aの方が大きい&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;bの方が大きい&quot;</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</code></pre></div>
+<p>このコードは、if / else を次のように書いたのと同じ意味です：</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aの方が大きい&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bの方が大きい&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>◆ 使いどころと注意点</p>
+<p>使いどころ</p>
+<ul>
+<li>代入や戻り値に条件分岐を含めたいとき</li>
+<li>処理が1行で済むシンプルな条件</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;合格&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;不合格&quot;</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意点</p>
+<p>複雑な条件やネスト（入れ子）は可読性を損なうため避けましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 悪い例：ネストした三項演算子</span>
+<span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">((</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;1〜9&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10以上&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0以下&quot;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>◆ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>構文</td>
+<td><code>条件 ? 値1 : 値2</code></td>
+</tr>
+<tr>
+<td>特徴</td>
+<td><code>if / else</code> を1行で簡潔に記述可能</td>
+</tr>
+<tr>
+<td>主な用途</td>
+<td>代入や出力など、簡単な条件分岐処理に適する</td>
+</tr>
+<tr>
+<td>注意点</td>
+<td>複雑な処理やネストは可読性が下がるため避ける</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">よくある間違いと注意点<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Javaの制御構文を使ううえで、初心者が陥りやすい間違いや注意しておきたいポイントを紹介します。</p>
+<p><strong>比較演算子と代入演算子の混同</strong></p>
+<p>Javaでは、比較をする際に <code>==</code> を使いますが、誤って <code>=</code>（代入）を書いてしまうケースがよくあります。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 誤り！代入になっている</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3です&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>このコードは、x = 3 という代入文が評価され、その結果が true 扱い（非ゼロ）となるため、文法上のエラーにはならず実行されますが、意図した動作にはなりません。</p>
+<p>正しくは：</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3です&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>ブロック <code>{}</code> を省略した場合の罠</strong></p>
+<p><code>if</code> や <code>else</code> の直後の処理が1行だけの場合、ブロック <code>{}</code> を省略できますが、後から行を追加したときに意図しない動作となるリスクがあります。</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;正の数です&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;処理完了&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// if文の外と見なされる</span>
+</code></pre></div>
+<p>この例では、下の <code>println</code> は <code>if</code> の中ではなく、常に実行されてしまいます。
+安全のため、常にブロック <code>{}</code> を使う習慣をおすすめします。
+このような落とし穴を理解しておくことで、より安全で読みやすいコードを書くことができます。</p>
+<h3 id="_13">演習問題<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">問題1：if文の基本</p>
+<p>次のコードは、入力された点数が60点以上かどうかを判定するものです。空欄【A】を埋めて、合格か不合格を表示させてください。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">【</span><span class="n">A</span><span class="err">】</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合格&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>score &gt;= 60</li>
+<li>score == 60</li>
+<li>score &gt; 75</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題2：if / else文</p>
+<p>年齢に応じて「大人」か「子供」を判定します。正しく動作するように、if文を完成させましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">【</span><span class="n">A</span><span class="err">】</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;大人&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;子供&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>age &gt; 20</li>
+<li>age &gt;= 18</li>
+<li>age &lt; 18</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題3：if / else if / else文</p>
+<p>次のコードは、点数に応じて成績を判定します。空欄を埋めて、以下の条件で表示がされるようにしてください。:
+- 80点以上 → 「優秀」
+- 60点以上 → 「合格」
+- それ以外 → 「再試験」</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">【</span><span class="n">A</span><span class="err">】</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;優秀&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">【</span><span class="n">B</span><span class="err">】</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合格&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;再試験&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>score &gt;= 80</li>
+<li>score &gt;= 60</li>
+<li>score &lt; 60</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題4：入れ子のif文（ネスト）</p>
+<p>次のコードは、年齢と性別に応じてメッセージを表示します。空欄を埋めて、20歳以上の男性に「成人男性です」と表示させましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;male&quot;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">【</span><span class="n">A</span><span class="err">】</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;成人男性です&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>gender.equals(“male”)</li>
+<li>gender == “male”</li>
+<li>gender = “male”</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題5：switch文の活用</p>
+<p>次のコードは、曜日に応じてメッセージを表示します。正しい箇所にbreakを入れて、不要な出力が行われないようにしてください。</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="p">;</span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;Monday&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;週の始まりです&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="err">【</span><span class="n">A</span><span class="err">】</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;火曜日です&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="err">【</span><span class="n">B</span><span class="err">】</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;その他の曜日です&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>break;</li>
+<li>continue;</li>
+<li>return;</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題6：三項演算子</p>
+<p>三項演算子を使って、年齢に応じてメッセージを変えるコードを完成させてください。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;成人&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">【</span><span class="n">A</span><span class="err">】</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>“未成年”</li>
+<li>“成人”</li>
+<li>“子供”</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">問題7：よくある間違い</p>
+<p>次のコードは、20歳以上なら「成人」と表示するはずですが、意図通りに動作しません。間違っている部分を選んでください。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;成人&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>[選択肢]</strong></p>
+<ol>
+<li>if文の条件で代入演算子（<code>=</code>）を使っている</li>
+<li>25は20より大きいからif文は実行されない</li>
+<li>printlnの文法が間違っている</li>
+</ol>
+</div>
+<hr />
+<h2 id="_14">参考<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../../reskill_py/outro/" class="md-footer__link md-footer__link--prev" aria-label="前: おわりに">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                おわりに
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../blog/" class="md-footer__link md-footer__link--next" aria-label="次: リスキリングブログ">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                リスキリングブログ
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
