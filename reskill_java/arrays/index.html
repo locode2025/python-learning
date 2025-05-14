@@ -1,0 +1,1982 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/reskill_java/arrays/">
+      
+      
+        <link rel="prev" href="../basic/">
+      
+      
+        <link rel="next" href="../control_flow_statement/">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>配列 - ペアリスキリング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-3953371500811296">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="ペアリスキリング" class="md-header__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ペアリスキリング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              配列
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ホーム
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reskill_py/introduction/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Java
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  リスキリングブログ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy_policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  プライバシーポリシー
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about_us/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  運営者情報
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../request_form/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  お問い合わせ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ペアリスキリング" class="md-nav__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    ペアリスキリング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/operator_and_variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    演算と変数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/list_tuple_set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    リストとタプルとセット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基礎編
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    配列
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    配列
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列のメリット
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の「要素」と「添え字」
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の扱い方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 配列とfor文の組み合わせ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forfor-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 拡張for文（for-each文）の使い方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 配列とfor文を使って塩基記号を表示するプログラム
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Javaにおける配列とメモリの仕組み
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java のガーベージコレクション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      多次元配列
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_flow_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    制御構文
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    メソッド
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre_opp_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    クラスを分けて考える
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre_opp_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    部品として捉える
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_and_instance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    クラスとインスタンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    コンストラクタ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    リスキリングブログ
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            リスキリングブログ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    過去の投稿
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            過去の投稿
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プライバシーポリシー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about_us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    運営者情報
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../request_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    お問い合わせ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列のメリット
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の「要素」と「添え字」
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配列の扱い方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 配列とfor文の組み合わせ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forfor-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 拡張for文（for-each文）の使い方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 配列とfor文を使って塩基記号を表示するプログラム
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Javaにおける配列とメモリの仕組み
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java のガーベージコレクション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      多次元配列
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="arrays">配列; Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h1>
+<h2 id="_1">配列のメリット<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>たとえば、英語・数学・国語・理科・社会の5教科の点数を管理するプログラムを作ろうとするとします。</p>
+<p>配列を使わずにそれぞれの点数を変数で管理しようとすると、次のように一つひとつ別の名前をつけて変数を定義することになります。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScoreExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">score1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合計点: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;平均点: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">average</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>このように変数を個別に用意する方法には、いくつかの問題があります。</p>
+<ol>
+<li>
+<dl>
+<dt>変数が増えるとコードが複雑になる</dt>
+<dd>教科が増えるたびに、新しい変数を用意しなければなりません。同じようなデータが並ぶだけなのに、名前を毎回考えて記述するのは手間がかかります。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>処理が繰り返しになりやすい</dt>
+<dd>平均点を計算したいときなどに、すべての変数を一つずつ足し合わせる必要があり、同じような処理を何度も書くことになります。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>柔軟性が低い</dt>
+<dd>もし教科の数が変更されたり、別の用途で同様の構造のデータを扱う必要が出てきたとき、コードをすべて書き換える必要があります。これはメンテナンス性が悪く、ミスが起きやすくなります。</dd>
+</dl>
+</li>
+</ol>
+<p>こうした課題を解決するために登場するのが配列です。配列を使えば、同じ種類のデータを「まとめてひとつの変数」として扱えるようになり、コードが簡潔で柔軟になります。</p>
+<p><strong>配列でこの課題を解決する</strong></p>
+<p>先ほどのように、5教科の点数を管理する場合、配列を使えば次のように記述できます。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">};</span>
+</code></pre></div>
+<p>このように、同じ型のデータをまとめてひとつに管理できるのが配列の特徴です。これによって次のようなメリットがあります。</p>
+<ul>
+<li>教科の数が増減しても、変数名をたくさん用意する必要がありません。</li>
+<li>すべての教科の合計や平均を求める処理を、繰り返し（ループ）を使って簡潔に書くことができます。</li>
+</ul>
+<h2 id="_2">配列の「要素」と「添え字」<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>配列には複数のデータが順番に並んで格納されています。このひとつひとつのデータのことを<strong>要素（element）</strong>と呼びます。</p>
+<p>それぞれの要素には番号が振られており、その番号を使ってアクセスします。この番号のことを<strong>添え字（index）</strong>と言います。</p>
+<p>Javaでは、添え字は0から始まるのが特徴です。</p>
+<table>
+<thead>
+<tr>
+<th>インデックス</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>値（スコア）</td>
+<td>80</td>
+<td>75</td>
+<td>90</td>
+<td>85</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p>たとえば、3番目の教科の点数を使いたい場合は、次のように書きます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 結果: 90</span>
+</code></pre></div>
+<p>このように、配列を使えば、データの管理・処理がずっと効率的になります。</p>
+<h2 id="_3">配列の扱い方<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>■ 配列の作成（宣言と代入）</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 5つのint型の要素を持つ配列</span>
+</code></pre></div>
+<p>※ 要素の中身は、初期化しない限り 0 が自動で入る（基本型の場合）。</p>
+<p>■ 配列の利用（代入と参照）</p>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 70 と出力される</span>
+</code></pre></div>
+<p>■ 配列の初期化（同時に値を代入）</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">■ インデックス（添え字）の注意点</p>
+<ul>
+<li>配列のインデックスは 0からスタート。</li>
+<li>範囲外のインデックスにアクセスすると、ArrayIndexOutOfBoundsException になる。</li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// エラー：5番目は存在しない</span>
+</code></pre></div>
+<p>■ for文との組み合わせ</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>scores.length</code> で配列の長さを取得。</li>
+<li>添え字 i を使って要素を順番に処理。</li>
+</ul>
+<h2 id="for">📘 配列とfor文の組み合わせ<a class="headerlink" href="#for" title="Permanent link">&para;</a></h2>
+<p>配列は、同じ型のデータをまとめて管理するための箱でしたね。
+でも、それぞれの要素にアクセスしたり、まとめて処理したりするには、繰り返し処理が必要になります。</p>
+<p>そこで登場するのが、for文との組み合わせです。</p>
+<p><strong>✅ 例：5科目の点数の合計を計算する</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span><span class="w">  </span><span class="c1">// 英数国理社の点数</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// i番目の点数を足していく</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合計点は &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 点です&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>scores.length</code> で、配列の要素数。<code>5</code>が返るので、<code>i = 0</code> から <code>i &lt; 5</code> まで繰り返します。<code>for (int i = 0; i &lt; scores.length; i++)</code> のように、「length」 を使えば、要素数が変わっても対応可能です。</li>
+<li><code>scores[i]</code> で、i番目の要素にアクセスします（0番目が最初）。</li>
+<li><code>sum += scores[i];</code> で、毎回のループで点数を加算します。</li>
+</ul>
+<p><strong>💡 この構文を使うと便利な場面:</strong></p>
+<ul>
+<li>合計点・平均点の計算</li>
+<li>条件に合うデータの抽出</li>
+<li>全体に同じ処理を適用（例：10点加点など）</li>
+</ul>
+<h2 id="forfor-each">🔁 拡張for文（for-each文）の使い方<a class="headerlink" href="#forfor-each" title="Permanent link">&para;</a></h2>
+<p>Javaでは、配列やリストなどを1つずつ順番に処理したい場合、
+通常のfor文よりも シンプルに書ける構文 があります。
+それが、<strong>拡張for文（for-each文）</strong>です。</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">型</span><span class="w"> </span><span class="n">変数名</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">配列名</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 各要素に対しての処理</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>:</code> は「in」のような意味と捉えるとわかりやすいです。</li>
+<li>各要素が順番に取り出されて、変数に入ります。</li>
+</ul>
+<p><strong>✅ 実例：5科目の点数を出力する:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">};</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">scores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;点数：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意点</p>
+<p>拡張for文では 要素のインデックス番号（0, 1, 2…）は使えません。
+インデックスを使いたい場合は、通常のfor文を使いましょう。</p>
+</div>
+<h2 id="for_1">🔬 配列とfor文を使って塩基記号を表示するプログラム<a class="headerlink" href="#for_1" title="Permanent link">&para;</a></h2>
+<p>サイズ10の配列に 1〜4 のランダムな整数を格納し、それぞれに対応する塩基記号（A, T, G, C）を表示するプログラムを、switch文を使って記述します。</p>
+<p><strong>例1：switch文で塩基記号を対応させる</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">baseChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;T&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kd">yield</span><span class="w"> </span><span class="sc">&#39;?&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">baseChar</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>1〜4の数値に応じて、塩基「A」「T」「G」「C」を対応させています。JavaではJava 14以降で導入された<strong>「switch式（switch expressions）」</strong>において、yield を使うことができます。</p>
+<ul>
+<li><code>-&gt;</code> の形式で式として使えるswitch。</li>
+<li>複数行ブロックにしたいときは <code>{}</code> を使い、その中で値を返すには <code>yield</code> が必要。</li>
+</ul>
+<p><strong>🔁 より簡潔に書く方法：配列を使って直接変換する</strong></p>
+<p>この処理は、塩基記号を配列として持っておくことで、インデックスを使ってシンプルに記述できます。</p>
+<p><strong>例2：配列で塩基記号を直接参照する方法</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BaseExampleArray</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">baseSymbols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;T&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;G&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">};</span><span class="w">  </span><span class="c1">// 0番は使わない</span>
+
+<span class="w">        </span><span class="c1">// 配列に1〜4のランダムな数値を格納</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// 数値をインデックスとして塩基を取得・出力</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bases</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">baseSymbols</span><span class="o">[</span><span class="n">bases</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>✅ 解説：</p>
+<ul>
+<li><code>baseSymbols[bases[i]]</code> という一文で塩基記号が取り出せるので、switch文よりも可読性・保守性に優れています。</li>
+<li>0番目に空白を入れることで、1〜4をそのままインデックスとして使えるよう工夫しています。</li>
+<li>この方法は「マッピング（対応関係）の明示」にもなっており、他のケースにも応用が可能です。</li>
+</ul>
+<h2 id="java">🧠 Javaにおける配列とメモリの仕組み<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
+<p>💡 配列は「参照型（Reference Type）」</p>
+<p>Javaでは、配列は参照型に分類されます。つまり、配列変数は<strong>配列そのものではなく、配列のデータが格納されているメモリ領域への参照（アドレス）</strong>を保持しています。</p>
+<p>🔍 具体的なイメージ</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<p>このとき、Javaは以下のような処理を行います：</p>
+<ol>
+<li>int型のデータを5個格納できるメモリ領域を確保</li>
+<li>そのメモリ領域の先頭アドレスを、numbersという変数に保持</li>
+</ol>
+<p>イメージとしてはこんな構造です：</p>
+<div class="highlight"><pre><span></span><code>numbers ──┐
+          ▼
+     [ 0, 0, 0, 0, 0 ]  ← 実体（メモリ上の配列）
+</code></pre></div>
+<p>このように、numbersには実際の配列データではなく、配列のアドレスが入っているのです。</p>
+<p><strong>📌 配列を別の変数に代入した場合</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">;</span>
+</code></pre></div>
+このとき、<code>numbers</code> と <code>other</code> は同じ配列を指すことになります。つまり、どちらかの変数を使って配列の要素を変更すれば、もう一方にも反映されます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">other</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// → 100</span>
+</code></pre></div>
+<ul>
+<li>otherに新しい配列をコピーしているわけではなく、同じ配列のアドレスを渡しているだけ。</li>
+<li>この性質を知らないと、「意図しない値の変更」が起こることがあります。</li>
+</ul>
+<p><strong>❗ 値型との違いに注意</strong></p>
+<p>たとえば、以下のようなint（プリミティブ型）の代入では、値そのものがコピーされます。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">  </span><span class="c1">// → 10（変化なし）</span>
+</code></pre></div>
+<p><strong>🧭 まとめ</strong></p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>値型 (<code>int</code>, <code>double</code> など)</th>
+<th>参照型（配列など）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代入時の動作</td>
+<td>値そのものがコピーされる</td>
+<td>アドレス（参照）がコピーされる</td>
+</tr>
+<tr>
+<td>メモリの格納場所</td>
+<td>スタック</td>
+<td>ヒープに実体、スタックに参照</td>
+</tr>
+<tr>
+<td>変更の影響範囲</td>
+<td>代入先のみ</td>
+<td>すべての参照元に影響あり</td>
+</tr>
+<tr>
+<td><code>==</code>の比較結果</td>
+<td>値を比較する</td>
+<td>アドレスを比較する</td>
+</tr>
+<tr>
+<td><code>null</code>を代入可能か</td>
+<td>不可</td>
+<td>可</td>
+</tr>
+</tbody>
+</table>
+<h2 id="java_1">Java のガーベージコレクション<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h2>
+<p><strong>ガーベージコレクションとは？</strong></p>
+<p>Javaでは、<code>new</code> キーワードを使ってオブジェクトを作成すると、そのオブジェクトはヒープと呼ばれるメモリ領域に配置されます。しかし、プログラムが進むにつれて、使わなくなったオブジェクトもメモリ上に残り続けてしまうと、メモリが不足してしまいます。
+そこで、Javaでは使われなくなったオブジェクト（＝誰からも参照されていないオブジェクト）を自動的に削除する機能が用意されています。これが「ガーベージコレクション」です。</p>
+<p><strong>どのように動くの？</strong></p>
+<p>Javaのガーベージコレクタは、次のようなタイミングで動作します。</p>
+<ul>
+<li>メモリが不足しそうになったとき</li>
+<li>明示的に <code>System.gc()</code> を呼び出したとき（ただし、実行される保証はありません）</li>
+</ul>
+<p>ガーベージコレクタは、現在使われていないオブジェクトを探索し、それらを削除してメモリを回収します。これによって、プログラマはメモリ解放の処理を記述する必要がなくなり、安全かつ効率的にプログラムを開発できるのです。</p>
+<p><strong>「使われていないオブジェクト」とは？</strong></p>
+<p>以下のような状態になると、オブジェクトは「不要」とみなされます：</p>
+<div class="highlight"><pre><span></span><code><span class="n">MyObject</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyObject</span><span class="p">();</span><span class="w"> </span><span class="c1">// オブジェクトを生成</span>
+<span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// 参照を切る → この時点でガーベージコレクションの対象になる</span>
+</code></pre></div>
+<p>参照が切れたり、スコープの外に出てアクセスできなくなった場合、そのオブジェクトは「誰からも使われていない」と判断され、削除の候補になります。</p>
+<table>
+<thead>
+<tr>
+<th>メリット</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メモリ管理を自動化できる</td>
+<td>実行タイミングは制御できない</td>
+</tr>
+<tr>
+<td>メモリリークのリスクを減らせる</td>
+<td>処理が重くなることがあり、動作が一時止まることも</td>
+</tr>
+<tr>
+<td>コードがシンプルに保てる</td>
+<td>リアルタイム性が求められる処理には不向き</td>
+</tr>
+</tbody>
+</table>
+<p><strong>まとめ</strong></p>
+<p>Javaのガーベージコレクションは、プログラム中で不要になったオブジェクトを自動的に削除してくれる仕組みで、Javaが「メモリ管理がしやすい言語」と言われる理由の一つです。ガーベージコレクションのおかげで、開発者はメモリ解放のことをそれほど意識せずに、より本質的なロジックに集中することができます。</p>
+<h2 id="_4">多次元配列<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>多次元配列とは？</strong></p>
+<p>Javaでは、配列の中に配列を格納することで多次元配列を表現します。特によく使われるのが「2次元配列」です。これは、表（表形式のデータ）やマス目のようなデータを表すときに便利です。</p>
+<p><strong>2次元配列の宣言と初期化:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<p>この例では、3行4列の整数の表（3×4の2次元配列）を作成しています。</p>
+<div class="highlight"><pre><span></span><code>matrix ──▶ [ [0, 0, 0, 0],
+              [0, 0, 0, 0],
+              [0, 0, 0, 0] ]
+</code></pre></div>
+<ul>
+<li>行数：3</li>
+<li>列数：4</li>
+<li>添え字でアクセス：matrix[0][1] は1行目の2列目の要素</li>
+</ul>
+<p><strong>要素へのアクセス・変更:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matrix</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 出力：99</span>
+</code></pre></div>
+<p><strong>配列の初期化時に直接値を入れる方法:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>これは、2行3列の2次元配列で、初期値があらかじめ与えられています。</p>
+<p><strong>for文による走査（ネスト構造）:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li>外側のiが行</li>
+<li>内側のjが列</li>
+<li><code>scores.length</code> は行数</li>
+<li><code>scores[i].length</code> はその行の列数</li>
+</ul>
+<p><strong>不規則な配列（ジャグ配列）にも対応</strong></p>
+<p>Javaの2次元配列は「配列の配列」なので、各行の長さが異なる「ジャグ配列」も作れます：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">jagged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>これは、各行の要素数が異なる特殊な形の配列です。</p>
+<p><strong>まとめ：2次元配列の特徴</strong></p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>構造</td>
+<td>配列の中に配列（＝行ごとの配列）で構成される</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>表形式のデータ、行列、マス目状のデータなどに便利</td>
+</tr>
+<tr>
+<td>走査方法</td>
+<td>二重の for 文（ネスト構造）を用いて各要素にアクセス</td>
+</tr>
+<tr>
+<td>初期化</td>
+<td><code>{ {1,2}, {3,4,5}, {6} }</code> のように異なる長さの配列も定義可能</td>
+</tr>
+<tr>
+<td>柔軟性</td>
+<td>各行の列数が異なる「ジャグ配列（Jagged Array）」も作成できる</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../basic/" class="md-footer__link md-footer__link--prev" aria-label="前: 基礎編">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                基礎編
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../control_flow_statement/" class="md-footer__link md-footer__link--next" aria-label="次: 制御構文">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                制御構文
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

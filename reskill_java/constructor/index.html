@@ -1,0 +1,2181 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="プログラミングを学べる学習教材サイトです。改めてプログラミングを学ぶ方にも、初めてプログラミングを学ぶ方にも、わかりやすく説明します。">
+      
+      
+        <meta name="author" content="Masayuki">
+      
+      
+        <link rel="canonical" href="https://pylocode.jp/reskill_java/constructor/">
+      
+      
+        <link rel="prev" href="../class_and_instance/">
+      
+      
+        <link rel="next" href="../../blog/">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>コンストラクタ - ペアリスキリング</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3953371500811296"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-3953371500811296">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWN2B4XZDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WWN2B4XZDV');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="ペアリスキリング" class="md-header__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ペアリスキリング
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              コンストラクタ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ホーム
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reskill_py/introduction/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Java
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  リスキリングブログ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy_policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  プライバシーポリシー
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about_us/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  運営者情報
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../request_form/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  お問い合わせ
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ペアリスキリング" class="md-nav__button md-logo" aria-label="ペアリスキリング" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    ペアリスキリング
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    はじめに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/operator_and_variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    演算と変数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/list_tuple_set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    リストとタプルとセット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ディクショナリ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/conditinal_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    条件分岐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    繰り返し
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    オブジェクト
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    モジュール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reskill_py/outro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    おわりに
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基礎編
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    配列
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_flow_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    制御構文
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    メソッド
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre_opp_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    クラスを分けて考える
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre_opp_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    部品として捉える
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_and_instance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    クラスとインスタンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    コンストラクタ
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    コンストラクタ
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. フィールドに値を後から設定するのは面倒？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. コンストラクタってどう書くの？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 実際にコンストラクタを使ってみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. コンストラクタって特別なの？JVMのしくみをのぞいてみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 引数つきコンストラクタで自由に初期化しよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. インスタンスはそれぞれ独立している
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    リスキリングブログ
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            リスキリングブログ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    過去の投稿
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            過去の投稿
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プライバシーポリシー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about_us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    運営者情報
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../request_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    お問い合わせ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. フィールドに値を後から設定するのは面倒？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. コンストラクタってどう書くの？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 実際にコンストラクタを使ってみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. コンストラクタって特別なの？JVMのしくみをのぞいてみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 引数つきコンストラクタで自由に初期化しよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. インスタンスはそれぞれ独立している
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 練習問題
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">コンストラクタ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>~コンストラクタで「初期状態」を用意しよう~</p>
+<h2 id="1">1. フィールドに値を後から設定するのは面倒？<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>前の章では、クラスからインスタンス（実体）を作ったあとに、フィールド（変数）に値を手動で設定していました。たとえば、次のようなコードでした：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">        </span><span class="c1">// Penのインスタンスを作成</span>
+<span class="n">myPen</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;青&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// 色を手動で設定</span>
+<span class="n">myPen</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">          </span><span class="c1">// キャップがあることを手動で設定</span>
+</code></pre></div>
+<p>このやり方でも問題なく動きますが、次のような不便さがあります。</p>
+<p>■ 毎回同じ値なら、設定が面倒！</p>
+<p>たとえば、「色はいつも黒」「キャップは常についている」というペンを作るとします。
+毎回同じように書くのは、ちょっと無駄が多いですよね。</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">pen1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+<span class="n">pen1</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="n">pen1</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="n">Pen</span><span class="w"> </span><span class="n">pen2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+<span class="n">pen2</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="n">pen2</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">// … これが何本も続く</span>
+</code></pre></div>
+<p>■ ミスの原因にもなる</p>
+<p>手動で設定するということは、「うっかり忘れる」「値を間違える」可能性もあります。</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">pen3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+<span class="c1">// pen3.color = &quot;黒&quot;; ← 書き忘れたらどうなる？</span>
+<span class="n">pen3</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w"> </span><span class="c1">// 何色のペンか分からない！</span>
+</code></pre></div>
+<p>■ だから、最初からセットできたら楽！</p>
+<p>こんなときに便利なのが<strong>「コンストラクタ」</strong>です。
+コンストラクタを使えば、インスタンスを作った瞬間に初期値を自動で設定できます。</p>
+<p>これにより、</p>
+<ul>
+<li>コードが短く、分かりやすくなる</li>
+<li>設定漏れのリスクが減る</li>
+<li>一貫性のある状態でスタートできる</li>
+</ul>
+<p>といったメリットが得られます。</p>
+<h2 id="2">2. コンストラクタってどう書くの？<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>■ まずは役割の再確認</p>
+<p>コンストラクタは、「クラスからインスタンスを作るときに最初に一度だけ実行される特別なメソッド」です。
+目的は、インスタンスの初期状態を設定することです。</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+</code></pre></div>
+<p>上のように new Pen(); と書くと、自動的に Penクラスのコンストラクタが呼び出されます。</p>
+<p>■ 書き方の基本（シグネチャ）</p>
+<p>コンストラクタには、いくつかのルールがあります。</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// コンストラクタの本体（ここに初期値の設定を書く）</span>
+<span class="p">}</span>
+</code></pre></div>
+この部分を<strong>シグネチャ（signature）</strong>と呼びます。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>どこからでも呼び出せるようにするアクセス修飾子</td>
+</tr>
+<tr>
+<td><code>Pen</code></td>
+<td>クラス名と全く同じ名前にする必要がある</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>引数がないことを示す（後で引数付きも学びます）</td>
+</tr>
+<tr>
+<td><code>{ ... }</code></td>
+<td>処理を各ブロック</td>
+</tr>
+</tbody>
+</table>
+<p>🚫 こう書くと「コンストラクタ」じゃなくなる！
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// これはメソッド扱いで、コンストラクタではありません！</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>戻り値（voidなど）をつけてしまうと、それは通常のメソッドになってしまいます。
+コンストラクタには戻り値を書いてはいけません。</p>
+<p>■ 初期値の設定方法</p>
+<p>次に、コンストラクタの中でフィールドに値を設定する方法を見てみましょう。
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>このように直接フィールドに値を代入するだけでOKです。</p>
+<p>■ でも「this.」ってなに？</p>
+<p>次のような書き方もよく見かけます：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>ここで使われている this は、<strong>「このインスタンス自身」</strong>を指します。</p>
+<p>どちらでも動きますが、</p>
+<ul>
+<li>変数名が曖昧になる場合（引数とフィールドが同じ名前など）には this を使うのが必須</li>
+<li>明示的に書いたほうがコードが読みやすいというメリットもあります</li>
+</ul>
+<p>したがって、初心者でも this を使う習慣をつけておくのがおすすめです。</p>
+<p>■ まとめ表</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コンストラクタ</td>
+<td>インスタンスを作ること子に最初に実行される特別なメソッド</td>
+</tr>
+<tr>
+<td>シグネチャ</td>
+<td><code>public クラス名()</code>のように、戻り値を書かず、クラス名と一致させる</td>
+</tr>
+<tr>
+<td>処理内容</td>
+<td>フィールドに初期値を代入するコードを書く</td>
+</tr>
+<tr>
+<td>thisの意味</td>
+<td>「このオブジェクト自身」を指す・フィールドへの代入に使える</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 実際にコンストラクタを使ってみよう<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>■ これまでのコード（おさらい）</p>
+<p>前章では、Pen クラスのインスタンスを作ってから、後からフィールドに値を設定していました。
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;書いています...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">     </span><span class="c1">// インスタンスの作成</span>
+<span class="w">        </span><span class="n">myPen</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;青&quot;</span><span class="p">;</span><span class="w">         </span><span class="c1">// 後から値を設定</span>
+<span class="w">        </span><span class="n">myPen</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myPen</span><span class="p">.</span><span class="na">write</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>このように毎回同じ値を設定するのは面倒ですし、書き忘れによるバグの元にもなります。</p>
+<p>■ コンストラクタを追加してみよう！</p>
+<p>では、Pen クラスにコンストラクタを追加して、初期状態を自動でセットしてみましょう。</p>
+<p>✅ 修正後の Pen クラス
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// コンストラクタの定義</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;書いています...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>このように書くと、new Pen(); をした時点で、自動的に以下の状態になります：</p>
+<ul>
+<li>色 → 「黒」</li>
+<li>キャップ → 「ある（true）」</li>
+</ul>
+<p>■ Mainクラスでの使い方は変わらない</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">     </span><span class="c1">// ここでコンストラクタが自動実行される</span>
+<span class="w">        </span><span class="n">myPen</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">             </span><span class="c1">// フィールドに値が入っている状態でメソッドを使える</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>ポイントは、「呼び出し側は書く内容が減ってシンプルになる」ということです。</p>
+<p>■ 実行結果
+<div class="highlight"><pre><span></span><code><span class="n">書いています</span><span class="p">...</span>
+</code></pre></div></p>
+<p>目立った変化は出力上はありませんが、コードの中では自動的に color と hasCap がセットされており、より安全でミスの少ないコードになっています。</p>
+<p>■ 補足：複数のインスタンスを作ってみよう
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">pen1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+<span class="n">Pen</span><span class="w"> </span><span class="n">pen2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pen1</span><span class="p">.</span><span class="na">color</span><span class="p">);</span><span class="w">  </span><span class="c1">// 黒</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pen2</span><span class="p">.</span><span class="na">color</span><span class="p">);</span><span class="w">  </span><span class="c1">// 黒</span>
+
+<span class="n">pen1</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;赤&quot;</span><span class="p">;</span><span class="w">               </span><span class="c1">// pen1 だけ変更</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pen1</span><span class="p">.</span><span class="na">color</span><span class="p">);</span><span class="w">  </span><span class="c1">// 赤</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pen2</span><span class="p">.</span><span class="na">color</span><span class="p">);</span><span class="w">  </span><span class="c1">// 黒（影響を受けない！）</span>
+</code></pre></div></p>
+<p>→ このように、インスタンスごとに状態が独立していることも確認できます。</p>
+<p>■ まとめ表</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コンストラクタの役割</td>
+<td>インスタンスの初期状態を設定する</td>
+</tr>
+<tr>
+<td>書き方</td>
+<td><code>public クラス名() {...}</code> ※戻り値は書かない</td>
+</tr>
+<tr>
+<td>this の使い方</td>
+<td>フィールドに値を代入する際によく使う</td>
+</tr>
+<tr>
+<td>メリット</td>
+<td>値の設定漏れを防ぎ、コードがスッキリする</td>
+</tr>
+<tr>
+<td>複数インスタンスの確認</td>
+<td>インスタンスごとに状態は独立している</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-jvm">4. コンストラクタって特別なの？JVMのしくみをのぞいてみよう<a class="headerlink" href="#4-jvm" title="Permanent link">&para;</a></h2>
+<p>■ そもそも「コンストラクタ」って何が特別なの？</p>
+<p>Javaでは、クラスからオブジェクトを作るとき、必ず「コンストラクタ」が呼ばれます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">  </span><span class="c1">// ← ここで new Pen() がコンストラクタの呼び出し</span>
+</code></pre></div>
+<p>このとき、Javaのプログラムを動かしている「JVM（Java Virtual Machine）」が、水面下でいろいろな処理をしてくれています。</p>
+<p>■ JVM のイメージ図：オブジェクトを作るしくみ</p>
+<p>次のようなステップで、JVMはオブジェクトを作成しています。
+<div class="highlight"><pre><span></span><code>Step<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Penクラスの定義をもとに、メモリを確保（箱を作る）
+Step<span class="w"> </span><span class="m">2</span>:<span class="w"> </span>フィールドを初期化（デフォルト値：nullやfalse）
+Step<span class="w"> </span><span class="m">3</span>:<span class="w"> </span>コンストラクタを呼び出して、初期状態を上書き
+Step<span class="w"> </span><span class="m">4</span>:<span class="w"> </span>myPen<span class="w"> </span>にその「箱」のアドレスを代入
+</code></pre></div></p>
+<p>たとえるなら…</p>
+<ul>
+<li>Penクラスは「設計図」、</li>
+<li>JVMは「工場」、</li>
+<li><strong>new Pen()</strong>は「工場に製造を依頼」しているイメージです。</li>
+</ul>
+<p>■ なぜ「戻り値なし」なのに使えるの？</p>
+<p>通常のメソッドは戻り値の型を書く必要がありますが、コンストラクタにはありません。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// ← 戻り値の型がない！（これが正しい書き方）</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<dl>
+<dt>なぜか？</dt>
+<dd>Javaでは、new を使うと、自動的に「コンストラクタの呼び出し → メモリ確保 → 参照を返す」まで含まれているからです。</dd>
+</dl>
+<p>■ 「シグネチャ」が大事：コンストラクタの見分けポイント</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>メソッド名</td>
+<td>クラス名と同じである必要がある</td>
+</tr>
+<tr>
+<td>戻り値</td>
+<td>書いてはいけない（書くと普通のメソッドになってしまう）</td>
+</tr>
+<tr>
+<td><code>public</code></td>
+<td>通常はpublicにしておく（外から呼べるように）</td>
+</tr>
+</tbody>
+</table>
+<p>例：正しいコンストラクタ
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 正しいコンストラクタ</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>× 間違った例：
+<div class="highlight"><pre><span></span><code><span class="c1">// これはコンストラクタではなく、普通のメソッド</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>→ <code>void</code> を書いた時点で「ただのメソッド」になります。</p>
+<p>■ なぜ this. を使うの？</p>
+<p>this は「このインスタンス自身のフィールド」という意味です。たとえば：</p>
+<div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>これは、「このオブジェクトが持つ color に “黒” を代入せよ」という指示です。
+フィールドとローカル変数が同じ名前のときに使うことで、あいまいさをなくすためにも役立ちます。</p>
+<p>■ 補足：デフォルトコンストラクタってなに？</p>
+<p>もし自分でコンストラクタを1つも定義していない場合、Javaは自動的に「中身が空のコンストラクタ」を用意してくれます。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 自分で何も書かなくても…</span>
+<span class="n">Pen</span><span class="w"> </span><span class="n">myPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">  </span><span class="c1">// ← 動く</span>
+
+<span class="c1">// ただし、一度でも自作コンストラクタを定義すると、自動ではつかなくなる！</span>
+</code></pre></div>
+<p>■ まとめ表</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コンストラクタの役割</td>
+<td>オブジェクト生成時に初期値を設定する特別なメソッド</td>
+</tr>
+<tr>
+<td>書き方</td>
+<td>うラス名と同じ、戻り値なし</td>
+</tr>
+<tr>
+<td>呼ばれるタイミング</td>
+<td><code>new</code>と同時に自動的に呼び出される</td>
+</tr>
+<tr>
+<td>JVMでの流れ</td>
+<td>メモリ確保 -&gt; フィールド初期化 -&gt; コンストラクタ実行</td>
+</tr>
+<tr>
+<td>注意点</td>
+<td><code>void</code>を書いたらただのメソッドになるのでNG</td>
+</tr>
+</tbody>
+</table>
+<p>このように、<strong>コンストラクタは「オブジェクトができる瞬間に一度だけ呼ばれる特別な処理」</strong>です。</p>
+<h2 id="5">5. 引数つきコンストラクタで自由に初期化しよう<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>■ こんなときに便利！</p>
+<p>前のセクションでは、コンストラクタで「いつも同じ初期値（色＝黒、キャップあり）」をセットしていました。</p>
+<p>でも、現実のペンは毎回同じとは限りません。</p>
+<p>たとえば：
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">bluePen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;青&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="n">Pen</span><span class="w"> </span><span class="n">redPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;赤&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div></p>
+<p>→ コンストラクタに「引数」をつければ、それが可能になります。</p>
+<p>■ 引数つきコンストラクタの書き方
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 引数つきコンストラクタ</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w">      </span><span class="c1">// 右側は引数、左側はフィールド</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;色のペンで書いています...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">bluePen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;青&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">redPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;赤&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">bluePen</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">  </span><span class="c1">// 青色のペンで書いています...</span>
+<span class="w">        </span><span class="n">redPen</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">   </span><span class="c1">// 赤色のペンで書いています...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>■ なぜ <code>this.color = color</code> のように書くの？</p>
+<p>これは、引数の color と、フィールドの color の名前が同じだからです。</p>
+<ul>
+<li><code>this.color</code> → このオブジェクトが持っている変数</li>
+<li><code>color</code> → コンストラクタの引数として渡された値</li>
+</ul>
+<p>名前が同じときは、<code>this.</code> をつけて「どっちなのか」を明確にする必要があります。</p>
+<p>■ 引数があるコンストラクタ vs 引数がないコンストラクタ</p>
+<p>2つ以上のコンストラクタを定義することもできます。これを オーバーロード（多重定義） といいます。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 引数なし（デフォルト）のコンストラクタ</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;黒&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 引数つきのコンストラクタ</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">defaultPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">();</span><span class="w">              </span><span class="c1">// 黒・キャップあり</span>
+<span class="n">Pen</span><span class="w"> </span><span class="n">customPen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;緑&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w">    </span><span class="c1">// 緑・キャップなし</span>
+</code></pre></div>
+<p>→ 状況に応じて使い分けられる！</p>
+<p>■ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>引数付きコンストラクタ</td>
+<td>オブジェクトを作る時に、初期値を指定できる</td>
+</tr>
+<tr>
+<td>書き方</td>
+<td>クラスメイト同じ名前、パラメータを受け取る</td>
+</tr>
+<tr>
+<td><code>this</code>の結果</td>
+<td>フィールドの引数の区別を明確にするために使う</td>
+</tr>
+<tr>
+<td>オーバーロード</td>
+<td>引数の異なるコンストラクタを複数定義できる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6">6. インスタンスはそれぞれ独立している<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>■ 同じ「Penクラス」から作っても、中身はそれぞれ違う！</p>
+<p>クラスは設計図にすぎません。
+それをもとに作られたインスタンスは、<strong>それぞれ別の「実体」</strong>です。</p>
+<p>たとえば：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Pen</span><span class="w"> </span><span class="n">penA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;青&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="n">Pen</span><span class="w"> </span><span class="n">penB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;赤&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div>
+<p>この2つのオブジェクトは、色もキャップの有無も違う状態を持っています。</p>
+<p>■ 実際に動かしてみよう
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pen</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasCap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hasCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hasCap</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">write</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;色のペンで書いています...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">penA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;青&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Pen</span><span class="w"> </span><span class="n">penB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="s">&quot;赤&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">penA</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 青色のペンで書いています...</span>
+<span class="w">        </span><span class="n">penB</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 赤色のペンで書いています...</span>
+
+<span class="w">        </span><span class="c1">// penAの色を変更してもpenBには影響しない</span>
+<span class="w">        </span><span class="n">penA</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;緑&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">penA</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 緑色のペンで書いています...</span>
+<span class="w">        </span><span class="n">penB</span><span class="p">.</span><span class="na">write</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 赤色のペンで書いています...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>→ penA と penB は完全に独立して動いています。
+片方を変えても、もう片方には影響しません。</p>
+<p>■ なぜ独立しているの？</p>
+<p>Javaでは、<code>new</code> を使ってインスタンスを生成すると、メモリ上に新しい領域が確保されます。
+つまり、</p>
+<ul>
+<li><code>penA</code> → メモリ上の「箱A」</li>
+<li><code>penB</code> → メモリ上の「箱B」</li>
+</ul>
+<p>のように、別々の箱にそれぞれの値が入っていると考えるとイメージしやすいです。</p>
+<p>■ 現実の比喩で考えてみよう</p>
+<ul>
+<li>クラス →「ペンの設計図」</li>
+<li>インスタンス →「実際に製造された個々のペン」</li>
+</ul>
+<p>製造されたペンは、それぞれ色やキャップの有無が違ってもOK。
+変更しても、他のペンには関係ありません。</p>
+<p>■ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インスタンスの独立性</td>
+<td>同じクラスでも、作られたオブジェクトは別々の状態を持つ</td>
+</tr>
+<tr>
+<td>状態の違い</td>
+<td>フィールドの値を変えても、他のインスタンスには影響なし</td>
+</tr>
+<tr>
+<td>メモリ上の独立性</td>
+<td><code>new</code>で作るたびに、別々のメモリ領域が割り当てられる</td>
+</tr>
+<tr>
+<td>現実世界の例え</td>
+<td>同じ型番のペンでも、個体ごとに違いがあるのと同じ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7">7. 練習問題<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">【問題1】クラスを作ってみよう</p>
+<p>以下の仕様をもとに、「Book（本）」クラスを作成してください。</p>
+<p>▼ クラス仕様：</p>
+<ul>
+<li>フィールド<ul>
+<li><code>title</code>（本のタイトル：文字列）</li>
+<li><code>author</code>（著者名：文字列）</li>
+</ul>
+</li>
+<li>メソッド<ul>
+<li><code>introduce()</code>：タイトルと著者を紹介するメソッド</li>
+</ul>
+</li>
+</ul>
+<p>▼ 実装例（完成形イメージ）：
+<div class="highlight"><pre><span></span><code><span class="n">Book</span><span class="w"> </span><span class="n">book1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;走れメロス&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;太宰治&quot;</span><span class="p">);</span>
+<span class="n">Book</span><span class="w"> </span><span class="n">book2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;吾輩は猫である&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;夏目漱石&quot;</span><span class="p">);</span>
+
+<span class="n">book1</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「走れメロス」著：太宰治</span>
+<span class="n">book2</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「吾輩は猫である」著：夏目漱石</span>
+</code></pre></div></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">【問題2】インスタンスを複数作って状態を確認しよう</p>
+<ol>
+<li>上記の Book クラスを使って、3冊以上の本のインスタンスを作ってください。</li>
+<li>タイトルや著者をすべて異なる値にして、<code>introduce()</code> メソッドを呼び出して確認しましょう。</li>
+<li>どれか1冊のタイトルをあとから変更し、もう一度 <code>introduce()</code> を呼んで違いを確認してみましょう。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">book1</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;新しいタイトル&quot;</span><span class="p">;</span>
+<span class="n">book1</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// 変更されたタイトルが表示されること</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">【問題3】独立性を確かめよう（応用）</p>
+<ol>
+<li>どの本のタイトルを変えても、他の本のタイトルには影響しないことを確認しましょう。</li>
+<li><code>System.out.println(book2.title);</code> などで、他のインスタンスが変わっていないことを出力で確かめてください。</li>
+</ol>
+<details class="info">
+<summary>解答のヒント（構文テンプレートをクリックして表示）✍ </summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Book</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Book</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">author</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">introduce</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;「&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;」著：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">author</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+<details class="success">
+<summary>問題1から問題3までを実装した解答例をクリックして表示</summary>
+<p>まずはクラスの定義から。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Book.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Book</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">;</span><span class="w">   </span><span class="c1">// 本のタイトル</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">;</span><span class="w">  </span><span class="c1">// 著者名</span>
+
+<span class="w">    </span><span class="c1">// コンストラクタ：タイトルと著者を受け取り、フィールドに設定</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Book</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">author</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 本の紹介を行うメソッド</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">introduce</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;「&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;」著：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">author</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>そして、このクラスを使うメインクラス：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Main.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Book</span><span class="w"> </span><span class="n">book1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;走れメロス&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;太宰治&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Book</span><span class="w"> </span><span class="n">book2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;吾輩は猫である&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;夏目漱石&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Book</span><span class="w"> </span><span class="n">book3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;羅生門&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;芥川龍之介&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">book1</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「走れメロス」著：太宰治</span>
+<span class="w">        </span><span class="n">book2</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「吾輩は猫である」著：夏目漱石</span>
+<span class="w">        </span><span class="n">book3</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「羅生門」著：芥川龍之介</span>
+
+<span class="w">        </span><span class="c1">// book1のタイトルを変更</span>
+<span class="w">        </span><span class="n">book1</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;斜陽&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">book1</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「斜陽」著：太宰治</span>
+
+<span class="w">        </span><span class="c1">// book2の状態は変わらないことを確認</span>
+<span class="w">        </span><span class="n">book2</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">  </span><span class="c1">// → 「吾輩は猫である」著：夏目漱石</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>💡 解説</p>
+<ol>
+<li>
+<p>クラスとフィールド</p>
+</li>
+<li>
+<p><code>title</code> と <code>author</code> は本の情報（＝状態）を表すフィールドです。</p>
+</li>
+<li>
+<p>これらはインスタンスごとに異なる値を持ちます。</p>
+</li>
+<li>
+<p>コンストラクタ
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Book</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">author</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>Book</code> クラスのコンストラクタは、インスタンスを作るときに初期状態を設定するために使われます。</p>
+</li>
+<li>
+<p><code>this.title</code> はフィールド、右側の <code>title</code> は引数（外から受け取った値）です。</p>
+</li>
+<li>
+<p>メソッド：<code>introduce</code></p>
+</li>
+<li>
+<p><code>introduce()</code> は本の情報を出力するだけのシンプルなメソッドですが、<strong>オブジェクトの動作（ふるまい）</strong>を表現しています。</p>
+</li>
+<li>
+<p>インスタンスの独立性</p>
+</li>
+<li>
+<p><code>book1.title = "斜陽";</code> のように、1つのインスタンスの状態を変えても、他のインスタンス（<code>book2</code>や<code>book3</code>）には影響がありません。</p>
+</li>
+<li>これが「インスタンスはそれぞれ独立している」という考え方の確認です。</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../class_and_instance/" class="md-footer__link md-footer__link--prev" aria-label="前: クラスとインスタンス">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                クラスとインスタンス
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../blog/" class="md-footer__link md-footer__link--next" aria-label="次: リスキリングブログ">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                リスキリングブログ
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
